@@ -1,0 +1,37 @@
+# &lt;koa-checkbox&gt;
+
+Demo with [paper-checkbox](https://elements.polymer-project.org/elements/paper-checkbox?view=demo).
+
+Description of the koa-checkbox element.
+
+### Behaviors
+
+* [Polymer.IronButtonState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronButtonState): `active`, `pressed`, `toggles`.
+* [Polymer.IronControlState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronControlState): `disabled`, `focused`.
+* [Polymer.IronCheckedElementBehavior](https://elements.polymer-project.org/elements/iron-checked-element-behavior): `checked`, `name`, `required`, `toggles`, `value`.
+
+### Properties
+
+Name | Type | Description | Default
+-----|------|-------------|--------
+***active*** | `Boolean` | If true, the button is a toggle and is currently in the active state. | `false`
+***checked*** | `Boolean` | Gets or sets the state, true is checked and false is unchecked. | `false`
+***disabled*** | `Boolean` | If true, the user cannot interact with this element. | `false`
+***focused*** | `Boolean` | If true, the element currently has focus. | `false`
+***name*** | `String` | The name of this element. |
+***pressed*** | `Boolean` | If true, the user is currently holding down the button. | `false`
+***required*** | `Boolean` | Set to true to mark the input as required. If used in a form, a custom element that uses this behavior should also use Polymer.IronValidatableBehavior and define a custom validation method. Otherwise, a required element will always be considered valid. It's also strongly recommended to provide a visual style for the element when its value is invalid. | `false`
+***toggles*** | `Boolean` | If true, the button toggles the active state with each tap or press of the spacebar. | `true`
+***value*** | `String` | Overridden from Polymer.IronFormElementBehavior | `''`
+
+### Styling
+
+Custom property | Description | Default
+----------------|-------------|--------
+`--checkbox-unchecked-background-color` | Checkbox background color when the input is not checked | `transparent`
+`--checkbox-unchecked-color` | Checkbox border color when the input is not checked | `--primary-text-color`
+`--checkbox-checked-color` | Checkbox color when the input is checked | `--default-primary-color`
+`--checkbox-checkmark-color` | Checkmark color | `white`
+`--checkbox-label-color` | Label color | `--primary-text-color`
+`--checkbox-label-spacing` | Spacing between the label and the checkbox | `8px`
+`--checkbox-error-color` | Checkbox color when invalid | `--google-red-500`
