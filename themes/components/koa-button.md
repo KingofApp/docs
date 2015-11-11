@@ -1,8 +1,11 @@
 # &lt;koa-button&gt;
 
-Demo with [paper-button](https://elements.polymer-project.org/elements/paper-button?view=demo).
-
 It is a button.
+
+### Demo
+
+* Demo with [paper-button](https://elements.polymer-project.org/elements/paper-button?view=demo).
+* Demo with [ios-button](https://kingofapp.github.io/ios-button).
 
 ### Behaviors
 

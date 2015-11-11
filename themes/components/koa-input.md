@@ -2,9 +2,12 @@
 
 ## &lt;koa-input&gt;
 
-Demo with [paper-input](https://elements.polymer-project.org/elements/paper-input?view=demo).
-
 It is a single-line text field.
+
+### Demo
+
+* Demo with [paper-input](https://elements.polymer-project.org/elements/paper-input?view=demo).
+* Demo with [ios-input](https://kingofapp.github.io/ios-input).
 
 ### Behaviors
 
@@ -69,9 +72,12 @@ Custom property | Description | Default
 
 ## &lt;koa-textarea&gt;
 
-Demo with [paper-textarea](https://elements.polymer-project.org/elements/paper-input?view=demo).
-
 It is a multi-line text field.
+
+### Demo
+
+* Demo with [paper-textarea](https://elements.polymer-project.org/elements/paper-input?view=demo).
+* Demo with [ios-textarea](https://kingofapp.github.io/ios-input).
 
 ### Behaviors
 

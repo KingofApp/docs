@@ -1,8 +1,10 @@
 # &lt;koa-badge&gt;
 
-Demo with [paper-badge](https://elements.polymer-project.org/elements/paper-badge?view=demo).
-
 It is a text badge that is displayed on the top right corner of an element, representing a status or a notification.
+
+### Demo
+
+* Demo with [paper-badge](https://elements.polymer-project.org/elements/paper-badge?view=demo).
 
 ### Properties
 

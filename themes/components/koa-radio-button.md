@@ -1,8 +1,10 @@
 # &lt;koa-radio-button&gt;
 
-Demo with [paper-radio-button](https://elements.polymer-project.org/elements/paper-radio-button?view=demo).
-
 It is a button that can be either checked or unchecked. User can tap the radio button to check or uncheck it.
+
+### Demo
+
+* Demo with [paper-radio-button](https://elements.polymer-project.org/elements/paper-radio-button?view=demo).
 
 ### Behaviors
 

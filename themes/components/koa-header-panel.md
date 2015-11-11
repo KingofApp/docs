@@ -1,10 +1,13 @@
 # &lt;koa-header-panel&gt;
 
-Demo with [paper-header-panel](https://elements.polymer-project.org/elements/paper-header-panel?view=demo).
-
 It contains a header section and a content panel section.
 
 **Important**: It will not display if its parent does not have a height.
+
+### Demo
+
+* Demo with [paper-header-panel](https://elements.polymer-project.org/elements/paper-header-panel?view=demo).
+* Demo with [ios-header-panel](https://kingofapp.github.io/ios-header-panel).
 
 ### Properties
 

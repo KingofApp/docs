@@ -1,8 +1,10 @@
 # &lt;koa-spinner&gt;
 
-Demo with [paper-spinner](https://elements.polymer-project.org/elements/paper-spinner?view=demo).
-
 It is an spinner.
+
+### Demo
+
+* Demo with [paper-spinner](https://elements.polymer-project.org/elements/paper-spinner?view=demo).
 
 ### Properties
 

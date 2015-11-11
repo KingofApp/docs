@@ -1,8 +1,11 @@
 # &lt;koa-card&gt;
 
-Demo with [paper-card](https://elements.polymer-project.org/elements/paper-card?view=demo).
-
 It is a container with a drop shadow.
+
+### Demo
+
+* Demo with [paper-card](https://elements.polymer-project.org/elements/paper-card?view=demo).
+* Demo with [ios-card](https://kingofapp.github.io/ios-card).
 
 ### Properties
 

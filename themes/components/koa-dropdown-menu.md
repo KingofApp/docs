@@ -1,10 +1,12 @@
 # &lt;koa-dropdown-menu&gt;
 
-Demo with [paper-dropdown-menu](https://elements.polymer-project.org/elements/paper-dropdown-menu?view=demo).
-
 It is similar to a native browser `select` element. It works with selectable content. The currently selected item is displayed in the control. If no item is selected, the label is displayed instead.
 
 The child element with the class `dropdown-content` will be used as the dropdown menu.
+
+### Demo
+
+* Demo with [paper-dropdown-menu](https://elements.polymer-project.org/elements/paper-dropdown-menu?view=demo).
 
 ### Behaviors
 

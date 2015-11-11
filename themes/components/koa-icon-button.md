@@ -1,10 +1,13 @@
 # &lt;koa-icon-button&gt;
 
-Demo with [paper-icon-button](https://elements.polymer-project.org/elements/paper-icon-button?view=demo).
-
 It is a button with an image placed at the center.
 
 It includes a default icon set. Use `icon` to specify which icon from the icon set to use.
+
+### Demo
+
+* Demo with [paper-icon-button](https://elements.polymer-project.org/elements/paper-icon-button?view=demo).
+* Demo with [ios-icon-button](https://kingofapp.github.io/ios-icon-button).
 
 ### Behaviors
 

@@ -1,8 +1,11 @@
 # &lt;koa-toggle-button&gt;
 
-Demo with [paper-toggle-button](https://elements.polymer-project.org/elements/paper-toggle-button?view=demo).
-
 It provides a ON/OFF switch that user can toggle the state by tapping or by dragging the switch.
+
+### Demo
+
+* Demo with [paper-toggle-button](https://elements.polymer-project.org/elements/paper-toggle-button?view=demo).
+* Demo with [ios-toggle-button](https://kingofapp.github.io/ios-toggle-button).
 
 ### Behaviors
 

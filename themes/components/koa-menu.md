@@ -2,9 +2,11 @@
 
 ## &lt;koa-menu&gt;
 
-Demo with [paper-menu](https://elements.polymer-project.org/elements/paper-menu?view=demo).
-
 It implements an accessible menu control.
+
+### Demo
+
+* Demo with [paper-menu](https://elements.polymer-project.org/elements/paper-menu?view=demo).
 
 ### Behaviors
 

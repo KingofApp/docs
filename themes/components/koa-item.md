@@ -1,8 +1,10 @@
 # &lt;koa-item&gt;
 
-Demo with [paper-item](https://elements.polymer-project.org/elements/paper-item?view=demo).
-
 It is an interactive list item.
+
+### Demo
+
+* Demo with [paper-item](https://elements.polymer-project.org/elements/paper-item?view=demo).
 
 ### Behaviors
 

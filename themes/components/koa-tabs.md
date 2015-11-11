@@ -2,9 +2,12 @@
 
 ## &lt;koa-tabs&gt;
 
-Demo with [paper-tabs](https://elements.polymer-project.org/elements/paper-tabs?view=demo).
-
 It makes it easy to explore and switch between different views or functional aspects of an app, or to browse categorized data sets.
+
+### Demo
+
+* Demo with [paper-tabs](https://elements.polymer-project.org/elements/paper-tabs?view=demo).
+* Demo with [ios-tabs](https://kingofapp.github.io/ios-tabs).
 
 ### Behaviors
 
@@ -42,8 +45,6 @@ Name | Description
 
 
 ## &lt;koa-tab&gt;
-
-Demo with [paper-tab](https://elements.polymer-project.org/elements/paper-tabs?view=demo).
 
 It is styled to look like a tab. It should be used in conjunction with `koa-tabs`.
 

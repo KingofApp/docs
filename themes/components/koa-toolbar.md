@@ -1,8 +1,11 @@
 # &lt;koa-toolbar&gt;
 
-Demo with [paper-toolbar](https://elements.polymer-project.org/elements/paper-toolbar?view=demo).
-
 It is a horizontal bar containing items that can be used for label, navigation, search and actions.
+
+### Demo
+
+* Demo with [paper-toolbar](https://elements.polymer-project.org/elements/paper-toolbar?view=demo).
+* Demo with [ios-toolbar](https://kingofapp.github.io/ios-toolbar).
 
 ### Styling
 

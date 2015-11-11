@@ -1,8 +1,10 @@
 # &lt;koa-dialog&gt;
 
-Demo with [paper-dialog](https://elements.polymer-project.org/elements/paper-dialog?view=demo).
-
 It is a dialog. It provides styles for a header, content area, and an action area for buttons.
+
+### Demo
+
+* Demo with [paper-dialog](https://elements.polymer-project.org/elements/paper-dialog?view=demo).
 
 ### Behaviors
 
