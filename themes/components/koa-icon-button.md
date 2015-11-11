@@ -2,7 +2,9 @@
 
 Demo with [paper-icon-button](https://elements.polymer-project.org/elements/paper-icon-button?view=demo).
 
-Description of the koa-icon-button element.
+It is a button with an image placed at the center.
+
+It includes a default icon set. Use `icon` to specify which icon from the icon set to use.
 
 ### Behaviors
 

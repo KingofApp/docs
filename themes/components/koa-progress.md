@@ -2,7 +2,7 @@
 
 Demo with [paper-progress](https://elements.polymer-project.org/elements/paper-progress?view=demo).
 
-Description of the koa-progress element.
+The progress bars are for situations where the percentage completed can be determined. They give users a quick sense of how much longer an operation will take.
 
 ### Behaviors
 

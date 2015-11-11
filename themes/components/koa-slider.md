@@ -2,7 +2,7 @@
 
 Demo with [paper-slider](https://elements.polymer-project.org/elements/paper-slider?view=demo).
 
-Description of the koa-slider element.
+It allows user to select a value from a range of values by moving the slider thumb. The interactive nature of the slider makes it a great choice for settings that reflect intensity levels, such as volume, brightness, or color saturation.
 
 ### Behaviors
 

@@ -2,7 +2,7 @@
 
 Demo with [paper-card](https://elements.polymer-project.org/elements/paper-card?view=demo).
 
-Description of the koa-card element.
+It is a container with a drop shadow.
 
 ### Properties
 

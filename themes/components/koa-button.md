@@ -2,7 +2,7 @@
 
 Demo with [paper-button](https://elements.polymer-project.org/elements/paper-button?view=demo).
 
-Description of the koa-button element.
+It is a button.
 
 ### Behaviors
 

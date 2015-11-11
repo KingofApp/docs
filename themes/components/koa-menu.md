@@ -4,7 +4,7 @@
 
 Demo with [paper-menu](https://elements.polymer-project.org/elements/paper-menu?view=demo).
 
-Description of the koa-menu element.
+It implements an accessible menu control.
 
 ### Behaviors
 

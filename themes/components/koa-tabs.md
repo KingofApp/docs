@@ -4,7 +4,7 @@
 
 Demo with [paper-tabs](https://elements.polymer-project.org/elements/paper-tabs?view=demo).
 
-Description of the koa-tabs element.
+It makes it easy to explore and switch between different views or functional aspects of an app, or to browse categorized data sets.
 
 ### Behaviors
 
@@ -45,7 +45,7 @@ Name | Description
 
 Demo with [paper-tab](https://elements.polymer-project.org/elements/paper-tabs?view=demo).
 
-Description of the koa-tab element.
+It is styled to look like a tab. It should be used in conjunction with `koa-tabs`.
 
 ### Behaviors
 

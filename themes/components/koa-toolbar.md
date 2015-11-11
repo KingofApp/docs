@@ -2,7 +2,7 @@
 
 Demo with [paper-toolbar](https://elements.polymer-project.org/elements/paper-toolbar?view=demo).
 
-Description of the koa-toolbar element.
+It is a horizontal bar containing items that can be used for label, navigation, search and actions.
 
 ### Styling
 

@@ -2,7 +2,7 @@
 
 Demo with [paper-spinner](https://elements.polymer-project.org/elements/paper-spinner?view=demo).
 
-Description of the koa-spinner element.
+It is an spinner.
 
 ### Properties
 

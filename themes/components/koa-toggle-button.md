@@ -2,7 +2,7 @@
 
 Demo with [paper-toggle-button](https://elements.polymer-project.org/elements/paper-toggle-button?view=demo).
 
-Description of the koa-toggle-button element.
+It provides a ON/OFF switch that user can toggle the state by tapping or by dragging the switch.
 
 ### Behaviors
 

@@ -2,7 +2,9 @@
 
 Demo with [paper-header-panel](https://elements.polymer-project.org/elements/paper-header-panel?view=demo).
 
-Description of the koa-header-panel element.
+It contains a header section and a content panel section.
+
+**Important**: It will not display if its parent does not have a height.
 
 ### Properties
 

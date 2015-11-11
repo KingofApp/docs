@@ -2,7 +2,7 @@
 
 Demo with [paper-item](https://elements.polymer-project.org/elements/paper-item?view=demo).
 
-Description of the koa-item element.
+It is an interactive list item.
 
 ### Behaviors
 

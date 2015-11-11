@@ -2,7 +2,7 @@
 
 Demo with [paper-menu-button](https://elements.polymer-project.org/elements/paper-menu-button?view=demo).
 
-Description of the koa-menu-button element.
+It allows one to compose a designated "trigger" element with another element that represents "content", to create a dropdown menu that displays the "content" when the "trigger" is clicked.
 
 ### Behaviors
 

@@ -2,7 +2,7 @@
 
 Demo with [paper-dialog](https://elements.polymer-project.org/elements/paper-dialog?view=demo).
 
-Description of the koa-dialog element.
+It is a dialog. It provides styles for a header, content area, and an action area for buttons.
 
 ### Behaviors
 

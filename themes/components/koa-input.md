@@ -4,7 +4,7 @@
 
 Demo with [paper-input](https://elements.polymer-project.org/elements/paper-input?view=demo).
 
-Description of the koa-input element.
+It is a single-line text field.
 
 ### Behaviors
 
@@ -71,7 +71,7 @@ Custom property | Description | Default
 
 Demo with [paper-textarea](https://elements.polymer-project.org/elements/paper-input?view=demo).
 
-Description of the koa-textarea element.
+It is a multi-line text field.
 
 ### Behaviors
 

@@ -2,7 +2,7 @@
 
 Demo with [paper-checkbox](https://elements.polymer-project.org/elements/paper-checkbox?view=demo).
 
-Description of the koa-checkbox element.
+It is a button that can be either checked or unchecked. User can tap the checkbox to check or uncheck it. Usually you use checkboxes to allow user to select multiple options from a set.
 
 ### Behaviors
 
