@@ -2,6 +2,18 @@
 
 A King of App theme is composed of a set of elements built with [Polymer](https://www.polymer-project.org).
 
+## About elements
+
+Each element must have its own directory. The directory´s name must be formed with the name of the theme and the name of the tag, separated by a dash (-). Inside the directory, you must have an HTML file with the same name, and the folder `demo` with the example.
+
+For example, if the theme is called AwesomeTheme, `koa-button` element would have the following structure:
+
+```
+awesometheme-button
+├── demo
+│   └── index.html
+└── awesometheme-button.html
+```
 
 ## List of elements
 
