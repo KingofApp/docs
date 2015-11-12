@@ -11,9 +11,7 @@ It is a single-line text field.
 
 ### Behaviors
 
-* [Polymer.IronFormElementBehavior](https://elements.polymer-project.org/elements/iron-form-element-behavior): `name`, `required`, `value`.
 * [Polymer.PaperInputBehavior](https://elements.polymer-project.org/elements/paper-input?active=Polymer.PaperInputBehavior): `accept`, `allowedPattern`, `autocapitalize`, `autocomplete`, `autocorrect`, `autofocus`, `autosave`, `inputmode`, `invalid`, `list`, `max`, `maxlength`, `min`, `minlength`, `multiple`, `name`, `pattern`, `placeholder`, `preventInvalidInput`, `readonly`, `required`, `results`, `size`, `step`, `type`, `value`.
-* [Polymer.IronControlState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronControlState): `disabled`, `focused`.
 
 ### Properties
 
