@@ -28,7 +28,6 @@ Name | Type | Description | Default
 ***autosave*** | `String` | Bind this to the `<input is="iron-input">`'s `autosave` property, used with type=search. |
 ***disabled*** | `Boolean` | Set to true to disable this input. |
 ***focused*** | `Boolean` | If true, the element currently has focus. |
-***inputElement*** |  | Returns a reference to the input element. |
 ***inputmode*** | `String` | Bind this to the `<input is="iron-input">`'s `inputmode` property. |
 ***invalid*** | `Boolean` | Returns true if the value is invalid. |
 ***label*** | `String` | The label for this input. |
