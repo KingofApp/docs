@@ -97,6 +97,8 @@ Name | Type | Description | Default
 
 ### Styling
 
+Custom property | Description | Default
+----------------|-------------|--------
 `--input-container-color` | Label and underline color when the input is not focused | `--secondary-text-color`
 `--input-container-focus-color` | Label and underline color when the input is focused | `--default-primary-color`
 `--input-container-invalid-color` | Label and underline color when the input is is invalid | `--google-red-500`
