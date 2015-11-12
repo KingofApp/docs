@@ -18,7 +18,6 @@ It allows user to select a value from a range of values by moving the slider thu
 Name | Type | Description | Default
 -----|------|-------------|--------
 *active* | `Boolean` | If true, the button is a toggle and is currently in the active state. | `false`
-***checked*** | `Boolean` | Gets or sets the state, true is checked and false is unchecked. | `false`
 *disabled* | `Boolean` | If true, the user cannot interact with this element. | `false`
 ***dragging*** | `Boolean` | True when the user is dragging the slider. | `false`
 ***editable*** | `Boolean` | If true, an input is shown and user can use it to set the slider value. | `false`
