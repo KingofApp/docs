@@ -68,6 +68,12 @@ Custom property | Description | Default
 `--input-prefix` | Mixin applied to the input prefix | `{}`
 `--input-suffix` | Mixin applied to the input suffix | `{}`
 
+### Methods
+
+Name | Description
+-----|------------
+`inputElement()` | Returns a reference to the input element.
+
 
 ## &lt;koa-textarea&gt;
 
