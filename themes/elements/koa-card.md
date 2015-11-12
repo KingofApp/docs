@@ -11,8 +11,10 @@ It is a container with a drop shadow.
 
 Name | Type | Description | Default
 -----|------|-------------|--------
+***fadeImage*** | `Boolean` | When `preloadImage` is true, setting `fadeImage` to true will cause the image to fade into place. | `false`
 ***heading*** | `String` | The title of the card. | `''`
 ***name*** | `String` | The url of the title image of the card. | `''`
+***preloadImage*** | `Boolean` | When `true`, any change to the image url property will cause the `placeholder` image to be shown until the image is fully rendered. | `false`
 
 ### Styling
 
