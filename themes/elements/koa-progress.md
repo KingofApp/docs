@@ -16,13 +16,13 @@ Name | Type | Description | Default
 -----|------|-------------|--------
 ***disabled*** | `Boolean` | True if the progress is disabled. | `false`
 ***indeterminate*** | `Boolean` | Use an indeterminate progress indicator. | `false`
-***max*** | `Number` | The number that indicates the maximum value of the range. | `100`
-***min*** | `Number` | The number that indicates the minimum value of the range. | `0`
-***ratio*** | `Number` | Returns the ratio of the value. | `0`
+*max* | `Number` | The number that indicates the maximum value of the range. | `100`
+*min* | `Number` | The number that indicates the minimum value of the range. | `0`
+*ratio* | `Number` | Returns the ratio of the value. | `0`
 ***secondaryProgress*** | `Number` | The number that represents the current secondary progress. | `0`
 ***secondaryRatio*** | `Number` | The secondary ratio | `0`
-***step*** | `Number` | Specifies the value granularity of the range's value. | `1`
-***value*** | `Number` | The number that represents the current value. | `0`
+*step* | `Number` | Specifies the value granularity of the range's value. | `1`
+*value* | `Number` | The number that represents the current value. | `0`
 
 ### Styling
 

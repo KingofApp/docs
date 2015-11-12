@@ -17,15 +17,15 @@ It provides a ON/OFF switch that user can toggle the state by tapping or by drag
 
 Name | Type | Description | Default
 -----|------|-------------|--------
-***active*** | `Boolean` | If true, the button is a toggle and is currently in the active state. | `false`
-***checked*** | `Boolean` | Gets or sets the state, true is checked and false is unchecked. | `false`
-***disabled*** | `Boolean` | If true, the user cannot interact with this element. | `false`
-***focused*** | `Boolean` | If true, the element currently has focus. | `false`
-***name*** | `String` | The name of this element. |
-***pressed*** | `Boolean` | If true, the user is currently holding down the button. | `false`
-***required*** | `Boolean` | Set to true to mark the input as required. If used in a form, a custom element that uses this behavior should also use Polymer.IronValidatableBehavior and define a custom validation method. Otherwise, a required element will always be considered valid. It's also strongly recommended to provide a visual style for the element when its value is invalid. | `false`
-***toggles*** | `Boolean` | If true, the button toggles the active state with each tap or press of the spacebar. | `true`
-***value*** | `String` | Overridden from Polymer.IronFormElementBehavior | `''`
+*active* | `Boolean` | If true, the button is a toggle and is currently in the active state. | `false`
+*checked* | `Boolean` | Gets or sets the state, true is checked and false is unchecked. | `false`
+*disabled* | `Boolean` | If true, the user cannot interact with this element. | `false`
+*focused* | `Boolean` | If true, the element currently has focus. | `false`
+*name* | `String` | The name of this element. |
+*pressed* | `Boolean` | If true, the user is currently holding down the button. | `false`
+*required* | `Boolean` | Set to true to mark the input as required. If used in a form, a custom element that uses this behavior should also use Polymer.IronValidatableBehavior and define a custom validation method. Otherwise, a required element will always be considered valid. It's also strongly recommended to provide a visual style for the element when its value is invalid. | `false`
+*toggles* | `Boolean` | If true, the button toggles the active state with each tap or press of the spacebar. | `true`
+*value* | `String` | Overridden from Polymer.IronFormElementBehavior | `''`
 
 ### Styling
 

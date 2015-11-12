@@ -16,16 +16,16 @@ It implements an accessible menu control.
 
 Name | Type | Description | Default
 -----|------|-------------|--------
-***focusedItem*** | `Object` | Returns the currently focused item. |
-***items*** | `Array` | The list of items from which a selection can be made. | `[]`
-***multi*** | `Boolean` | If true, multiple selections are allowed. | `false`
-***selectable*** | `String` | This is a CSS selector string. If this is set, only items that match the CSS selector are selectable. |
-***selected*** | `String` | Gets or sets the selected element. The default is to use the index of the item. |
-***selectedAttribute*** | `String` | The attribute to set on elements when selected. | `null`
-***selectedClass*** | `String` | The class to set on elements when selected. | `iron-selected`
-***selectedItem*** | `Object` | Returns the currently selected item. |
-***selectedItems*** | `Array` | Returns an array of currently selected items. |
-***selectedValues*** | `Array` | Gets or sets the selected elements. This is used instead of `selected` when `multi` is true. |
+*focusedItem* | `Object` | Returns the currently focused item. |
+*items* | `Array` | The list of items from which a selection can be made. | `[]`
+*multi* | `Boolean` | If true, multiple selections are allowed. | `false`
+*selectable* | `String` | This is a CSS selector string. If this is set, only items that match the CSS selector are selectable. |
+*selected* | `String` | Gets or sets the selected element. The default is to use the index of the item. |
+*selectedAttribute* | `String` | The attribute to set on elements when selected. | `null`
+*selectedClass* | `String` | The class to set on elements when selected. | `iron-selected`
+*selectedItem* | `Object` | Returns the currently selected item. |
+*selectedItems* | `Array` | Returns an array of currently selected items. |
+*selectedValues* | `Array` | Gets or sets the selected elements. This is used instead of `selected` when `multi` is true. |
 
 ### Styling
 
@@ -43,9 +43,9 @@ Custom property | Description | Default
 
 Name | Description
 -----|------------
-`select(value)` | `value`: `String`. The value to select.<br/><br/>Selects the given value. If the multi property is true, then the selected state of the value will be toggled; otherwise the value will be selected.
-`selectNext()` | Selects the next item.
-`selectPrevious()` | Selects the previous item.
+*select(value)* | `value`: `String`. The value to select.<br/><br/>Selects the given value. If the multi property is true, then the selected state of the value will be toggled; otherwise the value will be selected.
+*selectNext()* | Selects the next item.
+*selectPrevious()* | Selects the previous item.
 
 
 ## &lt;koa-submenu&gt;
@@ -62,8 +62,8 @@ Description of the koa-submenu element.
 
 Name | Type | Description | Default
 -----|------|-------------|--------
-***disabled*** | `Boolean` | If true, the user cannot interact with this element. | `false`
-***focused*** | `Boolean` | If true, the element currently has focus. | `false`
+*disabled* | `Boolean` | If true, the user cannot interact with this element. | `false`
+*focused* | `Boolean` | If true, the element currently has focus. | `false`
 ***opened*** | `Boolean` | Set opened to true to show the collapse element and to false to hide it. | `false`
 
 ### Styling
@@ -78,5 +78,5 @@ Custom property | Description | Default
 
 Name | Description
 -----|------------
-`close()` | Collapse the submenu content.
-`open()` | Expand the submenu content.
+***close()*** | Collapse the submenu content.
+***open()*** | Expand the submenu content.

@@ -18,14 +18,14 @@ It includes a default icon set. Use `icon` to specify which icon from the icon s
 
 Name | Type | Description | Default
 -----|------|-------------|--------
-***active*** | `Boolean` | If true, the button is a toggle and is currently in the active state. | `false`
+*active* | `Boolean` | If true, the button is a toggle and is currently in the active state. | `false`
 ***alt*** | `String` | Specifies the alternate text for the button, for accessibility. | `false`
-***disabled*** | `Boolean` | If true, the user cannot interact with this element. | `false`
-***focused*** | `Boolean` | If true, the element currently has focus. | `false`
+*disabled* | `Boolean` | If true, the user cannot interact with this element. | `false`
+*focused* | `Boolean` | If true, the element currently has focus. | `false`
 ***icon*** | `String` | Specifies the icon name or index in the set of icons available in the icon's icon set. If the icon property is specified, the src property should not be. |
-***pressed*** | `Boolean` | If true, the user is currently holding down the button. | `false`
+*pressed* | `Boolean` | If true, the user is currently holding down the button. | `false`
 ***src*** | `String` | The URL of an image for the icon. If the src property is specified, the icon property should not be. |
-***toggles*** | `Boolean` | If true, the button toggles the active state with each tap or press of the spacebar. | `false`
+*toggles* | `Boolean` | If true, the button toggles the active state with each tap or press of the spacebar. | `false`
 
 ### Styling
 

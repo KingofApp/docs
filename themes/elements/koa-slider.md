@@ -17,29 +17,28 @@ It allows user to select a value from a range of values by moving the slider thu
 
 Name | Type | Description | Default
 -----|------|-------------|--------
-***active*** | `Boolean` | If true, the button is a toggle and is currently in the active state. | `false`
+*active* | `Boolean` | If true, the button is a toggle and is currently in the active state. | `false`
 ***checked*** | `Boolean` | Gets or sets the state, true is checked and false is unchecked. | `false`
-***disabled*** | `Boolean` | If true, the user cannot interact with this element. | `false`
+*disabled* | `Boolean` | If true, the user cannot interact with this element. | `false`
 ***dragging*** | `Boolean` | True when the user is dragging the slider. | `false`
 ***editable*** | `Boolean` | If true, an input is shown and user can use it to set the slider value. | `false`
 ***expand*** | `Boolean` | If true, the knob is expanded | `false`
-***focused*** | `Boolean` | If true, the element currently has focus. | `false`
+*focused* | `Boolean` | If true, the element currently has focus. | `false`
 ***immediateValue*** | `Number` | The immediate value of the slider. This value is updated while the user is dragging the slider. | `0`
 ***markers*** | `Array` |  | `[]`
-***max*** | `Number` | The number that indicates the maximum value of the range. | `100`
+*max* | `Number` | The number that indicates the maximum value of the range. | `100`
 ***maxMarkers*** | `Number` | The maximum number of markers | `0`
-***min*** | `Number` | The number that indicates the minimum value of the range. | `0`
-***name*** | `String` | The name of this element. |
+*min* | `Number` | The number that indicates the minimum value of the range. | `0`
+*name* | `String` | The name of this element. |
 ***pin*** | `Boolean` | If true, a pin with numeric value label is shown when the slider thumb is pressed. Use for settings for which users need to know the exact value of the setting. | `false`
-***pressed*** | `Boolean` | If true, the user is currently holding down the button. | `false`
-***ratio*** | `Number` | Returns the ratio of the value. | `0`
-***required*** | `Boolean` | Set to true to mark the input as required. If used in a form, a custom element that uses this behavior should also use Polymer.IronValidatableBehavior and define a custom validation method. Otherwise, a required element will always be considered valid. It's also strongly recommended to provide a visual style for the element when its value is invalid. | `false`
+*pressed* | `Boolean` | If true, the user is currently holding down the button. | `false`
+*ratio* | `Number` | Returns the ratio of the value. | `0`
+*required* | `Boolean` | Set to true to mark the input as required. If used in a form, a custom element that uses this behavior should also use Polymer.IronValidatableBehavior and define a custom validation method. Otherwise, a required element will always be considered valid. It's also strongly recommended to provide a visual style for the element when its value is invalid. | `false`
 ***secondaryProgress*** | `Number` | The number that represents the current secondary progress. | `0`
 ***snaps*** | `Boolean` | If true, the slider thumb snaps to tick marks evenly spaced based on the step property value. | `false`
-***step*** | `Number` | Specifies the value granularity of the range's value. | `1`
-***toggles*** | `Boolean` | If true, the button toggles the active state with each tap or press of the spacebar. | `true`
-***value*** | `Number` | The number that represents the current value. | `0`
-***value*** | `String` | Overridden from Polymer.IronFormElementBehavior | `''`
+*step* | `Number` | Specifies the value granularity of the range's value. | `1`
+*toggles* | `Boolean` | If true, the button toggles the active state with each tap or press of the spacebar. | `true`
+*value* | `Number` | The number that represents the current value. | `0`
 
 ### Styling
 
@@ -63,5 +62,5 @@ Custom property | Description | Default
 
 Name | Description
 -----|------------
-`decrement()` | Decreases value by step but not below `min`.
-`increment()` | Increases value by step but not above `max`.
+***decrement()*** | Decreases value by step but not below `min`.
+***increment()*** | Increases value by step but not above `max`.

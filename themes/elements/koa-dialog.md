@@ -14,11 +14,11 @@ It is a dialog. It provides styles for a header, content area, and an action are
 
 Name | Type | Description | Default
 -----|------|-------------|--------
-***canceled*** | `Boolean` | True if the overlay was canceled when it was last closed. | `false`
-***noCancelOnEscKey*** | `Boolean` | Set to true to disable canceling the overlay with the ESC key. | `false`
-***noCancelOnOutsideClick*** | `Boolean` | Set to true to disable canceling the overlay by clicking outside it. | `false`
-***opened*** | `Boolean` | True if the overlay is currently displayed. | `false`
-***withBackdrop*** | `Boolean` | Set to true to display a backdrop behind the overlay. | `false`
+*canceled* | `Boolean` | True if the overlay was canceled when it was last closed. | `false`
+*noCancelOnEscKey* | `Boolean` | Set to true to disable canceling the overlay with the ESC key. | `false`
+*noCancelOnOutsideClick* | `Boolean` | Set to true to disable canceling the overlay by clicking outside it. | `false`
+*opened* | `Boolean` | True if the overlay is currently displayed. | `false`
+*withBackdrop* | `Boolean` | Set to true to display a backdrop behind the overlay. | `false`
 
 ### Styling
 
@@ -34,8 +34,8 @@ Custom property | Description | Default
 
 Name | Description
 -----|------------
-`cancel()` | Cancels the overlay.
-`center()` | Centers horizontally and vertically if not already positioned. This also sets `position:fixed`.
-`close()` | Close the overlay.
-`open()` | Open the overlay.
-`toggle()` | Toggle the opened state of the overlay.
+*cancel()* | Cancels the overlay.
+*center()* | Centers horizontally and vertically if not already positioned. This also sets `position:fixed`.
+*close()* | Close the overlay.
+*open()* | Open the overlay.
+*toggle()* | Toggle the opened state of the overlay.

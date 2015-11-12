@@ -23,4 +23,4 @@ Custom property | Description | Default
 
 Name | Description
 -----|------------
-`reset()` |
+***reset()*** |

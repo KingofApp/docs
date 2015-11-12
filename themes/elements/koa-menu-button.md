@@ -15,8 +15,8 @@ It allows one to compose a designated "trigger" element with another element tha
 
 Name | Type | Description | Default
 -----|------|-------------|--------
-***disabled*** | `Boolean` | If true, the user cannot interact with this element. | `false`
-***focused*** | `Boolean` | If true, the element currently has focus. | `false`
+*disabled* | `Boolean` | If true, the user cannot interact with this element. | `false`
+*focused* | `Boolean` | If true, the element currently has focus. | `false`
 ***opened*** | `Boolean` | True if the content is currently displayed. | `false`
 
 ### Styling
@@ -32,5 +32,5 @@ Custom property | Description | Default
 
 Name | Description
 -----|------------
-`close()` | Hide the dropdown content.
-`open()` | Make the dropdown content appear as an overlay positioned relative to the dropdown trigger.
+***close()*** | Hide the dropdown content.
+***open()*** | Make the dropdown content appear as an overlay positioned relative to the dropdown trigger.

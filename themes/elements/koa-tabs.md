@@ -39,9 +39,9 @@ Custom property | Description | Default
 
 Name | Description
 -----|------------
-`select(value)` | `value`: `String`. The value to select.<br/><br/>Selects the given value. If the multi property is true, then the selected state of the value will be toggled; otherwise the value will be selected.
-`selectNext()` | Selects the next item.
-`selectPrevious()` | Selects the previous item.
+*select(value)* | `value`: `String`. The value to select.<br/><br/>Selects the given value. If the multi property is true, then the selected state of the value will be toggled; otherwise the value will be selected.
+*selectNext()* | Selects the next item.
+*selectPrevious()* | Selects the previous item.
 
 
 ## &lt;koa-tab&gt;
@@ -57,11 +57,11 @@ It is styled to look like a tab. It should be used in conjunction with `koa-tabs
 
 Name | Type | Description | Default
 -----|------|-------------|--------
-***active*** | `Boolean` | If true, the button is a toggle and is currently in the active state. | `false`
-***disabled*** | `Boolean` | If true, the user cannot interact with this element. | `false`
-***focused*** | `Boolean` | If true, the element currently has focus. | `false`
-***pressed*** | `Boolean` | If true, the user is currently holding down the button. | `false`
-***toggles*** | `Boolean` | If true, the button toggles the active state with each tap or press of the spacebar. | `false`
+*active* | `Boolean` | If true, the button is a toggle and is currently in the active state. | `false`
+*disabled* | `Boolean` | If true, the user cannot interact with this element. | `false`
+*focused* | `Boolean` | If true, the element currently has focus. | `false`
+*pressed* | `Boolean` | If true, the user is currently holding down the button. | `false`
+*toggles* | `Boolean` | If true, the button toggles the active state with each tap or press of the spacebar. | `false`
 
 ### Styling
 
