@@ -47,6 +47,12 @@ Name | Type | Description | Default
 *type* | `String` | The type of the input. The supported types are text, number and password. Bind this to the `<input is="iron-input">`'s `type` property. |
 *value* | `String` | The value for this input. Bind this to the `<input is="iron-input">`'s `bindValue` property, or the `value` property of your input that is notify:true. |
 
+### Methods
+
+Name | Description
+-----|------------
+***inputElement()*** | Returns a reference to the input element.
+
 ### Styling
 
 Custom property | Description | Default
@@ -65,12 +71,6 @@ Custom property | Description | Default
 `--input-container-underline-disabled` | Mixin applied to the underline when the input is disabled | `{}`
 `--input-prefix` | Mixin applied to the input prefix | `{}`
 `--input-suffix` | Mixin applied to the input suffix | `{}`
-
-### Methods
-
-Name | Description
------|------------
-***inputElement()*** | Returns a reference to the input element.
 
 
 ## &lt;koa-textarea&gt;

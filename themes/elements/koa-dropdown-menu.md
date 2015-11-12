@@ -31,6 +31,13 @@ Name | Type | Description | Default
 *toggles* | `Boolean` | If true, the button toggles the active state with each tap or press of the spacebar. | `false`
 *value* | `String` | The value for this element that will be used when submitting in a form. It is read only, and will always have the same value as `selectedItemLabel`. |
 
+### Methods
+
+Name | Description
+-----|------------
+***close()*** | Hide the dropdown content.
+***open()*** | Show the dropdown content.
+
 ### Styling
 
 Custom property | Description | Default
@@ -40,10 +47,3 @@ Custom property | Description | Default
 `--dropdown-menu-button` | A mixin that is applied to the internal menu button | `{}`
 `--dropdown-menu-input` | A mixin that is applied to the internal paper input | `{}`
 `--dropdown-menu-icon` | A mixin that is applied to the internal icon | `{}`
-
-### Methods
-
-Name | Description
------|------------
-***close()*** | Hide the dropdown content.
-***open()*** | Show the dropdown content.

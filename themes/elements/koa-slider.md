@@ -40,6 +40,13 @@ Name | Type | Description | Default
 *toggles* | `Boolean` | If true, the button toggles the active state with each tap or press of the spacebar. | `true`
 *value* | `Number` | The number that represents the current value. | `0`
 
+### Methods
+
+Name | Description
+-----|------------
+***decrement()*** | Decreases value by step but not below `min`.
+***increment()*** | Increases value by step but not above `max`.
+
 ### Styling
 
 Custom property | Description | Default
@@ -57,10 +64,3 @@ Custom property | Description | Default
 `--slider-knob-start-border-color` | The border color of the knob at the far left | `#c8c8c8`
 `--slider-pin-start-color` | The color of the pin at the far left | `#c8c8c8`
 `--slider-height` | Height of the progress bar | `2px`
-
-### Methods
-
-Name | Description
------|------------
-***decrement()*** | Decreases value by step but not below `min`.
-***increment()*** | Increases value by step but not above `max`.

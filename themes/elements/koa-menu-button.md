@@ -19,6 +19,13 @@ Name | Type | Description | Default
 *focused* | `Boolean` | If true, the element currently has focus. | `false`
 ***opened*** | `Boolean` | True if the content is currently displayed. | `false`
 
+### Methods
+
+Name | Description
+-----|------------
+***close()*** | Hide the dropdown content.
+***open()*** | Make the dropdown content appear as an overlay positioned relative to the dropdown trigger.
+
 ### Styling
 
 Custom property | Description | Default
@@ -27,10 +34,3 @@ Custom property | Description | Default
 `--menu-button` | Mixin applied to the menu-button | `{}`
 `--menu-button-disabled` | Mixin applied to the menu-button when disabled | `{}`
 `--menu-button-dropdown` | Mixin applied to the menu-button dropdown | `{}`
-
-### Methods
-
-Name | Description
------|------------
-***close()*** | Hide the dropdown content.
-***open()*** | Make the dropdown content appear as an overlay positioned relative to the dropdown trigger.

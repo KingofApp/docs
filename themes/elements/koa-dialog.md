@@ -20,16 +20,6 @@ Name | Type | Description | Default
 *opened* | `Boolean` | True if the overlay is currently displayed. | `false`
 *withBackdrop* | `Boolean` | Set to true to display a backdrop behind the overlay. | `false`
 
-### Styling
-
-Custom property | Description | Default
-----------------|-------------|--------
-`--dialog-background-color` | Dialog background color | `--primary-background-color`
-`--dialog-color` | Dialog foreground color | `--primary-text-color`
-`--dialog` | Mixin applied to the dialog | `{}`
-`--dialog-title` | Mixin applied to the title (`<h2>`) element | `{}`
-`--dialog-button-color` | Button area foreground color | `--default-primary-color`
-
 ### Methods
 
 Name | Description
@@ -39,3 +29,13 @@ Name | Description
 *close()* | Close the overlay.
 *open()* | Open the overlay.
 *toggle()* | Toggle the opened state of the overlay.
+
+### Styling
+
+Custom property | Description | Default
+----------------|-------------|--------
+`--dialog-background-color` | Dialog background color | `--primary-background-color`
+`--dialog-color` | Dialog foreground color | `--primary-text-color`
+`--dialog` | Mixin applied to the dialog | `{}`
+`--dialog-title` | Mixin applied to the title (`<h2>`) element | `{}`
+`--dialog-button-color` | Button area foreground color | `--default-primary-color`

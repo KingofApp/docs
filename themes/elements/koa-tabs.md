@@ -28,13 +28,6 @@ Name | Type | Description | Default
 ***selectedItems*** | `Array` | Returns an array of currently selected items. |
 ***selectedValues*** | `Array` | Gets or sets the selected elements. This is used instead of `selected` when `multi` is true. |
 
-### Styling
-
-Custom property | Description | Default
-----------------|-------------|--------
-`--tabs-selection-bar-color` | Color for the selection bar | `--accent-color`
-`--tabs` | Mixin applied to the tabs | `{}`
-
 ### Methods
 
 Name | Description
@@ -42,6 +35,13 @@ Name | Description
 *select(value)* | `value`: `String`. The value to select.<br/><br/>Selects the given value. If the multi property is true, then the selected state of the value will be toggled; otherwise the value will be selected.
 *selectNext()* | Selects the next item.
 *selectPrevious()* | Selects the previous item.
+
+### Styling
+
+Custom property | Description | Default
+----------------|-------------|--------
+`--tabs-selection-bar-color` | Color for the selection bar | `--accent-color`
+`--tabs` | Mixin applied to the tabs | `{}`
 
 
 ## &lt;koa-tab&gt;

@@ -27,6 +27,14 @@ Name | Type | Description | Default
 *selectedItems* | `Array` | Returns an array of currently selected items. |
 *selectedValues* | `Array` | Gets or sets the selected elements. This is used instead of `selected` when `multi` is true. |
 
+### Methods
+
+Name | Description
+-----|------------
+*select(value)* | `value`: `String`. The value to select.<br/><br/>Selects the given value. If the multi property is true, then the selected state of the value will be toggled; otherwise the value will be selected.
+*selectNext()* | Selects the next item.
+*selectPrevious()* | Selects the previous item.
+
 ### Styling
 
 Custom property | Description | Default
@@ -38,14 +46,6 @@ Custom property | Description | Default
 `--menu-selected-item` | Mixin applied to the selected item | `{}`
 `--menu-focused-item` | Mixin applied to the focused item | `{}`
 `--menu-focused-item-after` | Mixin applied to the ::after pseudo-element for the focused item | `{}`
-
-### Methods
-
-Name | Description
------|------------
-*select(value)* | `value`: `String`. The value to select.<br/><br/>Selects the given value. If the multi property is true, then the selected state of the value will be toggled; otherwise the value will be selected.
-*selectNext()* | Selects the next item.
-*selectPrevious()* | Selects the previous item.
 
 
 ## &lt;koa-submenu&gt;
@@ -66,6 +66,13 @@ Name | Type | Description | Default
 *focused* | `Boolean` | If true, the element currently has focus. | `false`
 ***opened*** | `Boolean` | Set opened to true to show the collapse element and to false to hide it. | `false`
 
+### Methods
+
+Name | Description
+-----|------------
+***close()*** | Collapse the submenu content.
+***open()*** | Expand the submenu content.
+
 ### Styling
 
 Custom property | Description | Default
@@ -73,10 +80,3 @@ Custom property | Description | Default
 `--menu-selected-item` | Mixin applied to the selected item | `{}`
 `--menu-focused-item` | Mixin applied to the focused item | `{}`
 `--menu-focused-item-after` | Mixin applied to the ::after pseudo-element for the focused item | `{}`
-
-### Methods
-
-Name | Description
------|------------
-***close()*** | Collapse the submenu content.
-***open()*** | Expand the submenu content.
