@@ -17,16 +17,16 @@ It makes it easy to explore and switch between different views or functional asp
 
 Name | Type | Description | Default
 -----|------|-------------|--------
-***focusedItem*** | `Object` | Returns the currently focused item. |
-***items*** | `Array` | The list of items from which a selection can be made. | `[]`
-***multi*** | `Boolean` | If true, multiple selections are allowed. | `false`
-***selectable*** | `String` | This is a CSS selector string. If this is set, only items that match the CSS selector are selectable. |
-***selected*** | `String` | Gets or sets the selected element. The default is to use the index of the item. |
-***selectedAttribute*** | `String` | The attribute to set on elements when selected. | `null`
-***selectedClass*** | `String` | The class to set on elements when selected. | `iron-selected`
-***selectedItem*** | `Object` | Returns the currently selected item. |
-***selectedItems*** | `Array` | Returns an array of currently selected items. |
-***selectedValues*** | `Array` | Gets or sets the selected elements. This is used instead of `selected` when `multi` is true. |
+*focusedItem* | `Object` | Returns the currently focused item. |
+*items* | `Array` | The list of items from which a selection can be made. | `[]`
+*multi* | `Boolean` | If true, multiple selections are allowed. | `false`
+*selectable* | `String` | This is a CSS selector string. If this is set, only items that match the CSS selector are selectable. |
+*selected* | `String` | Gets or sets the selected element. The default is to use the index of the item. |
+*selectedAttribute* | `String` | The attribute to set on elements when selected. | `null`
+*selectedClass* | `String` | The class to set on elements when selected. | `iron-selected`
+*selectedItem* | `Object` | Returns the currently selected item. |
+*selectedItems* | `Array` | Returns an array of currently selected items. |
+*selectedValues* | `Array` | Gets or sets the selected elements. This is used instead of `selected` when `multi` is true. |
 
 ### Methods
 
