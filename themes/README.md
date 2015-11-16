@@ -25,6 +25,8 @@ Each element is composed by:
 
 You'll have to add all the properties, host attributes, styling, methods and behaviors of each element in yours.
 
+Our [koa-theme generator](#) give you a scaffold with all these things.
+
 ## List of elements
 
 * [koa-badge](elements/koa-badge.md#koa-badge)
@@ -46,3 +48,17 @@ You'll have to add all the properties, host attributes, styling, methods and beh
 * [koa-tabs](elements/koa-tabs.md#koa-tabs)
 * [koa-toggle-button](elements/koa-toggle-button.md#koa-toggle-button)
 * [koa-toolbar](elements/koa-toolbar.md#koa-toolbar)
+
+## Getting started
+
+1. Install the [koa-theme generator](#).
+
+  `npm install -g generator-koa-theme`
+
+2. Create a new theme with the generator.
+
+  `yo koa-theme name-of-the-theme`
+
+  Note: `name-of-the-theme` will be the ID of the theme.
+
+3. Begins to change all elements as you want!
