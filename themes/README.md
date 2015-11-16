@@ -17,8 +17,9 @@ awesometheme-button
 
 Each element is composed by:
 
-* **Properties**: Using [Polymer properties](https://www.polymer-project.org/1.0/docs/devguide/properties.html), you can add properties.
 * **Behaviors**: Using [Polymer behaviors](https://www.polymer-project.org/1.0/docs/devguide/behaviors.html), you can inherit behaviors with their properties and methods.
+* **Host attributes**: Using [Polymer host attributes](https://www.polymer-project.org/1.0/docs/devguide/registering-elements.html#host-attributes), you can set HTML attributes on the element at create-time.
+* **Properties**: Using [Polymer properties](https://www.polymer-project.org/1.0/docs/devguide/properties.html), you can add properties.
 * **Styling**: Using [Polymer styling](https://www.polymer-project.org/1.0/docs/devguide/styling.html), you can use the custom properties and the mixins in CSS.
 * **Methods**: Using Polymer methods, you can expose methods.
 
