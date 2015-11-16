@@ -14,6 +14,13 @@ It includes a default icon set. Use `icon` to specify which icon from the icon s
 * [Polymer.IronButtonState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronButtonState): `active`, `pressed`, `toggles`.
 * [Polymer.IronControlState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronControlState): `disabled`, `focused`.
 
+### Host attributes
+
+Attribute | Value
+----------|------
+***role*** | `'button'`
+***tabindex*** | `0`
+
 ### Properties
 
 Name | Type | Description | Default

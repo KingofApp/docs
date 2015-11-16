@@ -13,6 +13,12 @@ It is a button that can be either checked or unchecked. User can tap the checkbo
 * [Polymer.IronControlState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronControlState): `disabled`, `focused`.
 * [Polymer.IronCheckedElementBehavior](https://elements.polymer-project.org/elements/iron-checked-element-behavior): `checked`, `name`, `required`, `toggles`, `value`.
 
+### Host attributes
+
+Attribute | Value
+----------|------
+***role*** | `'checkbox'`
+
 ### Properties
 
 Name | Type | Description | Default

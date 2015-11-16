@@ -13,6 +13,13 @@ It provides a ON/OFF switch that user can toggle the state by tapping or by drag
 * [Polymer.IronControlState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronControlState): `disabled`, `focused`.
 * [Polymer.IronCheckedElementBehavior](https://elements.polymer-project.org/elements/iron-checked-element-behavior): `checked`, `name`, `required`, `toggles`, `value`.
 
+### Host attributes
+
+Attribute | Value
+----------|------
+***role*** | `'button'`
+***tabindex*** | `0`
+
 ### Properties
 
 Name | Type | Description | Default

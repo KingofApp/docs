@@ -10,6 +10,12 @@ The progress bars are for situations where the percentage completed can be deter
 
 * [Polymer.IronRangeBehavior](https://elements.polymer-project.org/elements/iron-range-behavior?active=Polymer.IronRangeBehavior): `max`, `min`, `ratio`, `step`, `value`.
 
+### Host attributes
+
+Attribute | Value
+----------|------
+***role*** | `'progressbar'`
+
 ### Properties
 
 Name | Type | Description | Default

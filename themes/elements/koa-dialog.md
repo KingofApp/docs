@@ -10,6 +10,13 @@ It is a dialog. It provides styles for a header, content area, and an action are
 
 * [Polymer.IronOverlayBehavior](https://elements.polymer-project.org/elements/iron-overlay-behavior?active=Polymer.IronOverlayBehavior): `canceled`, `noCancelOnEscKey`, `noCancelOnOutsideClick`, `opened`, `withBackdrop`, `cancel()`, `center()`, `close()`, `open()`, `toggle()`.
 
+### Host attributes
+
+Attribute | Value
+----------|------
+***role*** | `'dialog'`
+***tabindex*** | `-1`
+
 ### Properties
 
 Name | Type | Description | Default

@@ -12,6 +12,13 @@ It is a button that can be either checked or unchecked. User can tap the radio b
 * [Polymer.IronControlState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronControlState): `disabled`, `focused`.
 * [Polymer.IronCheckedElementBehavior](https://elements.polymer-project.org/elements/iron-checked-element-behavior): `checked`, `name`, `required`, `toggles`, `value`.
 
+### Host attributes
+
+Attribute | Value
+----------|------
+***role*** | `'radio'`
+***tabindex*** | `0`
+
 ### Properties
 
 Name | Type | Description | Default

@@ -13,6 +13,12 @@ It makes it easy to explore and switch between different views or functional asp
 
 * [Polymer.IronMenuBehavior](https://elements.polymer-project.org/elements/iron-menu-behavior?active=Polymer.IronMenuBehavior): `focusedItem`, `items`, `multi`, `selectable`, `selected`, `selectedAttribute`, `selectedClass`, `selectedItem`, `selectedItems`, `selectedValues`, `select(value)`, `selectNext()`, `selectPrevious()`.
 
+### Host attributes
+
+Attribute | Value
+----------|------
+***role*** | `'tablist'`
+
 ### Properties
 
 Name | Type | Description | Default
@@ -52,6 +58,12 @@ It is styled to look like a tab. It should be used in conjunction with `koa-tabs
 
 * [Polymer.IronButtonState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronButtonState): `active`, `pressed`, `toggles`.
 * [Polymer.IronControlState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronControlState): `disabled`, `focused`.
+
+### Host attributes
+
+Attribute | Value
+----------|------
+***role*** | `'tab'`
 
 ### Properties
 

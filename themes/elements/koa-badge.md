@@ -6,6 +6,13 @@ It is a text badge that is displayed on the top right corner of an element, repr
 
 * Demo with [paper-badge](https://elements.polymer-project.org/elements/paper-badge?view=demo).
 
+### Host attributes
+
+Attribute | Value
+----------|------
+***role*** | `'status'`
+***tabindex*** | `0`
+
 ### Properties
 
 Name | Type | Description | Default

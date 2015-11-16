@@ -7,6 +7,12 @@ It is a horizontal bar containing items that can be used for label, navigation, 
 * Demo with [paper-toolbar](https://elements.polymer-project.org/elements/paper-toolbar?view=demo).
 * Demo with [ios-toolbar](https://kingofapp.github.io/ios-toolbar).
 
+### Host attributes
+
+Attribute | Value
+----------|------
+***role*** | `'toolbar'`
+
 ### Styling
 
 Custom property | Description | Default
