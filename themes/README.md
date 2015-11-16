@@ -25,7 +25,7 @@ Each element is composed by:
 
 You'll have to add all the properties, host attributes, styling, methods and behaviors of each element in yours.
 
-Our [koa-theme generator](#) give you a scaffold with all these things.
+Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give you a scaffold with all these things.
 
 ## List of elements
 
@@ -51,7 +51,7 @@ Our [koa-theme generator](#) give you a scaffold with all these things.
 
 ## Getting started
 
-1. Install the [koa-theme generator](#).
+1. Install the [koa-theme generator](https://github.com/KingofApp/generator-koa-theme).
 
   `npm install -g generator-koa-theme`
 
