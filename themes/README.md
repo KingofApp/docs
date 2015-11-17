@@ -170,3 +170,63 @@ Example for the `koa-button`:
 </dom-module>
 ```
 
+Now we can start to customize the element.
+
+1. Add the template.
+
+  ```html
+  <content></content>
+  ```
+
+  Note: [`<content>`](https://www.polymer-project.org/1.0/docs/devguide/local-dom.html#dom-distribution) element provides an insertion point.
+
+2. Add the styles
+
+  ```css
+  :host {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  :host(:not[link]) {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    color: #333;
+  }
+  :host([link]) {
+    color: #23527c;
+    text-decoration: underline;
+  }
+  :host([active]),
+  :host([pressed]) {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+  }
+  :host([big]) {
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    padding: 10px 16px;
+  }
+  :host([disabled]) {
+    background-color: #e0e0e0;
+    border-color: #ccc;
+  }
+  :host([focused]) {
+    background-color: #e6e6e6;
+    border-color: #8c8c8c;
+    color: #333;
+    text-decoration: none;
+  }
+  ```
+
+  Note: `:host` selector selects himself.
