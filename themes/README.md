@@ -83,3 +83,40 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
   ```
 
 3. Begins to change all elements as you want!
+
+## Edit one element
+
+Each element has a structure like this:
+
+```shell
+mythemename-button
+├── demo
+│   └── index.html
+└── mythemename-button.html
+```
+
+In the `mythemename-button.html` you change the element.
+It has a structure like this:
+
+```html
+<!-- Imports here -->
+
+<dom-module id="mythemename-button">
+  <template>
+    <style>
+      /* Styles here */
+    </style>
+
+    <!-- Template here -->
+  </template>
+
+  <script>
+    Polymer({
+      is: 'mythemename-button',
+
+      // Logic here. hostAttributes, behaviors: [], properties, methods, etc
+    });
+  </script>
+</dom-module>
+```
+
