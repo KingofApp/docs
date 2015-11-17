@@ -230,3 +230,95 @@ Now we can start to customize the element.
   ```
 
   Note: `:host` selector selects himself.
+
+Now we have the custom element:
+
+
+```html
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-behaviors/iron-button-state.html">
+<link rel="import" href="../../bower_components/iron-behaviors/iron-control-state.html">
+
+<dom-module id="mythemename-button">
+  <template>
+    <style>
+      :host {
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        margin-bottom: 0;
+        padding: 6px 12px;
+        text-align: center;
+        vertical-align: middle;
+        white-space: nowrap;
+      }
+      :host(:not[link]) {
+        background-color: #fff;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        color: #333;
+      }
+      :host([link]) {
+        color: #23527c;
+        text-decoration: underline;
+      }
+      :host([active]),
+      :host([pressed]) {
+        color: #333;
+        background-color: #e6e6e6;
+        border-color: #adadad;
+      }
+      :host([big]) {
+        border-radius: 6px;
+        font-size: 18px;
+        line-height: 1.3333333;
+        padding: 10px 16px;
+      }
+      :host([disabled]) {
+        background-color: #e0e0e0;
+        border-color: #ccc;
+      }
+      :host([focused]) {
+        background-color: #e6e6e6;
+        border-color: #8c8c8c;
+        color: #333;
+        text-decoration: none;
+      }
+    </style>
+
+    <content></content>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'mythemename-button',
+
+      hostAttributes: {
+        role: 'button',
+        tabindex: 0
+      },
+
+      behaviors: [
+        Polymer.IronButtonState,
+        Polymer.IronControlState
+      ],
+
+      properties: {
+        big: {
+          type: Boolean,
+          reflectToAttribute: true,
+          value: false
+        },
+
+        link: {
+          type: Boolean,
+          reflectToAttribute: true,
+          value: false
+        }
+      }
+    });
+  </script>
+</dom-module>
+```
