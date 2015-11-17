@@ -120,3 +120,53 @@ It has a structure like this:
 </dom-module>
 ```
 
+The generator give you imports, hostAttributes, behaviors, properties, methods, etc.
+
+Example for the `koa-button`:
+
+```html
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-behaviors/iron-button-state.html">
+<link rel="import" href="../../bower_components/iron-behaviors/iron-control-state.html">
+
+<dom-module id="mythemename-button">
+  <template>
+    <style>
+      /* Write your styles here */
+    </style>
+
+    <!-- Write your template here -->
+  </template>
+
+  <script>
+    Polymer({
+      is: 'mythemename-button',
+
+      hostAttributes: {
+        role: 'button',
+        tabindex: 0
+      },
+
+      behaviors: [
+        Polymer.IronButtonState,
+        Polymer.IronControlState
+      ],
+
+      properties: {
+        big: {
+          type: Boolean,
+          reflectToAttribute: true,
+          value: false
+        },
+
+        link: {
+          type: Boolean,
+          reflectToAttribute: true,
+          value: false
+        }
+      }
+    });
+  </script>
+</dom-module>
+```
+
