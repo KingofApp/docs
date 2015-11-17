@@ -57,8 +57,29 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
 
 2. Create a new theme with the generator.
 
-  `yo koa-theme name-of-the-theme`
+  `yo koa-theme mythemename`
 
-  Note: `name-of-the-theme` will be the ID of the theme.
+  Note: `mythemename` will be the ID of the theme.
+
+  Now, you have a scaffold like this:
+
+  ```
+  koa-mythemename-theme
+  ├── dist
+  │   └── koa-mythemename-theme.html
+  ├── elements
+  │   ├── mythemename-badge
+  │   │    ├── demo
+  │   │    │   └── index.html
+  │   │    └── mythemename-badge.html
+  │   ├── ...
+  │
+  ├── styles
+  │   ├── default-theme.html
+  │   └── main.css
+  ├── .gitignore
+  ├── bower.json
+  └── koa-mythemename-theme.html
+  ```
 
 3. Begins to change all elements as you want!
