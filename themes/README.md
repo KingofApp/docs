@@ -51,7 +51,9 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
 
 ## Getting started
 
-1. Install the [koa-theme generator](https://github.com/KingofApp/generator-koa-theme).
+1. Install Yeoman (if you haven´t) and the [koa-theme generator](https://github.com/KingofApp/generator-koa-theme).
+
+  `npm install -g yo`
 
   `npm install -g generator-koa-theme`
 
