@@ -84,7 +84,15 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
   └── koa-mythemename-theme.html
   ```
 
-3. Begins to change all elements as you want!
+3. Serve all the files with a basic HTTP serve.
+
+  For example with [serve](https://www.npmjs.com/package/serve):
+
+    `npm install -g serve`
+
+    `serve koa-mythemename-theme`
+
+4. Begins to change all elements as you want!
 
 ## Edit one element
 
