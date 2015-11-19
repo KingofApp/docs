@@ -41,3 +41,4 @@ Custom property | Description | Default
 `--icon-button-disabled-text` | The color of the disabled button | `--disabled-text-color`
 `--icon-button` | Mixin for a button | `{}`
 `--icon-button-disabled` | Mixin for a disabled button | `{}`
+`--icon-button-pressed-background-color` | Background color when the button is pressed | `--disabled-text-color`
