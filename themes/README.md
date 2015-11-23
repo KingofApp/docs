@@ -291,7 +291,7 @@ Now we have the custom element:
     <!-- end styles -->
 
     <!-- write your template here -->
-      <content></content>
+    <content></content>
     <!-- end template -->
   </template>
 
