@@ -6,20 +6,6 @@ It is a text badge that is displayed on the top right corner of an element, repr
 
 * Demo with [paper-badge](https://elements.polymer-project.org/elements/paper-badge?view=demo).
 
-### Host attributes
-
-Attribute | Value
-----------|------
-***role*** | `'status'`
-***tabindex*** | `0`
-
-### Properties
-
-Name | Type | Description | Default
------|------|-------------|--------
-***for*** | `String` | The id of the element that the badge is anchored to. This element must be a sibling of the badge. |
-***label*** | `String` | The label displayed in the badge. The label is centered, and ideally should have very few characters. |
-
 ### Styling
 
 Custom property | Description | Default
@@ -32,3 +18,21 @@ Custom property | Description | Default
 `--badge-margin-left` | Optional spacing added to the left of the badge. | `0px`
 `--badge-margin-bottom` | Optional spacing added to the bottom of the badge. | `0px`
 `--badge` | Mixin applied to the badge | `{}`
+
+---
+
+### [KoaBadgeBehavior](https://github.com/KingofApp/koa-behaviors/blob/master/koa-badge-behavior.html) offers
+
+#### Host attributes
+
+Attribute | Value
+----------|------
+***role*** | `'status'`
+***tabindex*** | `0`
+
+#### Properties
+
+Name | Type | Description | Default
+-----|------|-------------|--------
+***for*** | `String` | The id of the element that the badge is anchored to. This element must be a sibling of the badge. |
+***label*** | `String` | The label displayed in the badge. The label is centered, and ideally should have very few characters. |
