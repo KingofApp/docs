@@ -54,10 +54,12 @@ Name | Type | Description | Default
 *name* | `String` | The name of this element. |
 *required* | `Boolean` | Set to true to mark the input as required. If used in a form, a custom element that uses this behavior should also use Polymer.IronValidatableBehavior and define a custom validation method. Otherwise, a required element will always be considered valid. It's also strongly recommended to provide a visual style for the element when its value is invalid. | `false`
 *toggles* | `Boolean` | If true, the button toggles the active state with each tap or press of the spacebar. | `true`
-
+*value* | `String` | The value for this element. | `'on'`
 
 #### Host attributes
 
 Attribute | Value
 ----------|------
+***aria-checked*** | `false`
 ***role*** | `'checkbox'`
+***tabindex*** | `0`
