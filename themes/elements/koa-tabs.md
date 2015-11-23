@@ -9,17 +9,22 @@ It makes it easy to explore and switch between different views or functional asp
 * Demo with [paper-tabs](https://elements.polymer-project.org/elements/paper-tabs?view=demo).
 * Demo with [ios-tabs](https://kingofapp.github.io/ios-tabs).
 
-### Behaviors
+### Styling
 
-* [Polymer.IronMenuBehavior](https://elements.polymer-project.org/elements/iron-menu-behavior?active=Polymer.IronMenuBehavior): `focusedItem`, `items`, `multi`, `selectable`, `selected`, `selectedAttribute`, `selectedClass`, `selectedItem`, `selectedItems`, `selectedValues`, `select(value)`, `selectNext()`, `selectPrevious()`.
+Custom property | Description | Default
+----------------|-------------|--------
+`--tabs-selection-bar-color` | Color for the selection bar | `--accent-color`
+`--tabs` | Mixin applied to the tabs | `{}`
 
-### Host attributes
+---
 
-Attribute | Value
-----------|------
-***role*** | `'tablist'`
+### [KoaTabsBehavior](https://github.com/KingofApp/koa-behaviors/blob/master/koa-tabs-behavior.html) offers
 
-### Properties
+#### Behaviors
+
+##### [Polymer.IronMenuBehavior](https://elements.polymer-project.org/elements/iron-menu-behavior?active=Polymer.IronMenuBehavior)
+
+###### Properties
 
 Name | Type | Description | Default
 -----|------|-------------|--------
@@ -34,7 +39,7 @@ Name | Type | Description | Default
 *selectedItems* | `Array` | Returns an array of currently selected items. |
 *selectedValues* | `Array` | Gets or sets the selected elements. This is used instead of `selected` when `multi` is true. |
 
-### Methods
+###### Methods
 
 Name | Description
 -----|------------
@@ -42,38 +47,16 @@ Name | Description
 *selectNext()* | Selects the next item.
 *selectPrevious()* | Selects the previous item.
 
-### Styling
+#### Host attributes
 
-Custom property | Description | Default
-----------------|-------------|--------
-`--tabs-selection-bar-color` | Color for the selection bar | `--accent-color`
-`--tabs` | Mixin applied to the tabs | `{}`
+Attribute | Value
+----------|------
+***role*** | `'tablist'`
 
 
 ## &lt;koa-tab&gt;
 
 It is styled to look like a tab. It should be used in conjunction with `koa-tabs`.
-
-### Behaviors
-
-* [Polymer.IronButtonState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronButtonState): `active`, `pressed`, `toggles`.
-* [Polymer.IronControlState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronControlState): `disabled`, `focused`.
-
-### Host attributes
-
-Attribute | Value
-----------|------
-***role*** | `'tab'`
-
-### Properties
-
-Name | Type | Description | Default
------|------|-------------|--------
-*active* | `Boolean` | If true, the button is a toggle and is currently in the active state. | `false`
-*disabled* | `Boolean` | If true, the user cannot interact with this element. | `false`
-*focused* | `Boolean` | If true, the element currently has focus. | `false`
-*pressed* | `Boolean` | If true, the user is currently holding down the button. | `false`
-*toggles* | `Boolean` | If true, the button toggles the active state with each tap or press of the spacebar. | `false`
 
 ### Styling
 
@@ -82,3 +65,34 @@ Custom property | Description | Default
 `--tab` | Mixin applied to the tab | `{}`
 `--tab-content` | Mixin applied to the tab content | `{}`
 `--tab-content-unselected` | Mixin applied to the tab content when the tab is not selected | `{}`
+
+---
+
+### [KoaTabBehavior](https://github.com/KingofApp/koa-behaviors/blob/master/koa-tab-behavior.html) offers
+
+#### Behaviors
+
+##### [Polymer.IronButtonState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronButtonState)
+
+### Properties
+
+Name | Type | Description | Default
+-----|------|-------------|--------
+*active* | `Boolean` | If true, the button is a toggle and is currently in the active state. | `false`
+*pressed* | `Boolean` | If true, the user is currently holding down the button. | `false`
+*toggles* | `Boolean` | If true, the button toggles the active state with each tap or press of the spacebar. | `false`
+
+##### [Polymer.IronControlState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronControlState)
+
+### Properties
+
+Name | Type | Description | Default
+-----|------|-------------|--------
+*disabled* | `Boolean` | If true, the user cannot interact with this element. | `false`
+*focused* | `Boolean` | If true, the element currently has focus. | `false`
+
+#### Host attributes
+
+Attribute | Value
+----------|------
+***role*** | `'tab'`
