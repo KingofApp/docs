@@ -8,11 +8,27 @@ It implements an accessible menu control.
 
 * Demo with [paper-menu](https://elements.polymer-project.org/elements/paper-menu?view=demo).
 
-### Behaviors
+### Styling
 
-* [Polymer.IronMenuBehavior](https://elements.polymer-project.org/elements/iron-menu-behavior?active=Polymer.IronMenuBehavior): `focusedItem`, `items`, `multi`, `selectable`, `selected`, `selectedAttribute`, `selectedClass`, `selectedItem`, `selectedItems`, `selectedValues`, `select(value)`, `selectNext()`, `selectPrevious()`.
+Custom property | Description | Default
+----------------|-------------|--------
+`--menu-background-color` | Menu background color | `--primary-background-color`
+`--menu-color` | Menu foreground color | `--primary-text-color`
+`--menu-disabled-color` | Foreground color for a disabled item | `--disabled-text-color`
+`--menu` | Mixin applied to the menu | `{}`
+`--menu-selected-item` | Mixin applied to the selected item | `{}`
+`--menu-focused-item` | Mixin applied to the focused item | `{}`
+`--menu-focused-item-after` | Mixin applied to the ::after pseudo-element for the focused item | `{}`
 
-### Properties
+---
+
+### [KoaMenuBehavior](https://github.com/KingofApp/koa-behaviors/blob/master/koa-menu-behavior.html) offers
+
+#### Behaviors
+
+##### [Polymer.IronMenuBehavior](https://elements.polymer-project.org/elements/iron-menu-behavior?active=Polymer.IronMenuBehavior)
+
+###### Properties
 
 Name | Type | Description | Default
 -----|------|-------------|--------
@@ -27,7 +43,7 @@ Name | Type | Description | Default
 *selectedItems* | `Array` | Returns an array of currently selected items. |
 *selectedValues* | `Array` | Gets or sets the selected elements. This is used instead of `selected` when `multi` is true. |
 
-### Methods
+###### Methods
 
 Name | Description
 -----|------------
@@ -35,36 +51,22 @@ Name | Description
 *selectNext()* | Selects the next item.
 *selectPrevious()* | Selects the previous item.
 
+
+## &lt;koa-submenu&gt;
+
+It is a nested menu inside of a parent <koa-menu>. It consists of a trigger that expands or collapses another <koa-menu>.
+
+### Demo
+
+* Demo with Demo with [paper-submenu](https://elements.polymer-project.org/elements/paper-menu?view=demo).
+
 ### Styling
 
 Custom property | Description | Default
 ----------------|-------------|--------
-`--menu-background-color` | Menu background color | `--primary-background-color`
-`--menu-color` | Menu foreground color | `--primary-text-color`
-`--menu-disabled-color` | Foreground color for a disabled item | `--disabled-text-color`
-`--menu` | Mixin applied to the menu | `{}`
 `--menu-selected-item` | Mixin applied to the selected item | `{}`
 `--menu-focused-item` | Mixin applied to the focused item | `{}`
 `--menu-focused-item-after` | Mixin applied to the ::after pseudo-element for the focused item | `{}`
-
-
-## &lt;koa-submenu&gt;
-
-Demo with [paper-submenu](https://elements.polymer-project.org/elements/paper-menu?view=demo).
-
-Description of the koa-submenu element.
-
-### Behaviors
-
-[Polymer.IronControlState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronControlState): `disabled`, `focused`.
-
-### Properties
-
-Name | Type | Description | Default
------|------|-------------|--------
-*disabled* | `Boolean` | If true, the user cannot interact with this element. | `false`
-*focused* | `Boolean` | If true, the element currently has focus. | `false`
-***opened*** | `Boolean` | Set opened to true to show the collapse element and to false to hide it. | `false`
 
 ### Methods
 
@@ -73,10 +75,23 @@ Name | Description
 ***close()*** | Collapse the submenu content.
 ***open()*** | Expand the submenu content.
 
-### Styling
+---
 
-Custom property | Description | Default
-----------------|-------------|--------
-`--menu-selected-item` | Mixin applied to the selected item | `{}`
-`--menu-focused-item` | Mixin applied to the focused item | `{}`
-`--menu-focused-item-after` | Mixin applied to the ::after pseudo-element for the focused item | `{}`
+### [KoaSubmenuBehavior](https://github.com/KingofApp/koa-behaviors/blob/master/koa-submenu-behavior.html) offers
+
+#### Behaviors
+
+##### [Polymer.IronControlState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronControlState)
+
+###### Properties
+
+Name | Type | Description | Default
+-----|------|-------------|--------
+*disabled* | `Boolean` | If true, the user cannot interact with this element. | `false`
+*focused* | `Boolean` | If true, the element currently has focus. | `false`
+
+#### Properties
+
+Name | Type | Description | Default
+-----|------|-------------|--------
+***opened*** | `Boolean` | Set opened to true to show the collapse element and to false to hide it. | `false`

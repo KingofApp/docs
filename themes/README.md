@@ -51,7 +51,9 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
 
 ## Getting started
 
-1. Install the [koa-theme generator](https://github.com/KingofApp/generator-koa-theme).
+1. Install Yeoman (if you haven´t) and the [koa-theme generator](https://github.com/KingofApp/generator-koa-theme).
+
+  `npm install -g yo`
 
   `npm install -g generator-koa-theme`
 
@@ -82,7 +84,15 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
   └── koa-mythemename-theme.html
   ```
 
-3. Begins to change all elements as you want!
+3. Serve all the files with a basic HTTP serve.
+
+  For example with [serve](https://www.npmjs.com/package/serve):
+
+    `npm install -g serve`
+
+    `serve koa-mythemename-theme`
+
+4. Begins to change all elements as you want!
 
 ## Edit one element
 
@@ -99,20 +109,28 @@ In the `mythemename-button.html` you change the element.
 It has a structure like this:
 
 ```html
-<!-- Imports here -->
+<!-- write your imports here -->
 
 <dom-module id="mythemename-button">
   <template>
+    <!-- write your styles here -->
     <style>
-      /* Styles here */
-    </style>
 
-    <!-- Template here -->
+    </style>
+    <!-- end styles -->
+
+    <!-- write your template here -->
+
+    <!-- end template -->
   </template>
 
   <script>
     Polymer({
       is: 'mythemename-button',
+
+      behaviors: [
+        Polymer.KoaButtonBehavior
+      ],
 
       // Logic here. hostAttributes, behaviors: [], properties, methods, etc
     });
@@ -126,45 +144,28 @@ Example for the `koa-button`:
 
 ```html
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/iron-behaviors/iron-button-state.html">
-<link rel="import" href="../../bower_components/iron-behaviors/iron-control-state.html">
+<link rel="import" href="../../bower_components/koa-behaviors/koa-button-behavior.html">
 
 <dom-module id="mythemename-button">
   <template>
+    <!-- write your styles here -->
     <style>
-      /* Write your styles here */
-    </style>
 
-    <!-- Write your template here -->
+    </style>
+    <!-- end styles -->
+
+    <!-- write your template here -->
+
+    <!-- end template -->
   </template>
 
   <script>
     Polymer({
       is: 'mythemename-button',
 
-      hostAttributes: {
-        role: 'button',
-        tabindex: 0
-      },
-
       behaviors: [
-        Polymer.IronButtonState,
-        Polymer.IronControlState
-      ],
-
-      properties: {
-        big: {
-          type: Boolean,
-          reflectToAttribute: true,
-          value: false
-        },
-
-        link: {
-          type: Boolean,
-          reflectToAttribute: true,
-          value: false
-        }
-      }
+        Polymer.KoaButtonBehavior
+      ]
     });
   </script>
 </dom-module>
@@ -236,11 +237,11 @@ Now we have the custom element:
 
 ```html
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/iron-behaviors/iron-button-state.html">
-<link rel="import" href="../../bower_components/iron-behaviors/iron-control-state.html">
+<link rel="import" href="../../bower_components/koa-behaviors/koa-button-behavior.html">
 
 <dom-module id="mythemename-button">
   <template>
+    <!-- write your styles here -->
     <style>
       :host {
         cursor: pointer;
@@ -287,37 +288,20 @@ Now we have the custom element:
         text-decoration: none;
       }
     </style>
+    <!-- end styles -->
 
+    <!-- write your template here -->
     <content></content>
+    <!-- end template -->
   </template>
 
   <script>
     Polymer({
       is: 'mythemename-button',
 
-      hostAttributes: {
-        role: 'button',
-        tabindex: 0
-      },
-
       behaviors: [
-        Polymer.IronButtonState,
-        Polymer.IronControlState
-      ],
-
-      properties: {
-        big: {
-          type: Boolean,
-          reflectToAttribute: true,
-          value: false
-        },
-
-        link: {
-          type: Boolean,
-          reflectToAttribute: true,
-          value: false
-        }
-      }
+        Polymer.KoaButtonBehavior
+      ]
     });
   </script>
 </dom-module>
