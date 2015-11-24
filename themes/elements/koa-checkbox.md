@@ -17,7 +17,7 @@ Custom property | Description | Default
 `--checkbox-checkmark-color` | Checkmark color | `white`
 `--checkbox-label-color` | Label color | `--primary-text-color`
 `--checkbox-label-spacing` | Spacing between the label and the checkbox | `8px`
-`--checkbox-error-color` | Checkbox color when invalid | `--google-red-500`
+`--checkbox-error-color` | Checkbox color when invalid | `#db4437`
 
 ---
 
