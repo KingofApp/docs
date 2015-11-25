@@ -68,13 +68,6 @@ Custom property | Description | Default
 `--menu-focused-item` | Mixin applied to the focused item | `{}`
 `--menu-focused-item-after` | Mixin applied to the ::after pseudo-element for the focused item | `{}`
 
-### Methods
-
-Name | Description
------|------------
-***close()*** | Collapse the submenu content.
-***open()*** | Expand the submenu content.
-
 ---
 
 ### [KoaSubmenuBehavior](https://github.com/KingofApp/koa-behaviors/blob/master/koa-submenu-behavior.html) offers
@@ -95,3 +88,10 @@ Name | Type | Description | Default
 Name | Type | Description | Default
 -----|------|-------------|--------
 ***opened*** | `Boolean` | Set opened to true to show the collapse element and to false to hide it. | `false`
+
+#### Methods
+
+Name | Description
+-----|------------
+***close()*** | Collapse the submenu content.
+***open()*** | Expand the submenu content.
