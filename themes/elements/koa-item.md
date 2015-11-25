@@ -25,7 +25,7 @@ Custom property | Description | Default
 
 #### Behaviors
 
-##### [Polymer.IronButtonState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronButtonState): `active`, `pressed`, `toggles`.
+##### [Polymer.IronButtonState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronButtonState)
 
 ###### Properties
 
@@ -35,7 +35,7 @@ Name | Type | Description | Default
 *pressed* | `Boolean` | If true, the user is currently holding down the button. | `false`
 *toggles* | `Boolean` | If true, the button toggles the active state with each tap or press of the spacebar. | `false`
 
-##### [Polymer.IronControlState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronControlState): `disabled`, `focused`.
+##### [Polymer.IronControlState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronControlState)
 
 ###### Properties
 
