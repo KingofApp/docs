@@ -43,7 +43,7 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
 * [koa-menu-button](elements/koa-menu-button.md#koa-menu-button)
 * [koa-progress](elements/koa-progress.md#koa-progress)
 * [koa-radio-button](elements/koa-radio-button.md#koa-radio-button)
-* [koa-slider](elements/koa-slider.md#koa-slider)
+* [koa-slider](elements/koa-slider.md#koa-slider) (it uses `koa-progress` and `koa-input`)
 * [koa-spinner](elements/koa-spinner.md#koa-spinner)
 * [koa-tabs](elements/koa-tabs.md#koa-tabs) (with [koa-tab](elements/koa-tabs.md#koa-tab))
 * [koa-toggle-button](elements/koa-toggle-button.md#koa-toggle-button)
@@ -51,15 +51,21 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
 
 ## Getting started
 
-1. Install Yeoman (if you haven´t) and the [koa-theme generator](https://github.com/KingofApp/generator-koa-theme).
+1. If you haven't, install Yeoman. And the [koa-theme generator](https://github.com/KingofApp/generator-koa-theme).
 
-  `npm install -g yo`
+  ```
+  npm install -g yo
+  ```
 
-  `npm install -g generator-koa-theme`
+  ```
+  npm install -g generator-koa-theme
+  ```
 
 2. Create a new theme with the generator.
 
-  `yo koa-theme mythemename`
+  ```
+  yo koa-theme mythemename
+  ```
 
   Note: `mythemename` will be the ID of the theme.
 
@@ -88,9 +94,13 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
 
   For example with [serve](https://www.npmjs.com/package/serve):
 
-    `npm install -g serve`
+  ```
+  npm install -g serve
+  ```
 
-    `serve koa-mythemename-theme`
+  ```
+  serve koa-mythemename-theme
+  ```
 
 4. Begins to change all elements as you want!
 
@@ -98,7 +108,7 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
 
 Each element has a structure like this:
 
-```shell
+```
 mythemename-button
 ├── demo
 │   └── index.html
