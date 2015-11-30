@@ -34,7 +34,7 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
 * [koa-card](elements/koa-card.md#koa-card)
 * [koa-checkbox](elements/koa-checkbox.md#koa-checkbox)
 * [koa-dialog](elements/koa-dialog.md#koa-dialog)
-* [koa-dropdown-menu](elements/koa-dropdown-menu.md#koa-dropdown-menu)
+* [koa-dropdown-menu](elements/koa-dropdown-menu.md#koa-dropdown-menu) (it uses `koa-input` and `koa-menu-button`)
 * [koa-header-panel](elements/koa-header-panel.md#koa-header-panel)
 * [koa-icon-button](elements/koa-icon-button.md#koa-icon-button)
 * [koa-input](elements/koa-input.md#koa-input) (with [koa-textarea](elements/koa-input.md#koa-textarea))
