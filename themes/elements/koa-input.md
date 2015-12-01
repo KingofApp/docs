@@ -15,7 +15,7 @@ Custom property | Description | Default
 ----------------|-------------|--------
 `--input-container-color` | Label and underline color when the input is not focused | `--secondary-text-color`
 `--input-container-focus-color` | Label and underline color when the input is focused | `--default-primary-color`
-`--input-container-invalid-color` | Label and underline color when the input is is invalid | `--google-red-500`
+`--input-container-invalid-color` | Label and underline color when the input is is invalid | `#db4437`
 `--input-container-input-color` | Input foreground color | `--primary-text-color`
 `--input-container` | Mixin applied to the container | `{}`
 `--input-container-disabled` | Mixin applied to the container when it's disabled | `{}`
@@ -23,7 +23,7 @@ Custom property | Description | Default
 `--input-container-label-focus` | Mixin applied to the label when the input is focused | `{}`
 `--input-container-input` | Mixin applied to the input | `{}`
 `--input-container-underline` | Mixin applied to the underline | `{}`
-`--input-container-underline-focus` | Mixin applied to the underline when the input is focued | `{}`
+`--input-container-underline-focus` | Mixin applied to the underline when the input is focused | `{}`
 `--input-container-underline-disabled` | Mixin applied to the underline when the input is disabled | `{}`
 `--input-prefix` | Mixin applied to the input prefix | `{}`
 `--input-suffix` | Mixin applied to the input suffix | `{}`
