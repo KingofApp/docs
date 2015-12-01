@@ -43,7 +43,7 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
 * [koa-menu-button](elements/koa-menu-button.md#koa-menu-button)
 * [koa-progress](elements/koa-progress.md#koa-progress)
 * [koa-radio-button](elements/koa-radio-button.md#koa-radio-button)
-* [koa-slider](elements/koa-slider.md#koa-slider) (it uses `koa-progress` and `koa-input`)
+* [koa-slider](elements/koa-slider.md#koa-slider) (it uses `koa-input` and `koa-progress`)
 * [koa-spinner](elements/koa-spinner.md#koa-spinner)
 * [koa-tabs](elements/koa-tabs.md#koa-tabs) (with [koa-tab](elements/koa-tabs.md#koa-tab))
 * [koa-toggle-button](elements/koa-toggle-button.md#koa-toggle-button)
