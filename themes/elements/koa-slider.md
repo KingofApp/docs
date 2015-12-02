@@ -47,7 +47,7 @@ Name | Type | Description | Default
 *pressed* | `Boolean` | If true, the user is currently holding down the button. | `false`
 *toggles* | `Boolean` | If true, the button toggles the active state with each tap or press of the spacebar. | `true`
 
-##### [Polymer.IronControlState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronControlState): `disabled`, `focused`.
+##### [Polymer.IronControlState](https://elements.polymer-project.org/elements/iron-behaviors?active=Polymer.IronControlState)
 
 ###### Properties
 
@@ -56,7 +56,7 @@ Name | Type | Description | Default
 *disabled* | `Boolean` | If true, the user cannot interact with this element. | `false`
 *focused* | `Boolean` | If true, the element currently has focus. | `false`
 
-##### [Polymer.IronFormElementBehavior](https://elements.polymer-project.org/elements/iron-form-element-behavior): `name`, `required`, `value`.
+##### [Polymer.IronFormElementBehavior](https://elements.polymer-project.org/elements/iron-form-element-behavior)
 
 ###### Properties
 
@@ -66,7 +66,7 @@ Name | Type | Description | Default
 *required* | `Boolean` | Set to true to mark the input as required. If used in a form, a custom element that uses this behavior should also use Polymer.IronValidatableBehavior and define a custom validation method. Otherwise, a required element will always be considered valid. It's also strongly recommended to provide a visual style for the element when its value is invalid. | `false`
 *value* | `Number` | The number that represents the current value. | `0`
 
-##### [Polymer.IronRangeBehavior](https://elements.polymer-project.org/elements/iron-range-behavior?active=Polymer.IronRangeBehavior): `max`, `min`, `ratio`, `step`, `value`.
+##### [Polymer.IronRangeBehavior](https://elements.polymer-project.org/elements/iron-range-behavior?active=Polymer.IronRangeBehavior)
 
 ###### Properties
 

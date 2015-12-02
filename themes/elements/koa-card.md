@@ -15,7 +15,6 @@ Custom property | Description | Default
 `--card-header` | Mixin applied to the card header section | `{}`
 `--card-header-text` | Mixin applied to the title in the card header section | `{}`
 `--card-header-image` | Mixin applied to the image in the card header section | `{}`
-`--card-header-image-text` | Mixin applied to the text overlapping the image in the card header section | `{}`
 `--card-content` | Mixin applied to the card content section| `{}`
 `--card-actions` | Mixin applied to the card action section | `{}`
 `--card` | Mixin applied to the card | `{}`

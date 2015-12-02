@@ -36,3 +36,4 @@ Name | Type | Description | Default
 -----|------|-------------|--------
 ***for*** | `String` | The id of the element that the badge is anchored to. This element must be a sibling of the badge. |
 ***label*** | `String` | The label displayed in the badge. The label is centered, and ideally should have very few characters. |
+***target*** |  | Returns the target element that this badge is anchored to. It is either the element given by the for attribute, or the immediate parent of the badge.
