@@ -13,7 +13,6 @@ It makes it easy to explore and switch between different views or functional asp
 
 Custom property | Description | Default
 ----------------|-------------|--------
-`--tabs-selection-bar-color` | Color for the selection bar | `--accent-color`
 `--tabs` | Mixin applied to the tabs | `{}`
 
 ---
@@ -22,36 +21,24 @@ Custom property | Description | Default
 
 #### Behaviors
 
-##### [Polymer.IronMenuBehavior](https://elements.polymer-project.org/elements/iron-menu-behavior?active=Polymer.IronMenuBehavior)
+##### [Polymer.IronMenubarBehavior](https://elements.polymer-project.org/elements/iron-menubar-behavior?active=Polymer.IronMenubarBehavior)
 
-###### Properties
+###### Behaviors
 
-Name | Type | Description | Default
------|------|-------------|--------
-*focusedItem* | `Object` | Returns the currently focused item. |
-*items* | `Array` | The list of items from which a selection can be made. | `[]`
-*multi* | `Boolean` | If true, multiple selections are allowed. | `false`
-*selectable* | `String` | This is a CSS selector string. If this is set, only items that match the CSS selector are selectable. |
-*selected* | `String` | Gets or sets the selected element. The default is to use the index of the item. |
-*selectedAttribute* | `String` | The attribute to set on elements when selected. | `null`
-*selectedClass* | `String` | The class to set on elements when selected. | `iron-selected`
-*selectedItem* | `Object` | Returns the currently selected item. |
-*selectedItems* | `Array` | Returns an array of currently selected items. |
-*selectedValues* | `Array` | Gets or sets the selected elements. This is used instead of `selected` when `multi` is true. |
-
-###### Methods
-
-Name | Description
------|------------
-*select(value)* | `value`: `String`. The value to select.<br/><br/>Selects the given value. If the multi property is true, then the selected state of the value will be toggled; otherwise the value will be selected.
-*selectNext()* | Selects the next item.
-*selectPrevious()* | Selects the previous item.
+[Polymer.IronMenuBehavior](https://elements.polymer-project.org/elements/iron-menu-behavior?active=Polymer.IronMenuBehavior)
 
 #### Host attributes
 
 Attribute | Value
 ----------|------
 ***role*** | `'tablist'`
+
+#### Properties
+
+Name | Type | Description | Default
+-----|------|-------------|--------
+*scrollable* | `Boolean` | If true, tabs are scrollable and the tab width is based on the label width. | `false`
+*selected* | `String` | Gets or sets the selected element. The default is to use the index of the item. |
 
 
 ## &lt;koa-tab&gt;
