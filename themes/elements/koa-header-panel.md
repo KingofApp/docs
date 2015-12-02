@@ -25,3 +25,10 @@ Custom property | Description | Default
 Name | Type | Description | Default
 -----|------|-------------|--------
 ***mode*** | `String` | Controls header and scrolling behavior. Options are `standard` and `scroll`.<br/><br/>`standard`: The header is a step above the panel. The header will consume the panel at the point of entry, preventing it from passing through to the opposite side.<br/>`scroll`: The header keeps its seam with the panel, and is pushed off screen. | `standard`
+
+#### Methods
+
+Name | Description
+-----|------------
+*header()* | Returns the header element.
+*scroller()* | Returns the scrollable element.

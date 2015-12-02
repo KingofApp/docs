@@ -10,14 +10,14 @@ The progress bars are for situations where the percentage completed can be deter
 
 Custom property | Description | Default
 ----------------|-------------|--------
-`--progress-container-color` | Mixin applied to container | `--google-grey-300`
+`--progress-container-color` | Mixin applied to container | `#e0e0e0`
 `--progress-transition-duration` | Duration of the transition | `0.008s`
 `--progress-transition-timing-function` | The timing function for the transition | `ease`
 `--progress-transition-delay` | Delay for the transition | `0s`
-`--progress-active-color` | The color of the active bar | `--google-green-500`
-`--progress-secondary-color` | The color of the secondary bar | `--google-green-100`
-`--progress-disabled-active-color` | The color of the active bar if disabled | `--google-grey-500`
-`--progress-disabled-secondary-color` | The color of the secondary bar if disabled | `--google-grey-300`
+`--progress-active-color` | The color of the active bar | `#0f9d58`
+`--progress-secondary-color` | The color of the secondary bar | `#b7e1cd`
+`--progress-disabled-active-color` | The color of the active bar if disabled | `#9e9e9e`
+`--progress-disabled-secondary-color` | The color of the secondary bar if disabled | `#e0e0e0`
 `--progress-height` | The height of the progress bar | `4px`
 
 ---
@@ -38,13 +38,13 @@ Name | Type | Description | Default
 *step* | `Number` | Specifies the value granularity of the range's value. | `1`
 *value* | `Number` | The number that represents the current value. | `0`
 
-#### Host attributes
+###### Host attributes
 
 Attribute | Value
 ----------|------
 ***role*** | `'progressbar'`
 
-#### Properties
+###### Properties
 
 Name | Type | Description | Default
 -----|------|-------------|--------

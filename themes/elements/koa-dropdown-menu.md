@@ -15,15 +15,8 @@ Custom property | Description | Default
 `--dropdown-menu` | A mixin that is applied to the element host | `{}`
 `--dropdown-menu-disabled` | A mixin that is applied to the element host when disabled | `{}`
 `--dropdown-menu-button` | A mixin that is applied to the internal menu button | `{}`
-`--dropdown-menu-input` | A mixin that is applied to the internal paper input | `{}`
+`--dropdown-menu-input` | A mixin that is applied to the internal input | `{}`
 `--dropdown-menu-icon` | A mixin that is applied to the internal icon | `{}`
-
-### Methods
-
-Name | Description
------|------------
-***close()*** | Hide the dropdown content.
-***open()*** | Show the dropdown content.
 
 ---
 
@@ -65,4 +58,16 @@ Name | Type | Description | Default
 Name | Type | Description | Default
 -----|------|-------------|--------
 ***label*** | `String` | The label for the dropdown. |
+***noAnimations*** | `Boolean` | Set to true to disable animations when opening and closing the dropdown. | `false`
 ***opened*** | `Boolean` | True if the dropdown is open. Otherwise, false. | `false`
+***placeholder*** | `String` | The placeholder for the dropdown. |
+***selectedItem*** | `Object` | The last selected item. An item is selected if the dropdown menu has a child with class `dropdown-content`, and that child triggers an `iron-select` event with the selected `item` in the `detail`. |
+***selectedItemLabel*** | `String` | The derived "label" of the currently selected item. This value is the `label` property on the selected item if set, or else the trimmed text content of the selected item. |
+***value*** | `String` | The value for this element that will be used when submitting in a form. It is read only, and will always have the same value as `selectedItemLabel`. |
+
+#### Methods
+
+Name | Description
+-----|------------
+***close()*** | Hide the dropdown content.
+***open()*** | Show the dropdown content.
