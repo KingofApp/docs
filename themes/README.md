@@ -15,13 +15,17 @@ awesometheme-button
 └── awesometheme-button.html
 ```
 
-Each element is composed by:
+Each element is composed by one `KoaBehavior`:
 
+* **KoaBehavior**: It contains most of the elements behavior: attributes, methods, etc.
+
+And:
+
+* **Behaviors**: Using [Polymer behaviors](https://www.polymer-project.org/1.0/docs/devguide/behaviors.html), you can inherit behaviors with their properties and methods.
 * **Host attributes**: Using [Polymer host attributes](https://www.polymer-project.org/1.0/docs/devguide/registering-elements.html#host-attributes), you can set HTML attributes on the element at create-time.
 * **Properties**: Using [Polymer properties](https://www.polymer-project.org/1.0/docs/devguide/properties.html), you can add properties.
 * **Styling**: Using [Polymer styling](https://www.polymer-project.org/1.0/docs/devguide/styling.html), you can use the custom properties and the mixins in CSS.
 * **Methods**: Using Polymer methods, you can expose methods.
-* **Behaviors**: Using [Polymer behaviors](https://www.polymer-project.org/1.0/docs/devguide/behaviors.html), you can inherit behaviors with their properties and methods.
 
 You'll have to add all the properties, host attributes, styling, methods and behaviors of each element in yours.
 
