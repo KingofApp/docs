@@ -51,7 +51,11 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
 
 ## Getting started
 
-1. If you haven't, install Yeoman. And the [koa-theme generator](https://github.com/KingofApp/generator-koa-theme).
+1. If you haven't, install Yeoman and Bower. And the [koa-theme generator](https://github.com/KingofApp/generator-koa-theme).
+
+  ```
+  npm install -g bower
+  ```
 
   ```
   npm install -g yo
