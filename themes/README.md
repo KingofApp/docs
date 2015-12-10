@@ -17,7 +17,7 @@ awesometheme-button
 
 Each element is composed by one `KoaBehavior`:
 
-* **KoaBehavior**: It contains most of the elements behavior: attributes, methods, etc.
+* **KoaBehavior**: It is a [Polymer behavior](https://www.polymer-project.org/1.0/docs/devguide/behaviors.html) that contains most of the elements behavior: attributes, methods, etc.
 
 And:
 
