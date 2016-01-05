@@ -95,7 +95,7 @@ To avoid conflicts with other modules, it's recommended to use moduleid.variable
 StructureService functions:
 
 Functions | Description | Expects | Returns
-----------------|-------------|--------
+----------------|-------------|--------|--------
 `get()` | TODO | null | JSON Object
 `getModule(path, callback)` | TODO | path - "/route" | JSON Object
 `getCurrentModules($location, callback)` | TODO | $location | JSON Object
