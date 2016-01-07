@@ -1,8 +1,6 @@
-AQUI PONER UN INDICE
-
 # King of App Modules
 
-A King of App modules are composed of [AngularJS](https://angularjs.org/) logic and presented with our custom Polymer elements.
+King of App modules are composed of [AngularJS](https://angularjs.org/) logic and presented with our custom [Polymer elements](https://github.com/KingofApp/docs/tree/master/themes).
 
 #### Table of contents
 [ The module structure ](#the-module-structure)  
@@ -14,17 +12,14 @@ A King of App modules are composed of [AngularJS](https://angularjs.org/) logic 
 [ Presenting data in modules ](#presenting-data-in-modules)
 [ Module config in builder ](#module-config-in-builder)  
 
-## Application sample
+## Application config structure
 TODO
 ## The module structure
-
-* File structure, directives, filters,
-* Config structure
-* Point that allows external Dependencies
-* Types of Modules
-* Access to StructureService
+Modules are composed of files that read from a config json...
 
 ### The module config structure
+
+For a module called testmodule this would be the config structure:
 
 ```json
 "name"       : "Test module",
@@ -55,28 +50,38 @@ TODO
 "config"     : []
 ```
 
-Key | Description | Default
+Key | Description | Default value
 ----------------|-------------|--------
 `name` | Module name |
 `identifier` | A unique name for your module that will be used to register the module and it's files. |
 `type` | Currently our modules only support Angular | A
 `version` | Version control |
 `author` | Author name |
-`category` | Categories which your module belongs to. [ Check-out our list ](#module-category-list)  |
-`requires` | Module name |
-`canContain` | Module name | False
-`showOn.menu` | Module name | True
-`showOn.market` | Module name | True
-`showOn.dragDrop` | Module name | True
-`view` | Module name | "modules/{identifier}/index.html"
-`files` | Module name |
-`libs` | Module name |
-`scope` | Module name |
-`config` | Module name  [ Check-out module config in builder ](#module-config-in-builder)|
+`category` | Categories to which your module belongs. [ Check-out our list ](#module-category-list)  |
+`requires` | Certain modules require other modules to work properly  | null
+`canContain` | Set to true for [container module](#container-modules) type. | False
+`showOn.menu` | Property defined by user in the KingOfApp builder| True
+`showOn.market` | Property to make the module selectable by the users in our market. | True
+`showOn.dragDrop` | Property to disable the drag and drop option from the KingOfApp builder | True
+`view` | Main view file | "modules/{identifier}/index.html"
+`files` | Array of files that will be loaded. Checkout [the module files section](#the-module-files) |
+`libs` | Array of bower dependencies used in the module. Checkout [the module libs section](#the-module-libs) |
+`scope` | Data Object that will be accessible from the module. | {}
+`config` | Formly based config for the KingOfApp builder. [ Check-out module config in builder ](#module-config-in-builder)|
 
-### The module file structure
+NOTE: Some modules may have a module dependency `Example: A list module with a Firebase module connector`.
 
-For a module called testmodule this would be the structure:
+
+
+
+
+
+### The module files
+
+
+#### The module file structure
+
+For a module called testmodule this would be the file structure:
 
 ```
 testmodule
@@ -87,19 +92,27 @@ testmodule
 └── index.html
 ```
 
+### The module libs
+
+
 ## Multi language modules
 To avoid conflicts with other modules, it's recommended to use moduleid.variable inside the locale json.
 
 ## Simple modules
 
-StructureService functions:
+
+This is a html module example:
+
+
+
+Accesible structureService functions within the module controller:
 
 Functions | Description | Expects | Returns
 ----------------|-------------|--------|--------
-`get()` | TODO | null | JSON Object
-`getModule(path, callback)` | TODO | path - "/route" | JSON Object
-`getCurrentModules($location, callback)` | TODO | $location | JSON Object
-`getChildren()` | TODO | TODO | JSON Object
+`get()` | Returns the [application object](#application-config-structure).  | null | JSON Object
+`getModule(path, callback)` | Returns a module config structure from a given path. | path - "/route" | JSON Object
+`getCurrentModules($location, callback)` | Returns an array with the modules used in the current location. `Useful for finding parent module` | $location | Array
+`getChildren()` | Returns an array with all the children modules of the given path. | path - "/route" | Array
 
 NOTE: Remember to specify the `requires` property in [ the module config structure ](#the-module-config-structure) if your module requires any other module.
 
