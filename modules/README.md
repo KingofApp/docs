@@ -1,9 +1,6 @@
 //TODOOOoOOOOOOOO
 * Application config structure sample
 
-* Simple modules
-
-
 # King of App Modules
 
 King of App modules are composed of [AngularJS](https://angularjs.org/) logic and presented with our custom [Polymer elements](https://github.com/KingofApp/docs/tree/master/themes).
@@ -50,6 +47,7 @@ For a module called testmodule this would be the config structure:
     "modules/testmodule/controller.js"
   ],
   "libs"       : [],
+  "deps"       : [],
   "scope"      : {
     "data"  : "Sample data"
   },
@@ -73,6 +71,7 @@ Key | Description | Default value
 `view` | Main view file | "modules/{identifier}/index.html"
 `files` | Array of files that will be loaded. [Check-out the module files section](#the-module-files) | []
 `libs` | Array of bower dependencies used in the module. [Check-out the module scope section](#the-module-scope) | []
+`deps` | Array of phonegap dependencies. | []
 `scope` | Data Object that will be accessible from the module. | {}
 `config` | Formly based config for the KingOfApp builder. [ Check-out module config in builder ](#module-config-in-builder)| {}
 
@@ -139,11 +138,71 @@ The data can be translated using different methods:
 To avoid conflicts with other modules, it's recommended to use {identifier}.variable inside the locale-en_US.json.
 
 ## Simple modules
-TODO
+We understand simple modules as final modules, that can't relay their services or functionalities to other modules.
 
-This is a html module example:
+Let's see the html module with a basic configuration.
+Html module file structure:
+
+
+
+#### Html module config structure:
+```json
+{
+  "name": "Html Example",
+  "identifier": "html",
+  "type": "A",
+  "showOn": {
+    "menu": true,
+    "market": true,
+    "dragDrop": true
+  },
+  "view": "modules/html/index.html",
+  "files": ["modules/html/controller.js"],
+  "scope": {
+    "value": "<p style='color:#39a9d3'>Ut tortor mauris, ultrices quis </p><p style='color:#d36339'>Other color text</p>"
+  }
+}
+```
+
+NOTE: For the module to properly work in the KingOfApp builder it is very important to include the property config, although we haven't in this example to make it simple. For more information [check-out the module config in builder section](#module-config-in-builder section).
+
+#### Html module controller
+In this particular case we won't be using any logic, so the controller will have the minimum lines of code to register in the environment.
+
+```javascript
+angular
+  .controller('htmlCtrl', loadFunction);
+
+loadFunction.$inject = ['$scope', 'structureService', '$location'];
+
+function loadFunction($scope, structureService, $location){
+  //Register upper level modules
+  structureService.registerModule($location,$scope,"html");
+
+  //Your code goes here
+
+}
+```
+
+#### Html module view:
+The view will use the scope defined in the [Html module config structure](#html-module-config-structure) inside a [custom element](#presenting-data-in-modules) koa-card.
+```html
+<div ng-controller="htmlCtrl" class="module html">
+
+  <koa-card>
+    <div class="card-content">
+      <div ng-bind-html="html.modulescope.value"></div>
+    </div>
+  <koa-card>
+
+</div>
+```
 
 ### The module scope
+
+From the html module in the last example you can appreciate how the scope we had in the module structure config is passed along to the scope variable with the following syntax {identifier}.modulescope.
+
+Also the same config structure can be accessed in the controller through $scope.{identifier}.modulescope.
 
 ### Structure service inside modules
 
@@ -177,6 +236,9 @@ Using  [Angular formly](http://angular-formly.com/):
 ## Samples
 
 ### Application config structure sample
+
+The main configuration file is located in `/app/core/structure.json`
+
 structure.json:
 
 ```json
