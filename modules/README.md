@@ -239,12 +239,119 @@ Using  [Angular formly](http://angular-formly.com/):
 
 The main configuration file is located in `/app/core/structure.json`
 
-structure.json:
+TODO Brief example.
+
+structure.json app example:
 
 ```json
 {
-
+  "config": {
+    "index": "/home-abcd",
+    "colors": {
+      "--default-primary-color": "#ffffff",
+      "--dark-primary-color": "#222222",
+      "--light-primary-color": "#ececec",
+      "--text-primary-color": "#000000",
+      "--accent-color": "#b43322",
+      "--primary-background-color": "#ffffff",
+      "--primary-text-color": "#212121",
+      "--secondary-text-color": "#727272",
+      "--disabled-text-color": "#333532",
+      "--divider-color": "#ececec"
+    },
+    "lang": [
+      "en_US"
+    ]
+  },
+  "modules": {
+    "/menu-abcd": {
+      "name": "Menu Module",
+      "identifier": "polymermenu",
+      "type": "A",
+      "showOn": {
+        "menu": false,
+        "market": true,
+        "dragDrop": true
+      },
+      "canContain": true,
+      "view": "modules/polymermenu/index.html",
+      "files": ["modules/polymermenu/controller.js"],
+      "libs": [{
+        "bower": {
+          "polymer/polymer": "^1.0.0"
+        },
+        "src": "bower_components/polymer/polymer.html"
+      }, {
+        "bower": {
+          "PolymerElements/paper-drawer-panel": "^1.0.0"
+        },
+        "src": "bower_components/paper-drawer-panel/paper-drawer-panel.html"
+      }, {
+        "bower": {
+          "PolymerElements/paper-header-panel": "^1.0.0"
+        },
+        "src": "bower_components/paper-header-panel/paper-header-panel.html"
+      }, {
+        "bower": {
+          "PolymerElements/paper-menu": "^1.0.0"
+        },
+        "src": "bower_components/paper-menu/paper-menu.html"
+      }, {
+        "bower": {
+          "PolymerElements/paper-scroll-header-panel": "^1.0.0"
+        },
+        "src": "bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html"
+      }, {
+        "bower": {
+          "PolymerElements/paper-item": "^1.0.0"
+        },
+        "src": "bower_components/paper-item/paper-item.html"
+      }],
+      "scope": {
+        "path": "/menu-abcd"
+      }
+    },
+    "/menu-abcd/home-abcd": {
+      "name": "Home",
+      "identifier": "html",
+      "type": "A",
+      "showOn": {
+        "menu": true,
+        "market": true,
+        "dragDrop": true
+      },
+      "view": "modules/html/index.html",
+      "files": ["modules/html/controller.js"],
+      "scope": {
+        "value": "<p style='color:#39a9d3'>Welcome to my </p><p style='color:#d36339'>APP</p>"
+      }
+    },
+    "/menu-abcd/map-abcd": {
+      "name": "Html Example",
+      "identifier": "googlemap",
+      "type": "A",
+      "showOn": {
+        "menu": true,
+        "market": true,
+        "dragDrop": true
+      },
+      "view": "modules/googlemap/index.html",
+      "files": ["modules/googlemap/controller.js"],
+      "libs": [{
+        "bower": {
+          "GoogleWebComponents/google-map": "^1.1.7"
+        },
+        "src": "bower_components/google-map/google-map.html"
+      }],
+      "scope": {
+        "lat": "39.8847281",
+        "lon": "4.2540999",
+        "zoom": "15"
+      }
+    }
+  }
 }
+
 ```
 
 ## Module category list
