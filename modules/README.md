@@ -84,7 +84,7 @@ For a module called testmodule this would be the file structure:
 ```
 testmodule
 ├── locale
-│   ├── locale-en_US.json
+│   ├── en_US.json
 │   └── ...
 ├── controller.js
 └── index.html
@@ -114,9 +114,9 @@ Dependencies that get loaded along with the modules files can be:
 ## Multi language modules
 
 KingOfApp visualizer uses [Angular translate](https://angular-translate.github.io/) to provide multilingual modules.
-Inside [the module file structure](#the-module-structure) a folder locale will contain the different translation files with the following file syntax : locale-{language}.json based on [Module language support](#module-language-support).
+Inside [the module file structure](#the-module-structure) a folder locale will contain the different translation files with the following file syntax : {language}.json based on [Module language support](#module-language-support).
 
-For an example using locale-en_US.json with the identifier moduletest:
+For an example using en_US.json with the identifier moduletest:
 ```json
 {
   "moduletest.text1": "First text",
@@ -135,7 +135,7 @@ The data can be translated using different methods:
 <p translate="moduletest.text4" translate-values="{ variable:'World' }"> </p>
 ```
 
-To avoid conflicts with other modules, it's recommended to use {identifier}.variable inside the locale-en_US.json.
+To avoid conflicts with other modules, it's recommended to use {identifier}.variable inside the en_US.json.
 
 ## Simple modules
 We understand simple modules as final modules, that can't relay their services or functionalities to other modules.
