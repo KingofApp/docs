@@ -63,8 +63,8 @@ Key | Description | Default value
 `version` | Version control | 0.0.1
 `author` | Author name | ""
 `category` | Categories to which your module belongs. [ Check-out our list ](#module-category-list)  | "others"
-`requires` | Certain modules require other modules to work properly  | null
-`canContain` | Set to true for [container module](#container-modules) type. | False
+`requires` | Certain modules require other modules to work properly. [Youtube gallery module] (#)  | null
+`canContain` | Set to true if the module can adopt other modules inside them.[Check-out the  container module](#container-modules) type. | False
 `showOn.menu` | Property defined by user in the KingOfApp builder| True
 `showOn.market` | Property to make the module selectable by the users in our market. | True
 `showOn.dragDrop` | Property to disable the drag and drop option from the KingOfApp builder | True
@@ -215,16 +215,27 @@ Functions | Description | Expects | Returns
 `getCurrentModules($location, callback)` | Returns an array with the modules used in the current location. `Useful for finding parent module` | $location | Array
 `getChildren()` | Returns an array with all the children modules of the given path. | path - "/route" | Array
 
+NOTE: Remember to specify the `requires` property in [ the module config structure ](#the-module-config-structure) if your module requires any other module. Example: [Youtube gallery module](#)
 
 ## Container modules
 
-NOTE: Remember to specify the `requires` property in [ the module config structure ](#the-module-config-structure) if your module requires any other module.
+Container modules share file structure, config structure and controller with simple modules. But has a different view ....
+
+
+These modules can access the scope and services from the children - TOTEST
+The children can access the scope and services from the parent - TOTEST
+
+### Container module examples
+
+
 
 NOTE: Remember to specify the `canContain` property in [ the module config structure ](#the-module-config-structure) if your module can contain other modules inside Example:menu modules.
 
 ### Menu modules
 
 Polymer and angular menus supported, examples.
+
+TODO: BRING BACK ANGULAR MODULE LINK TO SAMPLE
 
 ## Dependencies in modules
 
@@ -235,7 +246,6 @@ Using  [Angular formly](http://angular-formly.com/):
 
 ## Get started
 
-## Samples
 
 ### Application config structure sample
 
@@ -361,7 +371,7 @@ Key | Description | Default value
 `config.lang` | Available languages for the app. [Check-out the language support](#module-language-support) | ["en_US"]
 `modules` | Module configurations | {}
 
-Explanation: In this example there are 3 modules. First of all there is a menu using the [polymer menu module](#) with a [showOn.menu](#the-module-config-structure) property set to false so it wont appear as a menu element. Then an [html module](#) used as the home screen configured in the `config.index` of the application config structure and a [third google map module](#). 
+Explanation: In this example there are 3 modules. First of all there is a menu using the [polymer menu module](#) with a [showOn.menu](#the-module-config-structure) property set to false so it wont appear as a menu element. Then an [html module](#) used as the home screen configured in the `config.index` of the application config structure and a [third google map module](#).
 ## Module category list
 
 `social`
