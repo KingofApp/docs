@@ -224,6 +224,8 @@ NOTE: Remember to specify the `canContain` property in [ the module config struc
 
 ### Menu modules
 
+Polymer and angular menus supported, examples.
+
 ## Dependencies in modules
 
 ## Presenting data in modules
@@ -239,9 +241,7 @@ Using  [Angular formly](http://angular-formly.com/):
 
 The main configuration file is located in `/app/core/structure.json`
 
-TODO Brief example.
-
-structure.json app example:
+A structure.json app example:
 
 ```json
 {
@@ -354,6 +354,14 @@ structure.json app example:
 
 ```
 
+Key | Description | Default value
+----------------|-------------|--------
+`config.index` | The default route when opening the app | ""
+`config.colors` | Object containing the different colors used by the app | {}
+`config.lang` | Available languages for the app. [Check-out the language support](#module-language-support) | ["en_US"]
+`modules` | Module configurations | {}
+
+Explanation: In this example there are 3 modules. First of all there is a menu using the [polymer menu module](#) with a [showOn.menu](#the-module-config-structure) property set to false so it wont appear as a menu element. Then an [html module](#) used as the home screen configured in the `config.index` of the application config structure and a [third google map module](#). 
 ## Module category list
 
 `social`
