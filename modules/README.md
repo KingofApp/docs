@@ -1,6 +1,3 @@
-//TODOOOoOOOOOOOO
-* Application config structure sample
-
 # King of App Modules
 
 King of App modules are composed of [AngularJS](https://angularjs.org/) logic and presented with our custom [Polymer elements](https://github.com/KingofApp/docs/tree/master/themes).
@@ -219,27 +216,68 @@ NOTE: Remember to specify the `requires` property in [ the module config structu
 
 ## Container modules
 
-Container modules share file structure, config structure and controller with simple modules. But has a different view ....
+Container modules share the same file structure, config structure and controller as simple modules. But with a different view, having an additional div where all children modules will be contained.
 
+With a containermodule identifier view example will look like:
 
-These modules can access the scope and services from the children - TOTEST
-The children can access the scope and services from the parent - TOTEST
+```html
+<div ng-controller="containermoduleCtrl" class="module containermodule">
+  <!-- Module html can be coded here -->
 
-### Container module examples
+  <!-- Specific div for container modules -->
+  <div ng-include="containermoduleTemplate">
+    <!-- Do not code anything here, adopted modules will use this space -->
+  </div>
 
+</div>
+```
+In this type of modules, parents can:
+* Inject services from children
+
+and children can:
+
+* Access parents scope
+* Inject services from parent
 
 
 NOTE: Remember to specify the `canContain` property in [ the module config structure ](#the-module-config-structure) if your module can contain other modules inside Example:menu modules.
 
+### Container module examples
+
+Link to Firebase module?
+TODO EXPLANATION
+
+Link to Firebase List module?
+TODO EXPLANATION
+
+In this case, the firebase promotions require the firebase module
+The firebase connector module has showOnmenu to false
+
 ### Menu modules
+
+Menu particularities:
+* Specific controller
+* Directive to load the menu to polymer
+* Access to the toolbar scope within the view
 
 Polymer and angular menus supported, examples.
 
-TODO: BRING BACK ANGULAR MODULE LINK TO SAMPLE
+TODO: REDO + BRING BACK ANGULAR MODULE LINK TO SAMPLE
+
+### Connector modules
+
+[Firebase connector example](#)
+
+ToDo
 
 ## Dependencies in modules
 
+Phonegap libraries used by modules.
+
+Sample ToDo
+
 ## Presenting data in modules
+For templating features to work with modules we strongly recommend to use our custom [Koa elements](https://github.com/KingofApp/docs/tree/master/themes#list-of-elements) inside the view.html of the module.
 
 ## Module config in builder
 Using  [Angular formly](http://angular-formly.com/):
