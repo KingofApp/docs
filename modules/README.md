@@ -244,43 +244,103 @@ NOTE: Remember to specify the `canContain` property in [ the module config struc
 
 ### Container module examples
 
-Link to Firebase module?
-TODO EXPLANATION
+[Firebase module](#)
+This module acts as a parent module [connector](#connector-modules)
 
-Link to Firebase List module?
-TODO EXPLANATION
+[Firebase list module](#)
+This module uses the Firebase module's service to make the requests to firebase.
 
-In this case, the firebase promotions require the firebase module
-The firebase connector module has showOnmenu to false
+NOTE: The idea of using parent module connectors is to enable children modules to obtain data from different sources.
+
+In this case, the firebase list module requires the firebase module, so it will have the `requires` property in [ the module config structure ](#the-module-config-structure) set to firebase.
+In the other hand, the firebase connector module will have the showOnmenu to false by default.
 
 ### Menu modules
 
-Menu particularities:
+Menus can be built with polymer elements or angular.
+
+Polymer menu particularities:
 * Specific controller
-* Directive to load the menu to polymer
+* Directive to pass the menu items to polymer
 * Access to the toolbar scope within the view
 
-Polymer and angular menus supported, examples.
+[Polymer menu Example](#)
 
-TODO: REDO + BRING BACK ANGULAR MODULE LINK TO SAMPLE
+Angular menu particularities:
+* Specific controller
+* Specific styles.html to read the templates color variables
+* Access to the toolbar scope within the view
+
+[Angular menu Example](#)
 
 ### Connector modules
 
 [Firebase connector example](#)
 
-ToDo
+...Under construction...
 
 ## Dependencies in modules
 
 Phonegap libraries used by modules.
 
-Sample ToDo
+...We are working on a Sample...
 
 ## Presenting data in modules
 For templating features to work with modules we strongly recommend to use our custom [Koa elements](https://github.com/KingofApp/docs/tree/master/themes#list-of-elements) inside the view.html of the module.
 
 ## Module config in builder
 Using  [Angular formly](http://angular-formly.com/):
+
+Actually our King Of App builder has tested and supported the current configs:
+
+Regular Input
+```json
+{
+    "type" : "input",
+    "key" : "limit",
+    "templateOptions" : {
+        "label" : "Limit chars",
+        "pattern":"^[0-9]+$",
+        "required":true,
+        "maxlength": 2,
+        "description" : "limite tweets"
+    }
+}
+```
+
+Functions | Description
+----------------|-------------
+`type` | 
+`key` |
+`templateOptions.label` |
+
+MultiInput
+```json
+{
+    "type" : "multiInput",
+    "key" : "gallery",
+    "templateOptions" : {
+        "inputOptions" : {
+            "type" : "input"
+        },
+        "label" : "url",
+        "pattern" : "(https?://)([/\\w.()-]*).*",
+        "required" : true
+    }
+
+}
+```
+Functions | Description
+----------------|-------------
+`type` |
+`key` |
+`templateOptions.label` |
+
+TABLE TODO
+
+WYSIWYG editor
+
+...ToDo...
 
 ## Get started
 
@@ -409,7 +469,7 @@ Key | Description | Default value
 `config.lang` | Available languages for the app. [Check-out the language support](#module-language-support) | ["en_US"]
 `modules` | Module configurations | {}
 
-Explanation: In this example there are 3 modules. First of all there is a menu using the [polymer menu module](#) with a [showOn.menu](#the-module-config-structure) property set to false so it wont appear as a menu element. Then an [html module](#) used as the home screen configured in the `config.index` of the application config structure and a [third google map module](#).
+Explanation: In this example there are 3 modules. First of all there is a menu using the [polymer menu module](#) with a [showOn.menu](#the-module-config-structure) property set to false so it wont appear as a menu element. Then an [html module](#) used as the home screen configured in the `config.index` of the application config structure and a third [google map module](#).
 ## Module category list
 
 `social`
