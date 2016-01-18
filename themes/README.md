@@ -343,16 +343,7 @@ In the `styles/default-theme.html` you set the value of variables. Example:
   --divider-color: #e0e0e0;
   --primary-color: #ff003c;
   --light-primary-color: #c5cae9;
-  --dark-primary-color: #ff003c;
-  --accent-color: #fabe28;
-  --light-accent-color: #fabe28;
-  --dark-accent-color: #fabe28;
-
-  --background-color: #f8ecc2;
-  --background-image: url('images/background.png');
-
-  --primary-font-family: 'Verdana';
-  --title-font-family: 'Impact';
+  ...
 }
 ```
 
@@ -367,16 +358,7 @@ Also, you need to set the value of variables in the `css-variables.json`. Exampl
   "dividerColor": "#e0e0e0",
   "primaryColor": "#ff003c",
   "lightPrimaryColor": "#c5cae9",
-  "darkPrimaryColor": "#ff003c",
-  "accentColor": "#fabe28",
-  "lightAccentColor": "#fabe28",
-  "darkAccentColor": "#fabe28",
-
-  "backgroundColor": "#f8ecc2",
-  "backgroundImage": "images/background.png",
-
-  "primaryFontFamily": "Verdana",
-  "titleFontFamily": "Impact"
+  ...
 }
 ```
 
