@@ -405,3 +405,16 @@ Import the font in the `styles/default-theme.html` with `@import url()` and use 
   }
 </style>
 ```
+
+### Background color and background image
+
+Use it in the color CSS custom properties in the `styles/default-theme.html`. Example:
+
+```html
+<style is="custom-style">
+  :host {
+    --background-color: #f8ecc2;
+    --background-image: url('images/background.png');
+  }
+</style>
+```
