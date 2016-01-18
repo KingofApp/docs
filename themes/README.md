@@ -98,7 +98,7 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
   └── koa-mythemename-theme.html
   ```
 
-3. Serve all the files with a basic HTTP serve.
+3. Serve all the files with any HTTP server.
 
   For example with [serve](https://www.npmjs.com/package/serve):
 
