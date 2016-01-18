@@ -389,9 +389,9 @@ var(variable, defaultValue)
 ```
 
 ```html
-<style>
+<style is="custom-style">
   :host {
-    color: var(--badge-text-color, #ffffff);
+    color: var(--button-text-color, #ffffff);
   }
 </style>
 ```
@@ -400,9 +400,9 @@ Also, you can use another custom property as default value:
 
 
 ```html
-<style>
+<style is="custom-style">
   :host {
-    color: var(--badge-text-color, --primary-text-color);
+    color: var(--button-text-color, --primary-text-color);
   }
 </style>
 ```
