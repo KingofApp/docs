@@ -380,3 +380,29 @@ Also, you need to set the value of variables in the `css-variables.json`. Exampl
 }
 ```
 
+### Use the CSS custom properties
+
+In the `style` tag, you can use CSS custom properties. The syntax is:
+
+```
+var(variable, defaultValue)
+```
+
+```html
+<style>
+  :host {
+    color: var(--badge-text-color, #ffffff);
+  }
+</style>
+```
+
+Also, you can use another custom property as default value:
+
+
+```html
+<style>
+  :host {
+    color: var(--badge-text-color, --primary-text-color);
+  }
+</style>
+```
