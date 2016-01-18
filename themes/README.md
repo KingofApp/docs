@@ -95,6 +95,7 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
   │   └── main.css
   ├── .gitignore
   ├── bower.json
+  ├── css-variables.json
   └── koa-mythemename-theme.html
   ```
 
@@ -324,3 +325,58 @@ Now we have the custom element:
   </script>
 </dom-module>
 ```
+
+## CSS custom properties and mixins
+
+The King of App themes uses CSS custom properties to styling.
+
+### Set the CSS custom properties
+
+In the `styles/default-theme.html` you set the value of variables. Example:
+
+```css
+:root {
+  --primary-text-color: #636363;
+  --primary-background-color: #ffffff;
+  --secondary-text-color: #636363;
+  --disabled-text-color: #2f2b16;
+  --divider-color: #e0e0e0;
+  --primary-color: #ff003c;
+  --light-primary-color: #c5cae9;
+  --dark-primary-color: #ff003c;
+  --accent-color: #fabe28;
+  --light-accent-color: #fabe28;
+  --dark-accent-color: #fabe28;
+
+  --background-color: #f8ecc2;
+  --background-image: url('images/background.png');
+
+  --primary-font-family: 'Verdana';
+  --title-font-family: 'Impact';
+}
+```
+
+Also, you need to set the value of variables in the `css-variables.json`. Example:
+
+```json
+{
+  "primaryTextColor": "#636363",
+  "primaryBackgroundColor": "#ffffff",
+  "secondaryTextColor": "#636363",
+  "disabledTextColor": "#2f2b16",
+  "dividerColor": "#e0e0e0",
+  "primaryColor": "#ff003c",
+  "lightPrimaryColor": "#c5cae9",
+  "darkPrimaryColor": "#ff003c",
+  "accentColor": "#fabe28",
+  "lightAccentColor": "#fabe28",
+  "darkAccentColor": "#fabe28",
+
+  "backgroundColor": "#f8ecc2",
+  "backgroundImage": "images/background.png",
+
+  "primaryFontFamily": "Verdana",
+  "titleFontFamily": "Impact"
+}
+```
+
