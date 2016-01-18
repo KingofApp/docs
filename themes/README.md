@@ -388,3 +388,20 @@ Also, you can use another custom property as default value:
   }
 </style>
 ```
+
+### Typography
+
+For now, we only supports Google Fonts as external fonts.
+
+Import the font in the `styles/default-theme.html` with `@import url()` and use it in the font-family CSS custom properties. Example:
+
+```html
+<style is="custom-style">
+  @import url(https://fonts.googleapis.com/css?family=Roboto);
+
+  :host {
+    --primary-font-family: 'Roboto';
+    --title-font-family: 'Verdana';
+  }
+</style>
+```
