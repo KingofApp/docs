@@ -418,3 +418,16 @@ Use it in the color CSS custom properties in the `styles/default-theme.html`. Ex
   }
 </style>
 ```
+
+### Colors
+
+Use it in the color CSS custom properties in the `styles/default-theme.html`. Example:
+
+```html
+<style is="custom-style">
+  :host {
+    --primary-text-color: #636363;
+    --primary-background-color: #ffffff;
+  }
+</style>
+```
