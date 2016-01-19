@@ -95,10 +95,11 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
   │   └── main.css
   ├── .gitignore
   ├── bower.json
+  ├── css-variables.json
   └── koa-mythemename-theme.html
   ```
 
-3. Serve all the files with a basic HTTP serve.
+3. Serve all the files with any HTTP server.
 
   For example with [serve](https://www.npmjs.com/package/serve):
 
@@ -323,4 +324,110 @@ Now we have the custom element:
     });
   </script>
 </dom-module>
+```
+
+## CSS custom properties and mixins
+
+The King of App themes uses CSS custom properties to styling.
+
+### Set the CSS custom properties
+
+In the `styles/default-theme.html` you set the value of variables. Example:
+
+```css
+:root {
+  --primary-text-color: #636363;
+  --primary-background-color: #ffffff;
+  --secondary-text-color: #636363;
+  --disabled-text-color: #2f2b16;
+  --divider-color: #e0e0e0;
+  --primary-color: #ff003c;
+  --light-primary-color: #c5cae9;
+  ...
+}
+```
+
+Also, you need to set the value of variables in the `css-variables.json`. Example:
+
+```json
+{
+  "primaryTextColor": "#636363",
+  "primaryBackgroundColor": "#ffffff",
+  "secondaryTextColor": "#636363",
+  "disabledTextColor": "#2f2b16",
+  "dividerColor": "#e0e0e0",
+  "primaryColor": "#ff003c",
+  "lightPrimaryColor": "#c5cae9",
+  ...
+}
+```
+
+### Use the CSS custom properties
+
+In the `style` tag, you can use CSS custom properties. The syntax is:
+
+```
+var(variable, defaultValue)
+```
+
+```html
+<style is="custom-style">
+  :host {
+    color: var(--button-text-color, #ffffff);
+  }
+</style>
+```
+
+Also, you can use another custom property as default value:
+
+
+```html
+<style is="custom-style">
+  :host {
+    color: var(--button-text-color, --primary-text-color);
+  }
+</style>
+```
+
+### Typography
+
+For now, we only supports Google Fonts as external fonts.
+
+Import the font in the `styles/default-theme.html` with `@import url()` and use it in the font-family CSS custom properties. Example:
+
+```html
+<style is="custom-style">
+  @import url(https://fonts.googleapis.com/css?family=Roboto);
+
+  :host {
+    --primary-font-family: 'Roboto';
+    --title-font-family: 'Verdana';
+  }
+</style>
+```
+
+### Background color and background image
+
+Use it in the color CSS custom properties in the `styles/default-theme.html`. Example:
+
+```html
+<style is="custom-style">
+  :host {
+    --background-color: #f8ecc2;
+    --background-image: url('images/background.png');
+  }
+</style>
+```
+
+### Colors
+
+Use it in the color CSS custom properties in the `styles/default-theme.html`. Example:
+
+```html
+<style is="custom-style">
+  :host {
+    --primary-text-color: #636363;
+    --primary-background-color: #ffffff;
+  }
+</style>
 ```
