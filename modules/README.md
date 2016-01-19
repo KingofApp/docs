@@ -358,8 +358,46 @@ Functions | Description
 
 ...ToDo...
 
-## Get started
+## Getting started
 
+1. Install the [com.kingofapp.visualizer](#).
+
+  ```
+  npm install com.kingofapp.visualizer
+  ```
+
+2. Files of interest.
+  * [structure.json](#application-config-structure-sample)
+  * modules folder with and html, polymermenu and googlemap module.
+
+  ```
+  com.kingofapp.visualizer
+  ├── app
+  │   ├── core
+  │   │    ├── structure.json
+  │   │    └── ...
+  │   ├── modules
+  │   │    ├── html
+  │   │    ├── polymermenu
+  │   │    ├── googlemap  
+  │   │    └── ...
+  │   └── ...
+  │
+  └── ...
+  ```
+
+3. Serve all the files with a basic HTTP serve.
+
+  For example with [serve](https://www.npmjs.com/package/serve):
+
+  ```
+  npm install -g serve
+  ```
+  Run serve inside the com.kingofapp.visualizer folder.
+
+  ```
+  serve
+  ```
 
 ### Application config structure sample
 
@@ -451,7 +489,7 @@ A structure.json app example:
       }
     },
     "/menu-abcd/map-abcd": {
-      "name": "Html Example",
+      "name": "Google Map Example",
       "identifier": "googlemap",
       "type": "A",
       "showOn": {
