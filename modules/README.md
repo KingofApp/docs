@@ -11,7 +11,8 @@ King of App modules are composed of [AngularJS](https://angularjs.org/) logic an
 * [ Dependencies in modules ](#dependencies-in-modules)  
 * [ Presenting data in modules ](#presenting-data-in-modules)
 * [ Module config in builder ](#module-config-in-builder)  
-* [ Get started ](#get-started)  
+* [ Get started ](#get-started)
+* [ The advertising module ](#get-started)  
 
 ## The module structure
 Modules are composed of [files](#the-module-files) and [libs](#the-module-libs) that read from a [config structure json](#the-module-config-structure).
@@ -293,7 +294,8 @@ Using  [Angular formly](http://angular-formly.com/):
 
 Actually our King Of App builder has tested and supported the current configs:
 
-Regular Input
+#### Regular Input
+
 ```json
 {
     "type" : "input",
@@ -303,18 +305,23 @@ Regular Input
         "pattern":"^[0-9]+$",
         "required":true,
         "maxlength": 2,
-        "description" : "limite tweets"
+        "description" : "limit chars for the field"
     }
 }
 ```
 
 Functions | Description
 ----------------|-------------
-`type` | 
-`key` |
-`templateOptions.label` |
+`type` | Formly element type
+`key` | Same key used in the [module config structure](#the-module-config-structure) inside scope.
+`templateOptions.label` | Visible field name
+`templateOptions.pattern` | Regular expression validation
+`templateOptions.required` | Validation for required fields
+`templateOptions.maxlength` | Character max length
+`templateOptions.description` | Visible description under input
 
-MultiInput
+#### MultiInput
+
 ```json
 {
     "type" : "multiInput",
@@ -323,22 +330,31 @@ MultiInput
         "inputOptions" : {
             "type" : "input"
         },
-        "label" : "url",
+        "label" : "Url",
         "pattern" : "(https?://)([/\\w.()-]*).*",
-        "required" : true
+        "required" : true,
+        "maxlength": 40,
+        "description" : "Url list to include"
     }
 
 }
 ```
 Functions | Description
 ----------------|-------------
-`type` |
-`key` |
-`templateOptions.label` |
+`type` | Custom type defined in builder by the king of app team.
+`key` | Same key used in the [module config structure](#the-module-config-structure) inside scope.
+`templateOptions.type` | Formly element type
+`templateOptions.label` | Visible field name
+`templateOptions.pattern` | Regular expression validation
+`templateOptions.required` | Validation for required fields
+`templateOptions.maxlength` | Character max length
+`templateOptions.description` | Visible description under input
 
-TABLE TODO
+#### Select
 
-WYSIWYG editor
+...ToDo...
+
+#### WYSIWYG editor
 
 ...ToDo...
 
