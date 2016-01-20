@@ -408,18 +408,34 @@ A structure.json app example:
 ```json
 {
   "config": {
-    "index": "/home-abcd",
+    "index": "/menu-abcd/home-abcd",
+    "theme": "koa-paper-theme",
     "colors": {
-      "--default-primary-color": "#ffffff",
-      "--dark-primary-color": "#222222",
-      "--light-primary-color": "#ececec",
-      "--text-primary-color": "#000000",
-      "--accent-color": "#b43322",
-      "--primary-background-color": "#ffffff",
-      "--primary-text-color": "#212121",
-      "--secondary-text-color": "#727272",
-      "--disabled-text-color": "#333532",
-      "--divider-color": "#ececec"
+      "primaryTextColor": "#212121",
+      "primaryBackgroundColor": "#ffffff",
+      "secondaryTextColor": "#737373",
+      "disabledTextColor": "#9b9b9b",
+      "dividerColor": "#dbdbdb",
+      "primaryColor": "#3f51b5",
+      "lightPrimaryColor": "#c5cae9",
+      "darkPrimaryColor": "#303f9f",
+      "accentColor": "#ff4081",
+      "lightAccentColor": "#ff80ab",
+      "darkAccentColor": "#f50057",
+      "backgroundColor": "#ffffff"
+    },
+    "images": {
+      "background": ""
+    },
+    "fonts": {
+      "primaryFontFamily": {
+        "name": "Roboto",
+        "url": "https://fonts.googleapis.com/css?family=Roboto"
+      },
+      "titleFontFamily": {
+        "name": "Roboto",
+        "url": "https://fonts.googleapis.com/css?family=Roboto"
+      }
     },
     "lang": [
       "en_US"
@@ -498,7 +514,7 @@ A structure.json app example:
         "dragDrop": true
       },
       "view": "modules/googlemap/index.html",
-      "files": ["modules/googlemap/controller.js"],
+      "files": ["modules/googlemap/controller.js", "modules/googlemap/directive.js"],
       "libs": [{
         "bower": {
           "GoogleWebComponents/google-map": "^1.1.7"
