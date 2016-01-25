@@ -215,6 +215,15 @@ Functions | Description | Expects | Returns
 
 NOTE: Remember to specify the `requires` property in [ the module config structure ](#the-module-config-structure) if your module requires any other module. Example: [Youtube gallery module](#)
 
+### Inside module events
+```javascript
+$rootScope.$on("koaAppRendered",function() {
+  //Your code here
+
+});
+```
+Checkout our [simplegallery module] (#).
+
 ## Container modules
 
 Container modules share the same file structure, config structure and controller as simple modules. But with a different view, having an additional div where all children modules will be contained.
