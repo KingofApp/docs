@@ -61,7 +61,7 @@ Key | Description | Default value
 `version` | Version control | 0.0.1
 `author` | Author name | ""
 `category` | Categories to which your module belongs. [ Check-out our list ](#module-category-list)  | "others"
-`requires` | Certain modules require other modules to work properly. [Youtube gallery module] (#)  | null
+`requires` | Certain modules require other modules to work properly. [Youtube gallery module] (#)  | []
 `canContain` | Set to true if the module can adopt other modules inside them.[Check-out the  container module](#container-modules) type. | False
 `showOn.menu` | Property defined by user in the KingOfApp builder| True
 `showOn.market` | Property to make the module selectable by the users in our market. | True
