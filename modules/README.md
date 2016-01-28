@@ -13,6 +13,7 @@ King of App modules are composed of [AngularJS](https://angularjs.org/) logic an
 * [ Module config in builder ](#module-config-in-builder)  
 * [ Get started ](#get-started)
 * [ The advertising module ](#get-started)  
+* [ Module list ](#module-list)  
 
 ## The module structure
 Modules are composed of [files](#the-module-files) and [libs](#the-module-libs) that read from a [config structure json](#the-module-config-structure).
@@ -61,7 +62,7 @@ Key | Description | Default value
 `version` | Version control | 0.0.1
 `author` | Author name | ""
 `category` | Categories to which your module belongs. [ Check-out our list ](#module-category-list)  | "others"
-`requires` | Certain modules require other modules to work properly. [Youtube gallery module] (#)  | []
+`requires` | Certain modules require other modules to work properly. [ Youtube gallery module ](https://github.com/KingofApp/koa-module-youtubegallery)  | []
 `canContain` | Set to true if the module can adopt other modules inside them.[Check-out the  container module](#container-modules) type. | False
 `showOn.menu` | Property defined by user in the KingOfApp builder| True
 `showOn.market` | Property to make the module selectable by the users in our market. | True
@@ -213,7 +214,7 @@ Functions | Description | Expects | Returns
 `getCurrentModules($location, callback)` | Returns an array with the modules used in the current location. `Useful for finding parent module` | $location | Array
 `getChildren()` | Returns an array with all the children modules of the given path. | path - "/route" | Array
 
-NOTE: Remember to specify the `requires` property in [ the module config structure ](#the-module-config-structure) if your module requires any other module. Example: [Youtube gallery module](#)
+NOTE: Remember to specify the `requires` property in [ the module config structure ](#the-module-config-structure) if your module requires any other module. Example: [Youtube gallery module](https://github.com/KingofApp/koa-module-youtubegallery)
 
 ### Inside module events
 ```javascript
@@ -222,7 +223,7 @@ $rootScope.$on("koaAppRendered",function() {
 
 });
 ```
-Checkout our [simplegallery module] (#).
+Checkout our [simplegallery module](https://github.com/KingofApp/koa-module-simplegallery).
 
 ## Container modules
 
@@ -254,10 +255,10 @@ NOTE: Remember to specify the `canContain` property in [ the module config struc
 
 ### Container module examples
 
-[Firebase module](#)
+[Firebase module](https://github.com/KingofApp/koa-module-firebase)
 This module acts as a parent module [connector](#connector-modules)
 
-[Firebase list module](#)
+[Firebase list module](https://github.com/KingofApp/koa-module-list)
 This module uses the Firebase module's service to make the requests to firebase.
 
 NOTE: The idea of using parent module connectors is to enable children modules to obtain data from different sources.
@@ -274,18 +275,18 @@ Polymer menu particularities:
 * Directive to pass the menu items to polymer
 * Access to the toolbar scope within the view
 
-[Polymer menu Example](#)
+[Polymer menu Example](https://github.com/KingofApp/koa-module-polymermenu)
 
 Angular menu particularities:
 * Specific controller
 * Specific styles.html to read the templates color variables
 * Access to the toolbar scope within the view
 
-[Angular menu Example](#)
+[Angular menu Example](https://github.com/KingofApp/koa-module-angularmenu)
 
 ### Connector modules
 
-[Firebase connector example](#)
+[Firebase connector example](https://github.com/KingofApp/koa-module-firebase)
 
 ...Under construction...
 
@@ -548,7 +549,30 @@ Key | Description | Default value
 `config.lang` | Available languages for the app. [Check-out the language support](#module-language-support) | ["en_US"]
 `modules` | Module configurations | {}
 
-Explanation: In this example there are 3 modules. First of all there is a menu using the [polymer menu module](#) with a [showOn.menu](#the-module-config-structure) property set to false so it wont appear as a menu element. Then an [html module](#) used as the home screen configured in the `config.index` of the application config structure and a third [google map module](#).
+Explanation: In this example there are 3 modules. First of all there is a menu using the [polymer menu module](https://github.com/KingofApp/koa-module-polymermenu) with a [showOn.menu](#the-module-config-structure) property set to false so it wont appear as a menu element. Then an [html module](https://github.com/KingofApp/koa-module-html) used as the home screen configured in the `config.index` of the application config structure and a third [google map module](https://github.com/KingofApp/koa-module-googlemap).
+
+## Module List
+* [koa-module-list](https://github.com/KingofApp/koa-module-list)
+* [koa-module-angularmenu](https://github.com/KingofApp/koa-module-angularmenu)
+* [koa-module-contact](https://github.com/KingofApp/koa-module-contact)
+* [koa-module-embed](https://github.com/KingofApp/koa-module-embed)
+* [koa-module-facebookfeed](https://github.com/KingofApp/koa-module-facebookfeed)
+* [koa-module-firebase](https://github.com/KingofApp/koa-module-firebase)
+* [koa-module-flickrfeed](https://github.com/KingofApp/koa-module-flickrfeed)
+* [koa-module-googlemap](https://github.com/KingofApp/koa-module-googlemap)
+* [koa-module-grouplist](https://github.com/KingofApp/koa-module-grouplist)
+* [koa-module-html](https://github.com/KingofApp/koa-module-html)
+* [koa-module-instagramfeed](https://github.com/KingofApp/koa-module-instagramfeed)
+* [koa-module-pdfviewer](https://github.com/KingofApp/koa-module-pdfviewer)
+* [koa-module-polymermenu](https://github.com/KingofApp/koa-module-polymermenu)
+* [koa-module-rss](https://github.com/KingofApp/koa-module-rss)
+* [koa-module-simplegallery](https://github.com/KingofApp/koa-module-simplegallery)
+* [koa-module-twitterfeed](https://github.com/KingofApp/koa-module-twitterfeed)
+* [koa-module-vimeovideo](https://github.com/KingofApp/koa-module-vimeovideo)
+* [koa-module-youtubegallery](https://github.com/KingofApp/koa-module-youtubegallery)
+* [koa-module-youtubevideo](https://github.com/KingofApp/koa-module-youtubevideo)
+* [koa-module-ads](https://github.com/KingofApp/koa-module-ads)
+
 ## Module category list
 
 `social`
