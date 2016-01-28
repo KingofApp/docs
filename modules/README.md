@@ -3,17 +3,17 @@
 King of App modules are composed of [AngularJS](https://angularjs.org/) logic and presented with our custom [Polymer elements](https://github.com/KingofApp/docs/tree/master/themes).
 
 #### Table of contents
-* [ The module structure ](#the-module-structure)  
-* [ Multi language modules ](#multi-language-modules)  
-* [ Simple modules ](#simple-modules)  
-* [ Container modules ](#container-modules)  
-* [ Menu modules ](#menu-modules)  
-* [ Dependencies in modules ](#dependencies-in-modules)  
+* [ The module structure ](#the-module-structure)
+* [ Multi language modules ](#multi-language-modules)
+* [ Simple modules ](#simple-modules)
+* [ Container modules ](#container-modules)
+* [ Menu modules ](#menu-modules)
+* [ Dependencies in modules ](#dependencies-in-modules)
 * [ Presenting data in modules ](#presenting-data-in-modules)
-* [ Module config in builder ](#module-config-in-builder)  
+* [ Module config in builder ](#module-config-in-builder)
 * [ Get started ](#get-started)
-* [ The advertising module ](#get-started)  
-* [ Module list ](#module-list)  
+* [ The advertising module ](#get-started)
+* [ Module list ](#module-list)
 
 ## The module structure
 Modules are composed of [files](#the-module-files) and [libs](#the-module-libs) that read from a [config structure json](#the-module-config-structure).
@@ -57,7 +57,7 @@ For a module called testmodule this would be the config structure:
 Key | Description | Default value
 ----------------|-------------|--------
 `name` | Module name | ""
-`identifier` | A unique name for your module that will be used to register the module and it's files. | ""
+`identifier` | A unique name for your module that will be used to register the module and it's files. (Only alphabetic characters allowed) | ""
 `type` | Currently our modules only support Angular | A
 `version` | Version control | 0.0.1
 `author` | Author name | ""
@@ -284,6 +284,11 @@ Angular menu particularities:
 
 [Angular menu Example](https://github.com/KingofApp/koa-module-angularmenu)
 
+### The ads module
+The ads module is a container module embracing all the other modules in the app, pay special attention to the route modules. All containing ´/ads´ prefix.
+
+[Checkout the module documentation](https://github.com/KingofApp/koa-module-ads)
+
 ### Connector modules
 
 [Firebase connector example](https://github.com/KingofApp/koa-module-firebase)
@@ -463,7 +468,7 @@ A structure.json app example:
       },
       "canContain": true,
       "view": "modules/polymermenu/index.html",
-      "files": ["modules/polymermenu/controller.js"],
+      "files": ["modules/polymermenu/controller.js", "modules/polymermenu/style.css"],
       "libs": [{
         "bower": {
           "polymer/polymer": "^1.0.0"
@@ -524,7 +529,7 @@ A structure.json app example:
         "dragDrop": true
       },
       "view": "modules/googlemap/index.html",
-      "files": ["modules/googlemap/controller.js", "modules/googlemap/directive.js"],
+      "files": ["modules/googlemap/controller.js", "modules/googlemap/directive.js", "modules/googlemap/style.css"],
       "libs": [{
         "bower": {
           "GoogleWebComponents/google-map": "^1.1.7"
