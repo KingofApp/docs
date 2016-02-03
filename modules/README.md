@@ -12,7 +12,6 @@ King of App modules are composed of [AngularJS](https://angularjs.org/) logic an
 * [ Presenting data in modules ](#presenting-data-in-modules)
 * [ Module config in builder ](#module-config-in-builder)
 * [ Get started ](#get-started)
-* [ The advertising module ](#get-started)
 * [ Module list ](#module-list)
 
 ## The module structure
