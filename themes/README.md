@@ -56,7 +56,7 @@ Note: The `koa-icon` is offered by the King of App visualizer.
 
 ## Getting started
 
-1. If you haven't, install Yeoman and Bower. And the [koa-theme generator](https://github.com/KingofApp/generator-koa-theme).
+1. If you haven't, install Yeoman and Bower. Then, install [koa-theme generator](https://github.com/KingofApp/generator-koa-theme).
 
   ```
   npm install -g bower
@@ -81,9 +81,7 @@ Note: The `koa-icon` is offered by the King of App visualizer.
   Now, you have a scaffold like this:
 
   ```
-  koa-mythemename-theme
-  ├── dist
-  │   └── koa-mythemename-theme.html
+  koa-theme-mythemename
   ├── elements
   │   ├── mythemename-badge
   │   │    ├── demo
@@ -97,7 +95,7 @@ Note: The `koa-icon` is offered by the King of App visualizer.
   ├── .gitignore
   ├── bower.json
   ├── css-variables.json
-  └── koa-mythemename-theme.html
+  └── koa-theme-mythemename.html
   ```
 
 3. Serve all the files with any HTTP server.
@@ -109,7 +107,7 @@ Note: The `koa-icon` is offered by the King of App visualizer.
   ```
 
   ```
-  serve koa-mythemename-theme
+  serve koa-theme-mythemename
   ```
 
 4. Begins to change all elements as you want!
