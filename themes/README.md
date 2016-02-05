@@ -2,6 +2,19 @@
 
 A King of App theme is composed of a set of elements built with [Polymer](https://www.polymer-project.org).
 
+## Index
+
+* [About elements](#about-elements)
+* [List of elements](#list-of-elements)
+* [Getting started](#getting-started)
+* [Editing one element](#editing-one-element)
+* [CSS custom properties and mixins](#css-custom-properties-and-mixins)
+  * [Set the CSS custom properties](#set-the-css-custom-properties)
+  * [Use the CSS custom properties](#use-the-css-custom-properties)
+  * [Typography](#typography)
+  * [Background color and background image](#background-color-and-background-image)
+  * [Colors](#colors)
+
 ## About elements
 
 Each element must have its own directory. The directory´s name must be formed with the name of the theme and the name of the tag, separated by a dash (-). Inside the directory, you must have an HTML file with the same name, and the folder `demo` with the example.
