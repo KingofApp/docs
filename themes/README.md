@@ -33,13 +33,13 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
 
 ## List of elements
 
-* [koa-badge](elements/koa-badge.md#koa-badge)
+* [koa-badge](elements/koa-badge.md#koa-badge) (it uses `koa-icon`)
 * [koa-button](elements/koa-button.md#koa-button)
 * [koa-card](elements/koa-card.md#koa-card)
 * [koa-checkbox](elements/koa-checkbox.md#koa-checkbox)
 * [koa-dialog](elements/koa-dialog.md#koa-dialog)
-* [koa-dropdown-menu](elements/koa-dropdown-menu.md#koa-dropdown-menu) (it uses `koa-input` and `koa-menu-button`)
-* [koa-icon-button](elements/koa-icon-button.md#koa-icon-button)
+* [koa-dropdown-menu](elements/koa-dropdown-menu.md#koa-dropdown-menu) (it uses `koa-icon`, `koa-input` and `koa-menu-button`)
+* [koa-icon-button](elements/koa-icon-button.md#koa-icon-button) (it uses `koa-icon`)
 * [koa-input](elements/koa-input.md#koa-input) (with [koa-textarea](elements/koa-input.md#koa-textarea))
 * [koa-item](elements/koa-item.md#koa-item)
 * [koa-menu](elements/koa-menu.md#koa-menu) (with [koa-submenu](elements/koa-menu.md#koa-submenu))
@@ -51,6 +51,8 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
 * [koa-tabs](elements/koa-tabs.md#koa-tabs) (with [koa-tab](elements/koa-tabs.md#koa-tab))
 * [koa-toggle-button](elements/koa-toggle-button.md#koa-toggle-button)
 * [koa-toolbar](elements/koa-toolbar.md#koa-toolbar)
+
+Note: The `koa-icon` is offered by the King of App visualizer.
 
 ## Getting started
 
