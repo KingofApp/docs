@@ -423,7 +423,7 @@ A structure.json app example:
 {
   "config": {
     "index": "/menu-abcd/home-abcd",
-    "theme": "koa-paper-theme",
+    "theme": "koa-theme-paper",
     "colors": {
       "primaryTextColor": "#212121",
       "primaryBackgroundColor": "#ffffff",
@@ -451,6 +451,7 @@ A structure.json app example:
         "url": "https://fonts.googleapis.com/css?family=Roboto"
       }
     },
+    "iconset": "icons",
     "lang": [
       "en_US"
     ]
@@ -468,37 +469,38 @@ A structure.json app example:
       "canContain": true,
       "view": "modules/polymermenu/index.html",
       "files": ["modules/polymermenu/controller.js", "modules/polymermenu/style.css"],
-      "libs": [{
-        "bower": {
-          "polymer/polymer": "^1.0.0"
+      "libs":[
+        {
+          "bower": {
+            "PolymerElements/paper-drawer-panel": "^1.0.0"
+          },
+          "src": "http://resources.kingofapp.com/bower_components/paper-drawer-panel/paper-drawer-panel.html"
         },
-        "src": "bower_components/polymer/polymer.html"
-      }, {
-        "bower": {
-          "PolymerElements/paper-drawer-panel": "^1.0.0"
+        {
+          "bower": {
+            "PolymerElements/paper-header-panel": "^1.0.0"
+          },
+          "src": "http://resources.kingofapp.com/bower_components/paper-header-panel/paper-header-panel.html"
         },
-        "src": "bower_components/paper-drawer-panel/paper-drawer-panel.html"
-      }, {
-        "bower": {
-          "PolymerElements/paper-header-panel": "^1.0.0"
+        {
+          "bower": {
+            "PolymerElements/paper-menu": "^1.0.0"
+          },
+          "src": "http://resources.kingofapp.com/bower_components/paper-menu/paper-menu.html"
         },
-        "src": "bower_components/paper-header-panel/paper-header-panel.html"
-      }, {
-        "bower": {
-          "PolymerElements/paper-menu": "^1.0.0"
+        {
+          "bower": {
+            "PolymerElements/paper-scroll-header-panel": "^1.0.0"
+          },
+          "src": "http://resources.kingofapp.com/bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html"
         },
-        "src": "bower_components/paper-menu/paper-menu.html"
-      }, {
-        "bower": {
-          "PolymerElements/paper-scroll-header-panel": "^1.0.0"
-        },
-        "src": "bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html"
-      }, {
-        "bower": {
-          "PolymerElements/paper-item": "^1.0.0"
-        },
-        "src": "bower_components/paper-item/paper-item.html"
-      }],
+        {
+          "bower": {
+            "PolymerElements/paper-item": "^1.0.0"
+          },
+          "src": "http://resources.kingofapp.com/bower_components/paper-item/paper-item.html"
+        }
+      ],
       "scope": {
         "path": "/menu-abcd"
       }
@@ -533,7 +535,7 @@ A structure.json app example:
         "bower": {
           "GoogleWebComponents/google-map": "^1.1.7"
         },
-        "src": "bower_components/google-map/google-map.html"
+        "src": "http://resources.kingofapp.com/bower_components/google-map/google-map.html"
       }],
       "scope": {
         "lat": "39.8847281",
