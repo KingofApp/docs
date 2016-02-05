@@ -11,7 +11,7 @@ A King of App theme is composed of a set of elements built with [Polymer](https:
 * [CSS custom properties and mixins](#css-custom-properties-and-mixins)
   * [Set the CSS custom properties](#set-the-css-custom-properties)
   * [Use the CSS custom properties](#use-the-css-custom-properties)
-  * [Typography](#typography)
+  * [Set the fonts families](#set-the-fonts-families)
   * [Background color and background image](#background-color-and-background-image)
   * [Colors](#colors)
 
@@ -363,14 +363,17 @@ Also, you need to set the value of variables in the `css-variables.json`. Exampl
 
 ```json
 {
-  "primaryTextColor": "#636363",
-  "primaryBackgroundColor": "#ffffff",
-  "secondaryTextColor": "#636363",
-  "disabledTextColor": "#2f2b16",
-  "dividerColor": "#e0e0e0",
-  "primaryColor": "#ff003c",
-  "lightPrimaryColor": "#c5cae9",
-  /* ... */
+  "colors": {
+    "primaryTextColor": "#636363",
+    "primaryBackgroundColor": "#ffffff",
+    "secondaryTextColor": "#636363",
+    "disabledTextColor": "#2f2b16",
+    "dividerColor": "#e0e0e0",
+    "primaryColor": "#ff003c",
+    "lightPrimaryColor": "#c5cae9",
+    ...
+  },
+  ...
 }
 ```
 
@@ -401,21 +404,39 @@ Also, you can use another custom property as default value:
 </style>
 ```
 
-### Typography
+### Set the fonts families
 
 For now, we only supports Google Fonts as external fonts.
 
-Import the font in the `styles/default-theme.html` with `@import url()` and use it in the font-family CSS custom properties. Example:
+Set the fonts in the `default-theme.html`. Example:
 
 ```html
 <style is="custom-style">
-  @import url(https://fonts.googleapis.com/css?family=Roboto);
-
   :host {
+    /* ... */
     --primary-font-family: 'Roboto';
     --title-font-family: 'Verdana';
+    /* ... */
   }
 </style>
+```
+
+Also, you need to set in the `css-variables.json`. Example:
+
+```json
+{
+  ...
+  "fonts": {
+    "primaryFontFamily": {
+      "name": "Roboto",
+      "url": "https://fonts.googleapis.com/css?family=Roboto"
+    },
+    "titleFontFamily": {
+      "name": "Roboto",
+      "url": "https://fonts.googleapis.com/css?family=Roboto"
+    }
+  }
+}
 ```
 
 ### Background color and background image
