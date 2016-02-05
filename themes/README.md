@@ -112,7 +112,7 @@ Note: The `koa-icon` is offered by the King of App visualizer.
 
 4. Begins to change all elements as you want!
 
-## Edit one element
+## Editing one element
 
 Each element has a structure like this:
 
@@ -342,7 +342,7 @@ In the `styles/default-theme.html` you set the value of variables. Example:
   --divider-color: #e0e0e0;
   --primary-color: #ff003c;
   --light-primary-color: #c5cae9;
-  ...
+  /* ... */
 }
 ```
 
@@ -357,13 +357,13 @@ Also, you need to set the value of variables in the `css-variables.json`. Exampl
   "dividerColor": "#e0e0e0",
   "primaryColor": "#ff003c",
   "lightPrimaryColor": "#c5cae9",
-  ...
+  /* ... */
 }
 ```
 
 ### Use the CSS custom properties
 
-In the `style` tag, you can use CSS custom properties. The syntax is:
+In the `<style is="custom-style">` tag, you can use CSS custom properties. The syntax is:
 
 ```
 var(variable, defaultValue)
