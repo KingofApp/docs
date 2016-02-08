@@ -446,6 +446,21 @@ Use it in the color CSS custom properties in the `styles/default-theme.html`. Ex
 </style>
 ```
 
+Also, you need to set in the `css-variables.json`. Example:
+
+```json
+{
+  "colors": {
+    ...
+    "backgroundColor": "#ffffff"
+  },
+  "images": {
+    "background": "images/background.png"
+  }
+  ...
+}
+```
+
 ### Colors
 
 Use it in the color CSS custom properties in the `styles/default-theme.html`. Example:
