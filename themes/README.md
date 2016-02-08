@@ -2,6 +2,19 @@
 
 A King of App theme is composed of a set of elements built with [Polymer](https://www.polymer-project.org).
 
+## Index
+
+* [About elements](#about-elements)
+* [List of elements](#list-of-elements)
+* [Getting started](#getting-started)
+* [Editing one element](#editing-one-element)
+* [CSS custom properties and mixins](#css-custom-properties-and-mixins)
+  * [Set the CSS custom properties](#set-the-css-custom-properties)
+  * [Use the CSS custom properties](#use-the-css-custom-properties)
+  * [Set the fonts families](#set-the-fonts-families)
+  * [Background color and background image](#background-color-and-background-image)
+  * [Colors](#colors)
+
 ## About elements
 
 Each element must have its own directory. The directory´s name must be formed with the name of the theme and the name of the tag, separated by a dash (-). Inside the directory, you must have an HTML file with the same name, and the folder `demo` with the example.
@@ -33,14 +46,13 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
 
 ## List of elements
 
-* [koa-badge](elements/koa-badge.md#koa-badge)
+* [koa-badge](elements/koa-badge.md#koa-badge) (it uses `koa-icon`)
 * [koa-button](elements/koa-button.md#koa-button)
 * [koa-card](elements/koa-card.md#koa-card)
 * [koa-checkbox](elements/koa-checkbox.md#koa-checkbox)
 * [koa-dialog](elements/koa-dialog.md#koa-dialog)
-* [koa-dropdown-menu](elements/koa-dropdown-menu.md#koa-dropdown-menu) (it uses `koa-input` and `koa-menu-button`)
-* [koa-header-panel](elements/koa-header-panel.md#koa-header-panel)
-* [koa-icon-button](elements/koa-icon-button.md#koa-icon-button)
+* [koa-dropdown-menu](elements/koa-dropdown-menu.md#koa-dropdown-menu) (it uses `koa-icon`, `koa-input` and `koa-menu-button`)
+* [koa-icon-button](elements/koa-icon-button.md#koa-icon-button) (it uses `koa-icon`)
 * [koa-input](elements/koa-input.md#koa-input) (with [koa-textarea](elements/koa-input.md#koa-textarea))
 * [koa-item](elements/koa-item.md#koa-item)
 * [koa-menu](elements/koa-menu.md#koa-menu) (with [koa-submenu](elements/koa-menu.md#koa-submenu))
@@ -53,9 +65,11 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
 * [koa-toggle-button](elements/koa-toggle-button.md#koa-toggle-button)
 * [koa-toolbar](elements/koa-toolbar.md#koa-toolbar)
 
+Note: The `koa-icon` is offered by the King of App visualizer.
+
 ## Getting started
 
-1. If you haven't, install Yeoman and Bower. And the [koa-theme generator](https://github.com/KingofApp/generator-koa-theme).
+1. If you haven't, install Yeoman and Bower. Then, install [koa-theme generator](https://github.com/KingofApp/generator-koa-theme).
 
   ```
   npm install -g bower
@@ -80,9 +94,7 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
   Now, you have a scaffold like this:
 
   ```
-  koa-mythemename-theme
-  ├── dist
-  │   └── koa-mythemename-theme.html
+  koa-theme-mythemename
   ├── elements
   │   ├── mythemename-badge
   │   │    ├── demo
@@ -96,7 +108,7 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
   ├── .gitignore
   ├── bower.json
   ├── css-variables.json
-  └── koa-mythemename-theme.html
+  └── koa-theme-mythemename.html
   ```
 
 3. Serve all the files with any HTTP server.
@@ -108,12 +120,12 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
   ```
 
   ```
-  serve koa-mythemename-theme
+  serve koa-theme-mythemename
   ```
 
 4. Begins to change all elements as you want!
 
-## Edit one element
+## Editing one element
 
 Each element has a structure like this:
 
@@ -340,10 +352,7 @@ In the `styles/default-theme.html` you set the value of variables. Example:
   --primary-background-color: #ffffff;
   --secondary-text-color: #636363;
   --disabled-text-color: #2f2b16;
-  --divider-color: #e0e0e0;
-  --primary-color: #ff003c;
-  --light-primary-color: #c5cae9;
-  ...
+  /* ... */
 }
 ```
 
@@ -351,20 +360,20 @@ Also, you need to set the value of variables in the `css-variables.json`. Exampl
 
 ```json
 {
-  "primaryTextColor": "#636363",
-  "primaryBackgroundColor": "#ffffff",
-  "secondaryTextColor": "#636363",
-  "disabledTextColor": "#2f2b16",
-  "dividerColor": "#e0e0e0",
-  "primaryColor": "#ff003c",
-  "lightPrimaryColor": "#c5cae9",
+  "colors": {
+    "primaryTextColor": "#636363",
+    "primaryBackgroundColor": "#ffffff",
+    "secondaryTextColor": "#636363",
+    "disabledTextColor": "#2f2b16",
+    ...
+  },
   ...
 }
 ```
 
 ### Use the CSS custom properties
 
-In the `style` tag, you can use CSS custom properties. The syntax is:
+In the `<style is="custom-style">` tag, you can use CSS custom properties. The syntax is:
 
 ```
 var(variable, defaultValue)
@@ -389,21 +398,39 @@ Also, you can use another custom property as default value:
 </style>
 ```
 
-### Typography
+### Set the fonts families
 
 For now, we only supports Google Fonts as external fonts.
 
-Import the font in the `styles/default-theme.html` with `@import url()` and use it in the font-family CSS custom properties. Example:
+Set the fonts in the `default-theme.html`. Example:
 
 ```html
 <style is="custom-style">
-  @import url(https://fonts.googleapis.com/css?family=Roboto);
-
   :host {
+    /* ... */
     --primary-font-family: 'Roboto';
     --title-font-family: 'Verdana';
+    /* ... */
   }
 </style>
+```
+
+Also, you need to set in the `css-variables.json`. Example:
+
+```json
+{
+  ...
+  "fonts": {
+    "primaryFontFamily": {
+      "name": "Roboto",
+      "url": "https://fonts.googleapis.com/css?family=Roboto"
+    },
+    "titleFontFamily": {
+      "name": "Roboto",
+      "url": "https://fonts.googleapis.com/css?family=Roboto"
+    }
+  }
+}
 ```
 
 ### Background color and background image
@@ -419,15 +446,65 @@ Use it in the color CSS custom properties in the `styles/default-theme.html`. Ex
 </style>
 ```
 
+Also, you need to set in the `css-variables.json`. Example:
+
+```json
+{
+  "colors": {
+    ...
+    "backgroundColor": "#ffffff"
+  },
+  "images": {
+    "background": "images/background.png"
+  }
+  ...
+}
+```
+
 ### Colors
 
 Use it in the color CSS custom properties in the `styles/default-theme.html`. Example:
 
 ```html
 <style is="custom-style">
-  :host {
-    --primary-text-color: #636363;
+  :root {
+    --primary-text-color: #212121;
     --primary-background-color: #ffffff;
+    --secondary-text-color: #737373;
+    --disabled-text-color: #9b9b9b;
+    --divider-color: #dbdbdb;
+    --primary-color: #3f51b5;
+    --light-primary-color: #c5cae9;
+    --dark-primary-color: #303f9f;
+    --accent-color: #ff4081;
+    --light-accent-color: #ff80ab;
+    --dark-accent-color: #f50057;
+    --error-color: #dd2c00;
+
+    --background-color: #ffffff;
   }
 </style>
+```
+
+Also, you need to set in the `css-variables.json`. Example:
+
+```json
+{
+  "colors": {
+    "primaryTextColor": "#212121",
+    "primaryBackgroundColor": "#ffffff",
+    "secondaryTextColor": "#737373",
+    "disabledTextColor": "#9b9b9b",
+    "dividerColor": "#dbdbdb",
+    "primaryColor": "#3f51b5",
+    "lightPrimaryColor": "#c5cae9",
+    "darkPrimaryColor": "#303f9f",
+    "accentColor": "#ff4081",
+    "lightAccentColor": "#ff80ab",
+    "darkAccentColor": "#f50057",
+    "errorColor": "#dd2c00",
+    "backgroundColor": "#ffffff"
+  },
+  ...
+}
 ```
