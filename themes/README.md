@@ -352,9 +352,6 @@ In the `styles/default-theme.html` you set the value of variables. Example:
   --primary-background-color: #ffffff;
   --secondary-text-color: #636363;
   --disabled-text-color: #2f2b16;
-  --divider-color: #e0e0e0;
-  --primary-color: #ff003c;
-  --light-primary-color: #c5cae9;
   /* ... */
 }
 ```
@@ -368,9 +365,6 @@ Also, you need to set the value of variables in the `css-variables.json`. Exampl
     "primaryBackgroundColor": "#ffffff",
     "secondaryTextColor": "#636363",
     "disabledTextColor": "#2f2b16",
-    "dividerColor": "#e0e0e0",
-    "primaryColor": "#ff003c",
-    "lightPrimaryColor": "#c5cae9",
     ...
   },
   ...
