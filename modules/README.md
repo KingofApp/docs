@@ -456,6 +456,7 @@ A structure.json app example:
       "name": "Menu Module",
       "identifier": "polymermenu",
       "type": "A",
+      "icon": "menu",
       "showOn": {
         "menu": false,
         "market": true,
@@ -497,13 +498,15 @@ A structure.json app example:
         }
       ],
       "scope": {
-        "path": "/menu-abcd"
+        "path": "/menu-abcd",
+        "showicons": true
       }
     },
     "/menu-abcd/home-abcd": {
       "name": "Home",
       "identifier": "html",
       "type": "A",
+      "icon": "home",
       "showOn": {
         "menu": true,
         "market": true,
@@ -519,6 +522,7 @@ A structure.json app example:
       "name": "Google Map Example",
       "identifier": "googlemap",
       "type": "A",
+      "icon": "room",
       "showOn": {
         "menu": true,
         "market": true,
