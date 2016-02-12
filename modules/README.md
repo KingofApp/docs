@@ -11,7 +11,7 @@ King of App modules are composed of [AngularJS](https://angularjs.org/) logic an
 * [ Dependencies in modules ](#dependencies-in-modules)
 * [ Presenting data in modules ](#presenting-data-in-modules)
 * [ Module config in builder ](#module-config-in-builder)
-* [ Get started ](#get-started)
+* [ Getting started ](#getting-started)
 * [ Module list ](#module-list)
 
 ## The module structure
@@ -374,13 +374,13 @@ Functions | Description
 
 ## Getting started
 
-1. Install the [com.kingofapp.visualizer](#).
+1. Clone the [com.kingofapp.visualizer](https://github.com/KingofApp/com.kingofapp.visualizer/tree/dev) repository.
 
   ```
-  npm install com.kingofapp.visualizer
+  git clone https://github.com/KingofApp/com.kingofapp.visualizer/tree/dev
   ```
 
-2. Files of interest.
+Files of interest.
   * [structure.json](#application-config-structure-sample)
   * modules folder with and html, polymermenu and googlemap module.
 
@@ -400,18 +400,13 @@ Functions | Description
   └── ...
   ```
 
-3. Serve all the files with a basic HTTP serve.
-
-  For example with [serve](https://www.npmjs.com/package/serve):
+2. Run the visualizer using [NPM](https://nodejs.org/en/download):
 
   ```
-  npm install -g serve
+  npm start
   ```
-  Run serve inside the com.kingofapp.visualizer folder.
 
-  ```
-  serve
-  ```
+3. Open the app in your browser using http://localhost:9001/app/
 
 ### Application config structure sample
 
@@ -423,7 +418,7 @@ A structure.json app example:
 {
   "config": {
     "index": "/menu-abcd/home-abcd",
-    "theme": "koa-theme-paper",
+    "theme": "koa-theme-android",
     "colors": {
       "primaryTextColor": "#212121",
       "primaryBackgroundColor": "#ffffff",
@@ -461,6 +456,7 @@ A structure.json app example:
       "name": "Menu Module",
       "identifier": "polymermenu",
       "type": "A",
+      "icon": "menu",
       "showOn": {
         "menu": false,
         "market": true,
@@ -502,13 +498,15 @@ A structure.json app example:
         }
       ],
       "scope": {
-        "path": "/menu-abcd"
+        "path": "/menu-abcd",
+        "showicons": true
       }
     },
     "/menu-abcd/home-abcd": {
       "name": "Home",
       "identifier": "html",
       "type": "A",
+      "icon": "home",
       "showOn": {
         "menu": true,
         "market": true,
@@ -524,6 +522,7 @@ A structure.json app example:
       "name": "Google Map Example",
       "identifier": "googlemap",
       "type": "A",
+      "icon": "room",
       "showOn": {
         "menu": true,
         "market": true,
