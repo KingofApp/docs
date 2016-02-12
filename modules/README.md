@@ -418,7 +418,7 @@ A structure.json app example:
 {
   "config": {
     "index": "/menu-abcd/home-abcd",
-    "theme": "koa-theme-paper",
+    "theme": "koa-theme-android",
     "colors": {
       "primaryTextColor": "#212121",
       "primaryBackgroundColor": "#ffffff",
