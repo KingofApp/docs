@@ -377,8 +377,22 @@ Functions | Description
 1. Clone the [com.kingofapp.visualizer](https://github.com/KingofApp/com.kingofapp.visualizer/tree/dev) repository.
 
   ```
-  git clone https://github.com/KingofApp/com.kingofapp.visualizer/tree/dev
+  git clone -b dev https://github.com/KingofApp/com.kingofapp.visualizer/tree/dev
   ```
+
+2. Change directory to com.kingofapp.visualizer
+
+  ```
+  cd com.kingofapp.visualizer
+  ```
+
+3. Run the visualizer using [NPM](https://nodejs.org/en/download):
+
+  ```
+  npm start
+  ```
+
+4. Open the app in your browser using http://localhost:9001/app/
 
 Files of interest.
   * [structure.json](#application-config-structure-sample)
@@ -399,14 +413,6 @@ Files of interest.
   │
   └── ...
   ```
-
-2. Run the visualizer using [NPM](https://nodejs.org/en/download):
-
-  ```
-  npm start
-  ```
-
-3. Open the app in your browser using http://localhost:9001/app/
 
 ### Application config structure sample
 
