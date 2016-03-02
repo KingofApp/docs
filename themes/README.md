@@ -52,6 +52,7 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
 * [koa-checkbox](elements/koa-checkbox.md#koa-checkbox)
 * [koa-dialog](elements/koa-dialog.md#koa-dialog)
 * [koa-dropdown-menu](elements/koa-dropdown-menu.md#koa-dropdown-menu) (it uses `koa-icon`, `koa-input` and `koa-menu-button`)
+* [koa-grid](elements/koa-grid.md#koa-grid)
 * [koa-icon-button](elements/koa-icon-button.md#koa-icon-button) (it uses `koa-icon`)
 * [koa-input](elements/koa-input.md#koa-input) (with [koa-textarea](elements/koa-input.md#koa-textarea))
 * [koa-item](elements/koa-item.md#koa-item)
