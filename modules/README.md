@@ -8,6 +8,7 @@ King of App modules are composed of [AngularJS](https://angularjs.org/) logic an
 * [ Simple modules ](#simple-modules)
 * [ Container modules ](#container-modules)
 * [ Menu modules ](#menu-modules)
+* [ Working with APIs ](#working-with-apis)
 * [ Dependencies in modules ](#dependencies-in-modules)
 * [ Presenting data in modules ](#presenting-data-in-modules)
 * [ Module config in builder ](#module-config-in-builder)
@@ -283,6 +284,49 @@ Angular menu particularities:
 
 [Angular menu Example](https://github.com/KingofApp/koa-module-angularmenu)
 
+### Working with APIs
+
+Api modules mainly follow the same pattern. Data is obtained throught the controller.js controller, using an url source through a http request reading parameters from the [ scope ](#the-module-scope). Then iterated in the index.html view.
+
+Taking a look at the facebook module controller:
+```javascript
+angular
+  .controller('facebookFeedCtrl', loadFunction);
+
+loadFunction.$inject = ['$http', '$scope', 'structureService', '$filter', '$location'];
+
+function loadFunction($http, $scope, structureService, $filter, $location) {
+  //Register upper level modules
+  structureService.registerModule($location, $scope, 'facebookfeed');
+
+  $http.get('https://graph.facebook.com/v2.4/' + $scope.facebookfeed.modulescope.pageid + '/posts', {
+    params: {
+      access_token: $scope.facebookfeed.modulescope.accesstoken,
+      fields: 'object_id,message,link,full_picture'
+    }
+  })
+  .success(function(data) {
+    $scope.facebookfeed.items = data.data;
+  }).error(function() {
+    $scope.facebookfeed.message = $filter('translate')('facebookfeed.feed.error');
+  });
+}
+```
+
+The view simply uses angular directives to iterate the data, using our custom [Koa elements](https://github.com/KingofApp/docs/tree/master/themes#list-of-elements) to present the data:
+```html
+<koa-card image="{{item.full_picture}}" ng-repeat="item in facebookfeed.items">
+  <div class="card-content">{{item.message}}</div>
+</koa-card>
+```
+
+For more examples on Api related modules checkout:
+* [Facebook](https://github.com/KingofApp/koa-module-facebookfeed)
+* [Flickr](https://github.com/KingofApp/koa-module-flickrfeed)
+* [Youtube Gallery](https://github.com/KingofApp/koa-module-youtubegallery)
+* [RSS](https://github.com/KingofApp/koa-module-rss)
+* [Instagram](https://github.com/KingofApp/koa-module-instagramfeed)
+
 ### The ads module
 The ads module is a container module embracing all the other modules in the app, pay special attention to the route modules. All containing ´/ads´ prefix.
 
@@ -377,8 +421,22 @@ Functions | Description
 1. Clone the [com.kingofapp.visualizer](https://github.com/KingofApp/com.kingofapp.visualizer/tree/dev) repository.
 
   ```
-  git clone https://github.com/KingofApp/com.kingofapp.visualizer/tree/dev
+  git clone -b dev https://github.com/KingofApp/com.kingofapp.visualizer/tree/dev
   ```
+
+2. Change directory to com.kingofapp.visualizer
+
+  ```
+  cd com.kingofapp.visualizer
+  ```
+
+3. Run the visualizer using [NPM](https://nodejs.org/en/download):
+
+  ```
+  npm start
+  ```
+
+4. Open the app in your browser using http://localhost:9001/app/
 
 Files of interest.
   * [structure.json](#application-config-structure-sample)
@@ -399,14 +457,6 @@ Files of interest.
   │
   └── ...
   ```
-
-2. Run the visualizer using [NPM](https://nodejs.org/en/download):
-
-  ```
-  npm start
-  ```
-
-3. Open the app in your browser using http://localhost:9001/app/
 
 ### Application config structure sample
 
