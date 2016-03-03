@@ -101,7 +101,7 @@ Other files supported:
 
 * Css files (.css) - Sample
 * jQuery files (.js) - Sample
-
+* Polymer components (.html) -Sample
 
 ### The module libs
 
