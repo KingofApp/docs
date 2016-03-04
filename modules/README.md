@@ -536,12 +536,6 @@ A structure.json app example:
         },
         {
           "bower": {
-            "PolymerElements/paper-scroll-header-panel": "^1.0.0"
-          },
-          "src": "http://resources.kingofapp.com/bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html"
-        },
-        {
-          "bower": {
             "PolymerElements/paper-item": "^1.0.0"
           },
           "src": "http://resources.kingofapp.com/bower_components/paper-item/paper-item.html"
