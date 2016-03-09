@@ -514,8 +514,14 @@ A structure.json app example:
       },
       "canContain": true,
       "view": "modules/polymermenu/index.html",
-      "files": ["modules/polymermenu/controller.js", "modules/polymermenu/style.css"],
+      "files": ["modules/polymermenu/controller.js", "modules/polymermenu/style.html"],
       "libs":[
+        {
+          "bower": {
+          "PolymerElements/iron-flex-layout": "^1.3.0"
+        },
+          "src": "http://resources.kingofapp.com/bower_components/iron-flex-layout/iron-flex-layout.html"
+        },
         {
           "bower": {
             "PolymerElements/paper-drawer-panel": "^1.0.0"
@@ -543,6 +549,15 @@ A structure.json app example:
       ],
       "scope": {
         "path": "/menu-abcd",
+        "headerShown": true,
+        "headerBackgroundImage": "",
+        "headerBackgroundColor": "",
+        "headerReverse": false,
+        "headerTitle": "",
+        "headerTitleShown": true,
+        "headerLogo": "",
+        "headerLogoShown": true,
+        "headerAlignment": "left",
         "showicons": true
       }
     },
