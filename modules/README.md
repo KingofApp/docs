@@ -371,7 +371,7 @@ Actually our King Of App builder has tested and supported the current configs:
 Functions | Description
 ----------------|-------------
 `type` | Formly element type
-`key` | Same key used in the [module config structure](#the-module-config-structure) inside scope.
+`key` | Same key used in the [module config structure](#the-module-config-structure) inside scope
 `templateOptions.label` | Visible field name
 `templateOptions.pattern` | Regular expression validation
 `templateOptions.required` | Validation for required fields
@@ -400,8 +400,8 @@ Functions | Description
 Functions | Description
 ----------------|-------------
 `type` | Custom type defined in builder by the king of app team.
-`key` | Same key used in the [module config structure](#the-module-config-structure) inside scope.
-`templateOptions.type` | Formly element type
+`key` | Same key used in the [module config structure](#the-module-config-structure) inside scope
+`templateOptions.inputOptions.type` | Formly element type
 `templateOptions.label` | Visible field name
 `templateOptions.pattern` | Regular expression validation
 `templateOptions.required` | Validation for required fields
@@ -410,11 +410,70 @@ Functions | Description
 
 #### Select
 
-...ToDo...
+```json
+{
+  "type": "select",
+  "key": "alignment",
+  "templateOptions": {
+    "label": "Alignment",
+    "options": [
+      {"name": "left", "value": "left"},
+      {"name": "center", "value": "center"},
+      {"name": "right", "value": "right"}
+    ]
+  }
+}
+```
+Functions | Description
+----------------|-------------
+`type` | Formly element type
+`key` | Same key used in the [module config structure](#the-module-config-structure) inside scope
+`templateOptions.label` | Visible field name
+`templateOptions.options` | Array of items to appear in the select
 
 #### WYSIWYG editor
 
-...ToDo...
+```json
+{
+    "type" : "wysiwyg",
+    "key" : "value",
+    "templateOptions" : {
+        "label" : "Html",
+        "required" : true,
+        "description" : "Html editor"
+    }
+}
+```
+Functions | Description
+----------------|-------------
+`type` | Custom type defined in builder by the king of app team
+`key` | Same key used in the [module config structure](#the-module-config-structure) inside scope
+`templateOptions.label` | Visible field name
+`templateOptions.required` | Validation for required fields
+`templateOptions.description` | Visible description under input
+
+#### Date Picker
+
+```json
+{
+  "type": "datepicker",
+  "key": "day",
+  "templateOptions": {
+    "label": "day",
+    "type": "text",
+    "datepickerOptions": {
+      "format": "dd-MM-yyyy"
+    }
+  }
+}
+```
+Functions | Description
+----------------|-------------
+`type` | Custom type defined in builder by the king of app team.
+`key` | Same key used in the [module config structure](#the-module-config-structure) inside scope
+`templateOptions.label` | Visible field name
+`templateOptions.type` | Formly element type
+`templateOptions.datepickerOptions.format` | Date format
 
 ## Getting started
 
