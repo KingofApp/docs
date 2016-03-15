@@ -42,6 +42,7 @@ For a module called testmodule this would be the config structure:
     "dragDrop" : "true"
   },
   "view"       : "modules/testmodule/index.html",
+  "controller" : "modules/testmodule/controller.js",
   "files"      : [
     "modules/testmodule/controller.js"
   ],
@@ -68,6 +69,7 @@ Key | Description | Default value
 `showOn.market` | Property to make the module selectable by the users in our market. | True
 `showOn.dragDrop` | Property to disable the drag and drop option from the KingOfApp builder | True
 `view` | Main view file | "modules/{identifier}/index.html"
+`controller` :new: | Main controller file - Used to prioritize its loading respect other files | "modules/{identifier}/controller.js" [Check-out the googlemap module](https://github.com/KingofApp/koa-module-googlemap)
 `files` | Array of files that will be loaded. [Check-out the module files section](#the-module-files) | []
 `libs` | Array of bower dependencies used in the module. [Check-out the module scope section](#the-module-scope) | []
 `deps` | Array of phonegap dependencies. | []
@@ -647,7 +649,8 @@ A structure.json app example:
         "dragDrop": true
       },
       "view": "modules/googlemap/index.html",
-      "files": ["modules/googlemap/controller.js", "modules/googlemap/directive.js", "modules/googlemap/style.css"],
+      "controller": "modules/googlemap/controller.js",
+      "files": ["modules/googlemap/directive.js", "modules/googlemap/style.css"],
       "libs": [{
         "bower": {
           "GoogleWebComponents/google-map": "^1.1.7"
