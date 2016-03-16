@@ -42,6 +42,7 @@ For a module called testmodule this would be the config structure:
     "dragDrop" : "true"
   },
   "view"       : "modules/testmodule/index.html",
+  "controller" : "modules/testmodule/controller.js",
   "files"      : [
     "modules/testmodule/controller.js"
   ],
@@ -68,6 +69,7 @@ Key | Description | Default value
 `showOn.market` | Property to make the module selectable by the users in our market. | True
 `showOn.dragDrop` | Property to disable the drag and drop option from the KingOfApp builder | True
 `view` | Main view file | "modules/{identifier}/index.html"
+`controller` :new: | Main controller file - Used to prioritize its loading respect other files | "modules/{identifier}/controller.js" [Check-out the googlemap module](https://github.com/KingofApp/koa-module-googlemap)
 `files` | Array of files that will be loaded. [Check-out the module files section](#the-module-files) | []
 `libs` | Array of bower dependencies used in the module. [Check-out the module scope section](#the-module-scope) | []
 `deps` | Array of phonegap dependencies. | []
@@ -101,7 +103,7 @@ Other files supported:
 
 * Css files (.css) - Sample
 * jQuery files (.js) - Sample
-
+* Polymer components (.html) -Sample
 
 ### The module libs
 
@@ -371,7 +373,7 @@ Actually our King Of App builder has tested and supported the current configs:
 Functions | Description
 ----------------|-------------
 `type` | Formly element type
-`key` | Same key used in the [module config structure](#the-module-config-structure) inside scope.
+`key` | Same key used in the [module config structure](#the-module-config-structure) inside scope
 `templateOptions.label` | Visible field name
 `templateOptions.pattern` | Regular expression validation
 `templateOptions.required` | Validation for required fields
@@ -400,8 +402,8 @@ Functions | Description
 Functions | Description
 ----------------|-------------
 `type` | Custom type defined in builder by the king of app team.
-`key` | Same key used in the [module config structure](#the-module-config-structure) inside scope.
-`templateOptions.type` | Formly element type
+`key` | Same key used in the [module config structure](#the-module-config-structure) inside scope
+`templateOptions.inputOptions.type` | Formly element type
 `templateOptions.label` | Visible field name
 `templateOptions.pattern` | Regular expression validation
 `templateOptions.required` | Validation for required fields
@@ -410,11 +412,70 @@ Functions | Description
 
 #### Select
 
-...ToDo...
+```json
+{
+  "type": "select",
+  "key": "alignment",
+  "templateOptions": {
+    "label": "Alignment",
+    "options": [
+      {"name": "left", "value": "left"},
+      {"name": "center", "value": "center"},
+      {"name": "right", "value": "right"}
+    ]
+  }
+}
+```
+Functions | Description
+----------------|-------------
+`type` | Formly element type
+`key` | Same key used in the [module config structure](#the-module-config-structure) inside scope
+`templateOptions.label` | Visible field name
+`templateOptions.options` | Array of items to appear in the select
 
 #### WYSIWYG editor
 
-...ToDo...
+```json
+{
+    "type" : "wysiwyg",
+    "key" : "value",
+    "templateOptions" : {
+        "label" : "Html",
+        "required" : true,
+        "description" : "Html editor"
+    }
+}
+```
+Functions | Description
+----------------|-------------
+`type` | Custom type defined in builder by the king of app team
+`key` | Same key used in the [module config structure](#the-module-config-structure) inside scope
+`templateOptions.label` | Visible field name
+`templateOptions.required` | Validation for required fields
+`templateOptions.description` | Visible description under input
+
+#### Date Picker
+
+```json
+{
+  "type": "datepicker",
+  "key": "day",
+  "templateOptions": {
+    "label": "day",
+    "type": "text",
+    "datepickerOptions": {
+      "format": "dd-MM-yyyy"
+    }
+  }
+}
+```
+Functions | Description
+----------------|-------------
+`type` | Custom type defined in builder by the king of app team.
+`key` | Same key used in the [module config structure](#the-module-config-structure) inside scope
+`templateOptions.label` | Visible field name
+`templateOptions.type` | Formly element type
+`templateOptions.datepickerOptions.format` | Date format
 
 ## Getting started
 
@@ -514,8 +575,14 @@ A structure.json app example:
       },
       "canContain": true,
       "view": "modules/polymermenu/index.html",
-      "files": ["modules/polymermenu/controller.js", "modules/polymermenu/style.css"],
+      "files": ["modules/polymermenu/controller.js", "modules/polymermenu/style.html"],
       "libs":[
+        {
+          "bower": {
+          "PolymerElements/iron-flex-layout": "^1.3.0"
+        },
+          "src": "http://resources.kingofapp.com/bower_components/iron-flex-layout/iron-flex-layout.html"
+        },
         {
           "bower": {
             "PolymerElements/paper-drawer-panel": "^1.0.0"
@@ -536,12 +603,6 @@ A structure.json app example:
         },
         {
           "bower": {
-            "PolymerElements/paper-scroll-header-panel": "^1.0.0"
-          },
-          "src": "http://resources.kingofapp.com/bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html"
-        },
-        {
-          "bower": {
             "PolymerElements/paper-item": "^1.0.0"
           },
           "src": "http://resources.kingofapp.com/bower_components/paper-item/paper-item.html"
@@ -549,6 +610,15 @@ A structure.json app example:
       ],
       "scope": {
         "path": "/menu-abcd",
+        "headerShown": true,
+        "headerBackgroundImage": "",
+        "headerBackgroundColor": "",
+        "headerReverse": false,
+        "headerTitle": "",
+        "headerTitleShown": true,
+        "headerLogo": "",
+        "headerLogoShown": true,
+        "headerAlignment": "left",
         "showicons": true
       }
     },
@@ -579,7 +649,8 @@ A structure.json app example:
         "dragDrop": true
       },
       "view": "modules/googlemap/index.html",
-      "files": ["modules/googlemap/controller.js", "modules/googlemap/directive.js", "modules/googlemap/style.css"],
+      "controller": "modules/googlemap/controller.js",
+      "files": ["modules/googlemap/directive.js", "modules/googlemap/style.css"],
       "libs": [{
         "bower": {
           "GoogleWebComponents/google-map": "^1.1.7"
