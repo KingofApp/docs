@@ -26,6 +26,20 @@ For a module called testmodule this would be the config structure:
 {
   "name"       : "Test module",
   "identifier" : "testmodule",
+  "icon"       : "home",
+  "description": {
+    "es-ES": "Descripción del modulo",
+    "en-US": "Module description"
+  },
+  "documentation": {
+    "es-ES": "# Titulo Modulo\r\nConfiguración",
+    "en-US": "# Module Title\r\nConfiguration"
+  },
+  "descriptionShort": {
+    "es-ES": "Descripción corta",
+    "en-US": "Short description"
+  },
+  "price"       : 0,
   "type"       : "A",
   "version"    : "1.0",
   "author"     : "King of App",
@@ -42,7 +56,6 @@ For a module called testmodule this would be the config structure:
     "dragDrop" : "true"
   },
   "view"       : "modules/testmodule/index.html",
-  "controller" : "modules/testmodule/controller.js",
   "files"      : [
     "modules/testmodule/controller.js"
   ],
@@ -51,7 +64,17 @@ For a module called testmodule this would be the config structure:
   "scope"      : {
     "data"  : "Sample data"
   },
-  "config"     : []
+  "config"     : [],
+  "images": {
+    "list": "modules/testmodule/images/list.png",
+    "screenshots": [
+      "modules/testmodule/images/screenshot01.png",
+      "modules/testmodule/images/screenshot02.png"
+    ],
+    "popover": "modules/testmodule/images/popover.png",
+    "banner": "modules/testmodule/images/banner.png",
+    "logo": "modules/testmodule/images/logo.png"
+  }
 }
 ```
 
@@ -59,6 +82,11 @@ Key | Description | Default value
 ----------------|-------------|--------
 `name` | Module name | ""
 `identifier` | A unique name for your module that will be used to register the module and it's files. (Only alphabetic characters allowed) | ""
+`icon` | Module default icon from [ Icon list ](https://elements.polymer-project.org/bower_components/iron-icons/demo/index.html) or a custom image using an URL | ""
+`description` | Multilanguage supported description used in the KingOfApp builder | {}
+`documentation` | Multilanguage supported documentation with [ markdown syntax ](https://guides.github.com/features/mastering-markdown/) used in the KingOfApp builder | {}
+`descriptionShort` | Multilanguage supported short description used in the KingOfApp builder | {}
+`price` | Purchase price displayed for the module in the KingOfApp builder | 0
 `type` | Currently our modules only support Angular | A
 `version` | Version control | 0.0.1
 `author` | Author name | ""
@@ -69,13 +97,16 @@ Key | Description | Default value
 `showOn.market` | Property to make the module selectable by the users in our market. | True
 `showOn.dragDrop` | Property to disable the drag and drop option from the KingOfApp builder | True
 `view` | Main view file | "modules/{identifier}/index.html"
-`controller` :new: | Main controller file - Used to prioritize its loading respect other files | "modules/{identifier}/controller.js" [Check-out the googlemap module](https://github.com/KingofApp/koa-module-googlemap)
 `files` | Array of files that will be loaded. [Check-out the module files section](#the-module-files) | []
 `libs` | Array of bower dependencies used in the module. [Check-out the module scope section](#the-module-scope) | []
 `deps` | Array of phonegap dependencies. | []
 `scope` | Data Object that will be accessible from the module. | {}
 `config` | Formly based config for the KingOfApp builder. [ Check-out module config in builder ](#module-config-in-builder)| {}
-
+`images.list` | Module list image used in the KingOfApp builder | ""
+`images.screenshots` | Module screenshots images used in the KingOfApp builder | {}
+`images.popover` | Module popover image used in the KingOfApp builder | ""
+`images.banner` | Module banner image used in the KingOfApp builder | ""
+`images.logo` | Required - Module logo image used in the KingOfApp builder | ""
 NOTE: Some modules may have a module dependency `Example: A list module with a Firebase module connector`.
 
 ### The module file structure
@@ -649,8 +680,7 @@ A structure.json app example:
         "dragDrop": true
       },
       "view": "modules/googlemap/index.html",
-      "controller": "modules/googlemap/controller.js",
-      "files": ["modules/googlemap/directive.js", "modules/googlemap/style.css"],
+      "files": ["modules/googlemap/controller.js", "modules/googlemap/directive.js", "modules/googlemap/style.css"],
       "libs": [{
         "bower": {
           "GoogleWebComponents/google-map": "^1.1.7"
