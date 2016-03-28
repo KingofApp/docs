@@ -133,6 +133,10 @@ Note: The `koa-icon` is offered by the King of App visualizer.
 
 4. Begins to change all elements as you want!
 
+You can see the changes:
+* In the visualizer app: `http://localhost:9001`
+* In each element demo. Example: `http://localhost:9001/themes/koapp-theme-mythemename/elements/mythemename-button/demo/`
+
 ## Editing one element
 
 Each element has a structure like this:
