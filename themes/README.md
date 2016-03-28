@@ -186,8 +186,8 @@ The generator give you imports, hostAttributes, behaviors, properties, methods, 
 Example for the `koa-button`:
 
 ```html
-<link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/koa-behaviors/koa-button-behavior.html">
+<link rel="import" href="../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../bower_components/koa-behaviors/koa-button-behavior.html">
 
 <dom-module id="mythemename-button">
   <template>
@@ -279,8 +279,8 @@ Now we have the custom element:
 
 
 ```html
-<link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/koa-behaviors/koa-button-behavior.html">
+<link rel="import" href="../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../bower_components/koa-behaviors/koa-button-behavior.html">
 
 <dom-module id="mythemename-button">
   <template>
