@@ -95,7 +95,7 @@ Note: The `koa-icon` is offered by the King of App visualizer.
   Now, you have a scaffold like this:
 
   ```
-  koa-theme-mythemename
+  koapp-theme-mythemename
   ├── elements
   │   ├── mythemename-badge
   │   │    ├── demo
@@ -106,10 +106,11 @@ Note: The `koa-icon` is offered by the King of App visualizer.
   ├── styles
   │   ├── default-theme.html
   │   └── main.css
+  ├── .bowerrc
   ├── .gitignore
   ├── bower.json
-  ├── css-variables.json
-  └── koa-theme-mythemename.html
+  ├── config.json
+  └── koapp-theme-mythemename.html
   ```
 
 3. Serve all the files with any HTTP server.
@@ -121,7 +122,7 @@ Note: The `koa-icon` is offered by the King of App visualizer.
   ```
 
   ```
-  serve koa-theme-mythemename
+  serve koapp-theme-mythemename
   ```
 
 4. Begins to change all elements as you want!
