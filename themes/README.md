@@ -84,7 +84,25 @@ Note: The `koa-icon` is offered by the King of App visualizer.
   npm install -g generator-koa-theme
   ```
 
-2. Create a new theme with the generator.
+2. Download and start the [King of App visualizer](https://github.com/KingofApp/com.kingofapp.visualizer).
+
+  ```
+  git clone -b dev git@github.com:KingofApp/com.kingofapp.visualizer.git
+  ```
+
+  ```
+  cd com.kingofapp.visualizer
+  ```
+
+  ```
+  npm start
+  ```
+
+3. Go to themes path and create a new theme with the generator.
+
+  ```
+  cd com.kingofapp.visualizer/app/themes
+  ```
 
   ```
   yo koa-theme mythemename
@@ -111,18 +129,6 @@ Note: The `koa-icon` is offered by the King of App visualizer.
   ├── bower.json
   ├── config.json
   └── koapp-theme-mythemename.html
-  ```
-
-3. Serve all the files with any HTTP server.
-
-  For example with [serve](https://www.npmjs.com/package/serve):
-
-  ```
-  npm install -g serve
-  ```
-
-  ```
-  serve koapp-theme-mythemename
   ```
 
 4. Begins to change all elements as you want!
