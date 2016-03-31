@@ -124,24 +124,24 @@ testmodule
 
 ### The module files
 KingOfApp visualizer currently supports AngularJs modules, meaning modules can contain:
-* [Directives](https://docs.angularjs.org/guide/directive) - Sample
-* [Filters](https://docs.angularjs.org/guide/filter) - Sample
-* [Services / factories](https://docs.angularjs.org/guide/services) - Sample
-* Run - Sample
-* [Controllers](https://docs.angularjs.org/guide/controller) - Sample
+* [Directives](https://docs.angularjs.org/guide/directive) - [Youtubevideo sample](https://github.com/KingofApp/koapp-module-youtubevideo)
+* [Filters](https://docs.angularjs.org/guide/filter)
+* [Services / factories](https://docs.angularjs.org/guide/services) - [Firebase sample](https://github.com/KingofApp/koapp-module-firebase)
+* Run
+* [Controllers](https://docs.angularjs.org/guide/controller) - [Html sample](https://github.com/KingofApp/koapp-module-html)
 
 Other files supported:
 
-* Css files (.css) - Sample
-* jQuery files (.js) - Sample
-* Polymer components (.html) -Sample
+* Css files (.css) - [Simplegallery sample](https://github.com/KingofApp/koapp-module-simplegallery)
+* jQuery files (.js) - [Simplegallery sample](https://github.com/KingofApp/koapp-module-simplegallery)
+* Polymer style module (.html) - [Grouplist sample](https://github.com/KingofApp/koapp-module-grouplist)
 
 ### The module libs
 
 Dependencies that get loaded along with the modules files can be:
 
-* AngularJs modules (.js) - Sample
-* Polymer components (.html) - Sample
+* AngularJs modules (.js) - [Firebaselist sample](https://github.com/KingofApp/koapp-module-list)
+* Polymer components (.html) - [Googlemap sample](https://github.com/KingofApp/koapp-module-googlemap)
 
 ## Multi language modules
 
