@@ -1,6 +1,10 @@
 # &lt;koa-item&gt;
 
+## &lt;koa-item&gt;
+
 It is an interactive list item.
+
+Use the `item-icon` property to make an item with icon. It is an interactive list item with a fixed-width icon area. This is useful if the icons are of varying widths, but you want the item bodies to line up. The child node with the attribute `item-icon` is placed in the icon area.
 
 ### Demo
 
@@ -50,3 +54,19 @@ Attribute | Value
 ----------|------
 ***role*** | `'option'`
 ***tabindex*** | `0`
+
+
+## &lt;koa-item-body&gt;
+
+Use `<koa-item-body>` in a `<koa-item>` to make two- or three- line items. It is a flex item that is a vertical flexbox.
+
+The child elements with the `secondary` attribute is given secondary text styling.
+
+### Styling
+
+Custom property | Description | Default
+----------------|-------------|----------
+`--item-body-two-line-min-height`   | Minimum height of a two-line item          | `72px`
+`--item-body-three-line-min-height` | Minimum height of a three-line item        | `88px`
+`--item-body-secondary-color`       | Foreground color for the `secondary` area  | `--secondary-text-color`
+`--item-body-secondary`             | Mixin applied to the `secondary` area      | `{}`

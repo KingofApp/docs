@@ -55,7 +55,7 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
 * [koa-grid](elements/koa-grid.md#koa-grid)
 * [koa-icon-button](elements/koa-icon-button.md#koa-icon-button) (it uses `koa-icon`)
 * [koa-input](elements/koa-input.md#koa-input) (with [koa-textarea](elements/koa-input.md#koa-textarea))
-* [koa-item](elements/koa-item.md#koa-item)
+* [koa-item](elements/koa-item.md#koa-item) (with [koa-item-body](elements/koa-item.md#koa-item-body))
 * [koa-menu-button](elements/koa-menu-button.md#koa-menu-button)
 * [koa-menu](elements/koa-menu.md#koa-menu) (with [koa-submenu](elements/koa-menu.md#koa-submenu))
 * [koa-progress](elements/koa-progress.md#koa-progress)
