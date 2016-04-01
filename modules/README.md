@@ -91,16 +91,16 @@ Key | Description | Default value
 `version` | Version control | 0.0.1
 `author` | Author name | ""
 `category` | Categories to which your module belongs. [ Check-out our list ](#module-category-list)  | "others"
-`requires` | Certain modules require other modules to work properly. [ Youtube gallery module ](https://github.com/KingofApp/koa-module-youtubegallery)  | []
+`requires` | Certain modules require other modules to work properly. [ Youtube gallery module ](https://github.com/KingofApp/koapp-module-youtubegallery)  | []
 `canContain` | Set to true if the module can adopt other modules inside them.[Check-out the  container module](#container-modules) type. | False
 `showOn.menu` | Property defined by user in the KingOfApp builder| True
 `showOn.market` | Property to make the module selectable by the users in our market. | True
 `showOn.dragDrop` | Property to disable the drag and drop option from the KingOfApp builder | True
 `view` | Main view file | "modules/{identifier}/index.html"
 `files` | Array of files that will be loaded. [Check-out the module files section](#the-module-files) | []
-`libs` | Array of bower dependencies used in the module. [Check-out the module scope section](#the-module-scope) | []
+`libs` | Array of bower dependencies used in the module. [Check-out the module libs section](#the-module-libs) | []
 `deps` | Array of phonegap dependencies. | []
-`scope` | Data Object that will be accessible from the module. | {}
+`scope` | Data Object that will be accessible from the module. [Check-out the module scope section](#the-module-scope)| {}
 `config` | Formly based config for the KingOfApp builder. [ Check-out module config in builder ](#module-config-in-builder)| {}
 `images.list` | Module list image used in the KingOfApp builder | ""
 `images.screenshots` | Module screenshots images used in the KingOfApp builder | {}
@@ -142,6 +142,54 @@ Dependencies that get loaded along with the modules files can be:
 
 * AngularJs modules (.js) - [Firebaselist sample](https://github.com/KingofApp/koapp-module-list)
 * Polymer components (.html) - [Googlemap sample](https://github.com/KingofApp/koapp-module-googlemap)
+
+Libs example:
+```json
+"libs": [{
+  "bower": {
+    "firebase": "2.2.4"
+  },
+  "src": "https://cdn.firebase.com/js/client/2.2.4/firebase.js"
+}, {
+  "bower": {
+    "angularfire": "1.1.2"
+  },
+  "src": "https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"
+}, {
+  "bower": {
+    "PolymerElements/paper-item": "^1.0.0"
+  },
+  "src": "bower_components/paper-item/paper-item.html"
+}]
+```
+
+The module should include a .bowerrc and bower.json.
+
+Upon each npm start from the visualizer, each module will have it's bower.json downloaded to the .bowerrc specified directory.
+
+These libs should be included in the module's bower.json file like:
+
+```json
+{
+  "name": "koapp-module-testmodule",
+  "authors": "King of App",
+  "description": "test module for King of App",
+  "keywords": [
+    "kingofapp",
+    "module"
+  ],
+  "license": "MIT",
+  "homepage": "http://kingofapp.com",
+  "private": true,
+  "dependencies": {
+    "firebase": "firebase#2.2.4",
+    "angularfire": "angularfire#1.1.2",
+    "paper-item": "PolymerElements/paper-item#^1.0.0"
+  }
+}
+```
+
+[Checkout our polymermenu module](https://github.com/KingofApp/koapp-module-polymermenu) for bower libs example.
 
 ## Multi language modules
 
@@ -247,7 +295,7 @@ Functions | Description | Expects | Returns
 `getCurrentModules($location, callback)` | Returns an array with the modules used in the current location. `Useful for finding parent module` | $location | Array
 `getChildren()` | Returns an array with all the children modules of the given path. | path - "/route" | Array
 
-NOTE: Remember to specify the `requires` property in [ the module config structure ](#the-module-config-structure) if your module requires any other module. Example: [Youtube gallery module](https://github.com/KingofApp/koa-module-youtubegallery)
+NOTE: Remember to specify the `requires` property in [ the module config structure ](#the-module-config-structure) if your module requires any other module. Example: [Youtube gallery module](https://github.com/KingofApp/koapp-module-youtubegallery)
 
 ### Inside module events
 ```javascript
@@ -256,7 +304,7 @@ $rootScope.$on("koaAppRendered",function() {
 
 });
 ```
-Checkout our [simplegallery module](https://github.com/KingofApp/koa-module-simplegallery).
+Checkout our [simplegallery module](https://github.com/KingofApp/koapp-module-simplegallery).
 
 ## Container modules
 
@@ -288,10 +336,10 @@ NOTE: Remember to specify the `canContain` property in [ the module config struc
 
 ### Container module examples
 
-[Firebase module](https://github.com/KingofApp/koa-module-firebase)
+[Firebase module](https://github.com/KingofApp/koapp-module-firebase)
 This module acts as a parent module [connector](#connector-modules)
 
-[Firebase list module](https://github.com/KingofApp/koa-module-list)
+[Firebase list module](https://github.com/KingofApp/koapp-module-list)
 This module uses the Firebase module's service to make the requests to firebase.
 
 NOTE: The idea of using parent module connectors is to enable children modules to obtain data from different sources.
@@ -308,14 +356,14 @@ Polymer menu particularities:
 * Directive to pass the menu items to polymer
 * Access to the toolbar scope within the view
 
-[Polymer menu Example](https://github.com/KingofApp/koa-module-polymermenu)
+[Polymer menu Example](https://github.com/KingofApp/koapp-module-polymermenu)
 
 Angular menu particularities:
 * Specific controller
 * Specific styles.html to read the templates color variables
 * Access to the toolbar scope within the view
 
-[Angular menu Example](https://github.com/KingofApp/koa-module-angularmenu)
+[Angular menu Example](https://github.com/KingofApp/koapp-module-angularmenu)
 
 ### Working with APIs
 
@@ -354,20 +402,20 @@ The view simply uses angular directives to iterate the data, using our custom [K
 ```
 
 For more examples on Api related modules checkout:
-* [Facebook](https://github.com/KingofApp/koa-module-facebookfeed)
-* [Flickr](https://github.com/KingofApp/koa-module-flickrfeed)
-* [Youtube Gallery](https://github.com/KingofApp/koa-module-youtubegallery)
-* [RSS](https://github.com/KingofApp/koa-module-rss)
-* [Instagram](https://github.com/KingofApp/koa-module-instagramfeed)
+* [Facebook](https://github.com/KingofApp/koapp-module-facebookfeed)
+* [Flickr](https://github.com/KingofApp/koapp-module-flickrfeed)
+* [Youtube Gallery](https://github.com/KingofApp/koapp-module-youtubegallery)
+* [RSS](https://github.com/KingofApp/koapp-module-rss)
+* [Instagram](https://github.com/KingofApp/koapp-module-instagramfeed)
 
 ### The ads module
 The ads module is a container module embracing all the other modules in the app, pay special attention to the route modules. All containing ´/ads´ prefix.
 
-[Checkout the module documentation](https://github.com/KingofApp/koa-module-ads)
+[Checkout the module documentation](https://github.com/KingofApp/koapp-module-ads)
 
 ### Connector modules
 
-[Firebase connector example](https://github.com/KingofApp/koa-module-firebase)
+[Firebase connector example](https://github.com/KingofApp/koapp-module-firebase)
 
 ...Under construction...
 
@@ -560,7 +608,10 @@ A structure.json app example:
 {
   "config": {
     "index": "/menu-abcd/home-abcd",
-    "theme": "koa-theme-android",
+    "theme": {
+      "identifier": "koapp-theme-android",
+      "path": "themes/koapp-theme-android/koapp-theme-android.html"
+    },
     "colors": {
       "primaryTextColor": "#212121",
       "primaryBackgroundColor": "#ffffff",
@@ -598,45 +649,48 @@ A structure.json app example:
       "name": "Menu Module",
       "identifier": "polymermenu",
       "type": "A",
+      "canContain": true,
       "icon": "menu",
       "showOn": {
         "menu": false,
         "market": true,
         "dragDrop": true
       },
-      "canContain": true,
       "view": "modules/polymermenu/index.html",
-      "files": ["modules/polymermenu/controller.js", "modules/polymermenu/style.html"],
-      "libs":[
+      "files": [
+        "modules/polymermenu/controller.js",
+        "modules/polymermenu/styles.html"
+      ],
+      "libs": [
         {
           "bower": {
-          "PolymerElements/iron-flex-layout": "^1.3.0"
-        },
-          "src": "http://resources.kingofapp.com/bower_components/iron-flex-layout/iron-flex-layout.html"
+            "PolymerElements/iron-flex-layout": "^1.3.0"
+          },
+          "src": "bower_components/iron-flex-layout/iron-flex-layout.html"
         },
         {
           "bower": {
             "PolymerElements/paper-drawer-panel": "^1.0.0"
           },
-          "src": "http://resources.kingofapp.com/bower_components/paper-drawer-panel/paper-drawer-panel.html"
+          "src": "bower_components/paper-drawer-panel/paper-drawer-panel.html"
         },
         {
           "bower": {
             "PolymerElements/paper-header-panel": "^1.0.0"
           },
-          "src": "http://resources.kingofapp.com/bower_components/paper-header-panel/paper-header-panel.html"
+          "src": "bower_components/paper-header-panel/paper-header-panel.html"
         },
         {
           "bower": {
             "PolymerElements/paper-menu": "^1.0.0"
           },
-          "src": "http://resources.kingofapp.com/bower_components/paper-menu/paper-menu.html"
+          "src": "bower_components/paper-menu/paper-menu.html"
         },
         {
           "bower": {
             "PolymerElements/paper-item": "^1.0.0"
           },
-          "src": "http://resources.kingofapp.com/bower_components/paper-item/paper-item.html"
+          "src": "bower_components/paper-item/paper-item.html"
         }
       ],
       "scope": {
@@ -650,7 +704,9 @@ A structure.json app example:
         "headerLogo": "",
         "headerLogoShown": true,
         "headerAlignment": "left",
-        "showicons": true
+        "showicons": true,
+        "toolbarTitle": true,
+        "toolbarLogo": ""
       }
     },
     "/menu-abcd/home-abcd": {
@@ -670,7 +726,7 @@ A structure.json app example:
       }
     },
     "/menu-abcd/map-abcd": {
-      "name": "Google Map Example",
+      "name": "Google Maps",
       "identifier": "googlemap",
       "type": "A",
       "icon": "room",
@@ -685,7 +741,7 @@ A structure.json app example:
         "bower": {
           "GoogleWebComponents/google-map": "^1.1.7"
         },
-        "src": "http://resources.kingofapp.com/bower_components/google-map/google-map.html"
+        "src": "bower_components/google-map/google-map.html"
       }],
       "scope": {
         "lat": "39.8847281",
@@ -705,29 +761,34 @@ Key | Description | Default value
 `config.lang` | Available languages for the app. [Check-out the language support](#module-language-support) | ["en_US"]
 `modules` | Module configurations | {}
 
-Explanation: In this example there are 3 modules. First of all there is a menu using the [polymer menu module](https://github.com/KingofApp/koa-module-polymermenu) with a [showOn.menu](#the-module-config-structure) property set to false so it wont appear as a menu element. Then an [html module](https://github.com/KingofApp/koa-module-html) used as the home screen configured in the `config.index` of the application config structure and a third [google map module](https://github.com/KingofApp/koa-module-googlemap).
+Explanation: In this example there are 3 modules. First of all there is a menu using the [polymer menu module](https://github.com/KingofApp/koapp-module-polymermenu) with a [showOn.menu](#the-module-config-structure) property set to false so it wont appear as a menu element. Then an [html module](https://github.com/KingofApp/koapp-module-html) used as the home screen configured in the `config.index` of the application config structure and a third [google map module](https://github.com/KingofApp/koapp-module-googlemap).
 
 ## Module List
-* [koa-module-list](https://github.com/KingofApp/koa-module-list)
-* [koa-module-angularmenu](https://github.com/KingofApp/koa-module-angularmenu)
-* [koa-module-contact](https://github.com/KingofApp/koa-module-contact)
-* [koa-module-embed](https://github.com/KingofApp/koa-module-embed)
-* [koa-module-facebookfeed](https://github.com/KingofApp/koa-module-facebookfeed)
-* [koa-module-firebase](https://github.com/KingofApp/koa-module-firebase)
-* [koa-module-flickrfeed](https://github.com/KingofApp/koa-module-flickrfeed)
-* [koa-module-googlemap](https://github.com/KingofApp/koa-module-googlemap)
-* [koa-module-grouplist](https://github.com/KingofApp/koa-module-grouplist)
-* [koa-module-html](https://github.com/KingofApp/koa-module-html)
-* [koa-module-instagramfeed](https://github.com/KingofApp/koa-module-instagramfeed)
-* [koa-module-pdfviewer](https://github.com/KingofApp/koa-module-pdfviewer)
-* [koa-module-polymermenu](https://github.com/KingofApp/koa-module-polymermenu)
-* [koa-module-rss](https://github.com/KingofApp/koa-module-rss)
-* [koa-module-simplegallery](https://github.com/KingofApp/koa-module-simplegallery)
-* [koa-module-twitterfeed](https://github.com/KingofApp/koa-module-twitterfeed)
-* [koa-module-vimeovideo](https://github.com/KingofApp/koa-module-vimeovideo)
-* [koa-module-youtubegallery](https://github.com/KingofApp/koa-module-youtubegallery)
-* [koa-module-youtubevideo](https://github.com/KingofApp/koa-module-youtubevideo)
-* [koa-module-ads](https://github.com/KingofApp/koa-module-ads)
+* [koapp-module-list](https://github.com/KingofApp/koapp-module-list)
+* [koapp-module-contact](https://github.com/KingofApp/koapp-module-contact)
+* [koapp-module-embed](https://github.com/KingofApp/koapp-module-embed)
+* [koapp-module-facebookfeed](https://github.com/KingofApp/koapp-module-facebookfeed)
+* [koapp-module-firebase](https://github.com/KingofApp/koapp-module-firebase)
+* [koapp-module-flickrfeed](https://github.com/KingofApp/koapp-module-flickrfeed)
+* [koapp-module-googlemap](https://github.com/KingofApp/koapp-module-googlemap)
+* [koapp-module-grouplist](https://github.com/KingofApp/koapp-module-grouplist)
+* [koapp-module-html](https://github.com/KingofApp/koapp-module-html)
+* [koapp-module-instagramfeed](https://github.com/KingofApp/koapp-module-instagramfeed)
+* [koapp-module-instagramhash](https://github.com/KingofApp/koapp-module-instagramhash)
+* [koapp-module-pdfviewer](https://github.com/KingofApp/koapp-module-pdfviewer)
+* [koapp-module-polymermenu](https://github.com/KingofApp/koapp-module-polymermenu)
+* [koapp-module-fullmenu](https://github.com/KingofApp/koapp-module-fullmenu)
+* [koapp-module-topmenu](https://github.com/KingofApp/koapp-module-topmenu)
+* [koapp-module-boxmenu](https://github.com/KingofApp/koapp-module-boxmenu)
+* [koapp-module-bottommenu](https://github.com/KingofApp/koapp-module-bottommenu)
+* [koapp-module-angularmenu](https://github.com/KingofApp/koapp-module-angularmenu)
+* [koapp-module-rss](https://github.com/KingofApp/koapp-module-rss)
+* [koapp-module-simplegallery](https://github.com/KingofApp/koapp-module-simplegallery)
+* [koapp-module-twitterfeed](https://github.com/KingofApp/koapp-module-twitterfeed)
+* [koapp-module-vimeovideo](https://github.com/KingofApp/koapp-module-vimeovideo)
+* [koapp-module-youtubegallery](https://github.com/KingofApp/koapp-module-youtubegallery)
+* [koapp-module-youtubevideo](https://github.com/KingofApp/koapp-module-youtubevideo)
+* [koapp-module-ads](https://github.com/KingofApp/koapp-module-ads)
 
 ## Module category list
 
