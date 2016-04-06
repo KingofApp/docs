@@ -14,6 +14,7 @@ King of App modules are composed of [AngularJS](https://angularjs.org/) logic an
 * [ Module config in builder ](#module-config-in-builder)
 * [ Getting started ](#getting-started)
 * [ Module list ](#module-list)
+* [ Demo list ](#demo-list)
 
 ## The module structure
 Modules are composed of [files](#the-module-files) and [libs](#the-module-libs) that read from a [config structure json](#the-module-config-structure).
@@ -400,6 +401,8 @@ The view simply uses angular directives to iterate the data, using our custom [K
   <div class="card-content">{{item.message}}</div>
 </koa-card>
 ```
+
+`For more advance examples working with ngRepeat and ngClick` [check-out our koapp-demo-ngrepeatclick](https://github.com/KingofApp/koapp-demo-ngrepeatclick)
 
 For more examples on Api related modules checkout:
 * [Facebook](https://github.com/KingofApp/koapp-module-facebookfeed)
@@ -789,6 +792,9 @@ Explanation: In this example there are 3 modules. First of all there is a menu u
 * [koapp-module-youtubegallery](https://github.com/KingofApp/koapp-module-youtubegallery)
 * [koapp-module-youtubevideo](https://github.com/KingofApp/koapp-module-youtubevideo)
 * [koapp-module-ads](https://github.com/KingofApp/koapp-module-ads)
+
+## Demo List
+* [Working with ngClick and ngRepeat](https://github.com/KingofApp/koapp-demo-ngrepeatclick)
 
 ## Module category list
 
