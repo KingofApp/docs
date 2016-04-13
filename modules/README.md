@@ -6,6 +6,7 @@ King of App modules are composed of [AngularJS](https://angularjs.org/) logic an
 * [ The module structure ](#the-module-structure)
 * [ Multi language modules ](#multi-language-modules)
 * [ Simple modules ](#simple-modules)
+* [ Using the storage service ](#using-the-storage-service)
 * [ Container modules ](#container-modules)
 * [ Menu modules ](#menu-modules)
 * [ Working with APIs ](#working-with-apis)
@@ -297,6 +298,27 @@ Functions | Description | Expects | Returns
 `getChildren()` | Returns an array with all the children modules of the given path. | path - "/route" | Array
 
 NOTE: Remember to specify the `requires` property in [ the module config structure ](#the-module-config-structure) if your module requires any other module. Example: [Youtube gallery module](https://github.com/KingofApp/koapp-module-youtubegallery)
+
+### Using the storage service
+
+The storage service works around the [angular-indexedDB](https://github.com/webcss/angular-indexedDB) serviceprovider and stores data in the [IndexedDB](https://www.w3.org/TR/IndexedDB) web api database.
+
+
+Accessible storageService service within the module controller:
+
+Functions | Description | Expects | Returns
+----------------|-------------|--------|--------
+`getAll()` | Promise - Returns all the objects for an object store.  |  | Array
+`init(objectName)` | Can manually set a specific the object store  | objectName (default: modules) |
+`del(key)` | Promise - Deletes a specific key and its data. | key |
+`get(key)` | Promise - Returns the JSON Object from a specific key. | key | JSON Object
+`set(key, data)` | Promise - Insert data for a specific key. | key, data | data
+
+The following object stores are available:
+* modules - Used by modules to store data
+* services - Used by services to store data
+
+[Demo module using the storage service](https://github.com/KingofApp/koapp-demo-storagesample)
 
 ### Inside module events
 ```javascript
@@ -795,6 +817,7 @@ Explanation: In this example there are 3 modules. First of all there is a menu u
 
 ## Demo List
 * [Working with ngClick and ngRepeat](https://github.com/KingofApp/koapp-demo-ngrepeatclick)
+* [Working with the storage service](https://github.com/KingofApp/koapp-demo-storagesample)
 
 ## Module category list
 
