@@ -392,7 +392,7 @@ Key | Description | Example values
 ----------------|-------------|--------
 `menuItems` | Array of elements in the menu | ["/menu-abcd/home-abcd", "/menu-abcd/elements-abcd", "/menu-abcd/map-abcd"]
 `backgroundImages` | Array of images matched in index order | ["http://i.imgur.com/ZGEX2eX.jpg", "http://i.imgur.com/dd6Szc4.jpg", "http://i.imgur.com/3L11jbd.jpg"]
-`backgroundColors` | Array of images matched in index order | ["#ECECEC", "#FFFFFF", "#ECECEC"]
+`backgroundColors` | Array of colors matched in index order | ["#ECECEC", "#FFFFFF", "#ECECEC"]
 
 #### Formly config for menuItems
 ```json
