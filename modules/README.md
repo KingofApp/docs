@@ -9,6 +9,7 @@ King of App modules are composed of [AngularJS](https://angularjs.org/) logic an
 * [ Using the storage service ](#using-the-storage-service)
 * [ Container modules ](#container-modules)
 * [ Menu modules ](#menu-modules)
+* [ The menu standards ](#the-menu-standards)
 * [ Working with APIs ](#working-with-apis)
 * [ Dependencies in modules ](#dependencies-in-modules)
 * [ Presenting data in modules ](#presenting-data-in-modules)
@@ -53,7 +54,6 @@ For a module called testmodule this would be the config structure:
   ],
   "canContain" : false,
   "showOn"     : {
-    "menu"     : "true",
     "market"   : "true",
     "dragDrop" : "true"
   },
@@ -95,7 +95,6 @@ Key | Description | Default value
 `category` | Categories to which your module belongs. [ Check-out our list ](#module-category-list)  | "others"
 `requires` | Certain modules require other modules to work properly. [ Youtube gallery module ](https://github.com/KingofApp/koapp-module-youtubegallery)  | []
 `canContain` | Set to true if the module can adopt other modules inside them.[Check-out the  container module](#container-modules) type. | False
-`showOn.menu` | Property defined by user in the KingOfApp builder| True
 `showOn.market` | Property to make the module selectable by the users in our market. | True
 `showOn.dragDrop` | Property to disable the drag and drop option from the KingOfApp builder | True
 `view` | Main view file | "modules/{identifier}/index.html"
@@ -234,7 +233,6 @@ Html module file structure:
   "identifier": "html",
   "type": "A",
   "showOn": {
-    "menu": true,
     "market": true,
     "dragDrop": true
   },
@@ -368,7 +366,6 @@ This module uses the Firebase module's service to make the requests to firebase.
 NOTE: The idea of using parent module connectors is to enable children modules to obtain data from different sources.
 
 In this case, the firebase list module requires the firebase module, so it will have the `requires` property in [ the module config structure ](#the-module-config-structure) set to firebase.
-In the other hand, the firebase connector module will have the showOnmenu to false by default.
 
 ### Menu modules
 
@@ -387,6 +384,62 @@ Angular menu particularities:
 * Access to the toolbar scope within the view
 
 [Angular menu Example](https://github.com/KingofApp/koapp-module-angularmenu)
+
+### The menu standards
+All menus should include at least these 3 features:
+
+Key | Description | Example values
+----------------|-------------|--------
+`menuItems` | Array of elements in the menu | ["/menu-abcd/home-abcd", "/menu-abcd/elements-abcd", "/menu-abcd/map-abcd"]
+`backgroundImages` | Array of images matched in index order | ["http://i.imgur.com/ZGEX2eX.jpg", "http://i.imgur.com/dd6Szc4.jpg", "http://i.imgur.com/3L11jbd.jpg"]
+`backgroundColors` | Array of images matched in index order | ["#ECECEC", "#FFFFFF", "#ECECEC"]
+
+#### Formly config for menuItems
+```json
+{
+  "key": "menuItems",
+  "type": "multiInput",
+  "templateOptions": {
+    "label": "Menu items",
+    "inputOptions": {
+      "type": "select",
+      "templateOptions": {
+        "options": [],
+        "label": "Normal Select"
+      }
+    }
+  }
+}
+```
+
+#### Formly config for backgroundImages
+```json
+{
+  "key": "backgroundImages",
+  "type": "multiInput",
+  "templateOptions": {
+    "inputOptions": {
+      "type": "input"
+    },
+    "label": "Background image URLs",
+    "pattern": "(https?://)([/\\w.()-]*).*"
+  }
+}
+```
+
+#### Formly config for backgroundColors
+```json
+{
+  "key": "backgroundColors",
+  "type": "multiInput",
+  "templateOptions": {
+    "inputOptions": {
+      "type": "input"
+    },
+    "label": "Background colors"
+  }
+}
+```
 
 ### Working with APIs
 
@@ -436,7 +489,7 @@ For more examples on Api related modules checkout:
 ### The ads module
 The ads module is a container module embracing all the other modules in the app, pay special attention to the route modules. All containing ´/ads´ prefix.
 
-[Checkout the module documentation](https://github.com/KingofApp/koapp-module-ads)
+[Checkout the module documentation](https://bitbucket.org/koapp/koapp-service-ads)
 
 ### Connector modules
 
@@ -677,7 +730,6 @@ A structure.json app example:
       "canContain": true,
       "icon": "menu",
       "showOn": {
-        "menu": false,
         "market": true,
         "dragDrop": true
       },
@@ -719,8 +771,11 @@ A structure.json app example:
         }
       ],
       "scope": {
+        "menuItems": ["/menu-abcd/home-abcd", "/menu-abcd/elements-abcd", "/menu-abcd/map-abcd"],
+        "backgroundImages": [],
+        "backgroundColors": [],
         "path": "/menu-abcd",
-        "headerShown": true,
+        "headerShown": false,
         "headerBackgroundImage": "",
         "headerBackgroundColor": "",
         "headerReverse": false,
@@ -740,7 +795,6 @@ A structure.json app example:
       "type": "A",
       "icon": "home",
       "showOn": {
-        "menu": true,
         "market": true,
         "dragDrop": true
       },
@@ -756,7 +810,6 @@ A structure.json app example:
       "type": "A",
       "icon": "room",
       "showOn": {
-        "menu": true,
         "market": true,
         "dragDrop": true
       },
@@ -786,7 +839,7 @@ Key | Description | Default value
 `config.lang` | Available languages for the app. [Check-out the language support](#module-language-support) | ["en_US"]
 `modules` | Module configurations | {}
 
-Explanation: In this example there are 3 modules. First of all there is a menu using the [polymer menu module](https://github.com/KingofApp/koapp-module-polymermenu) with a [showOn.menu](#the-module-config-structure) property set to false so it wont appear as a menu element. Then an [html module](https://github.com/KingofApp/koapp-module-html) used as the home screen configured in the `config.index` of the application config structure and a third [google map module](https://github.com/KingofApp/koapp-module-googlemap).
+Explanation: In this example there are 3 modules. First of all there is a menu using the [polymer menu module](https://github.com/KingofApp/koapp-module-polymermenu) obtaining the elements list from the [menuItems](#the-menu-standards) property set to false so it wont appear as a menu element. Then an [html module](https://github.com/KingofApp/koapp-module-html) used as the home screen configured in the `config.index` of the application config structure and a third [google map module](https://github.com/KingofApp/koapp-module-googlemap).
 
 ## Module List
 * [koapp-module-list](https://github.com/KingofApp/koapp-module-list)
@@ -813,7 +866,7 @@ Explanation: In this example there are 3 modules. First of all there is a menu u
 * [koapp-module-vimeovideo](https://github.com/KingofApp/koapp-module-vimeovideo)
 * [koapp-module-youtubegallery](https://github.com/KingofApp/koapp-module-youtubegallery)
 * [koapp-module-youtubevideo](https://github.com/KingofApp/koapp-module-youtubevideo)
-* [koapp-module-ads](https://github.com/KingofApp/koapp-module-ads)
+* [koapp-service-ads](https://bitbucket.org/koapp/koapp-service-ads)
 
 ## Demo List
 * [Working with ngClick and ngRepeat](https://github.com/KingofApp/koapp-demo-ngrepeatclick)
