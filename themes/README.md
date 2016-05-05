@@ -536,3 +536,28 @@ Also, you need to set in the `css-variables.json`. Example:
   ...
 }
 ```
+
+## Iconsets
+
+To create an iconset, yo need to use the [Polymer `iron-iconset-svg`](https://elements.polymer-project.org/elements/iron-iconset-svg).
+
+The `iron-iconset-svg` element allows users to define their own icon sets that contain svg icons. The svg icon elements should be children of the `iron-iconset-svg` element. Multiple icons should be given distinct id's. To support all the icons, get the [PolymerElements/iron-icons/iron-icons.html](https://github.com/PolymerElements/iron-icons/blob/master/iron-icons.html) and edit the svg paths.
+
+Example:
+
+```html
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../iron-iconset-svg/iron-iconset-svg.html">
+
+<iron-iconset-svg name="myiconsetname" size="24">
+  <svg>
+    <defs>
+      [...]
+      <g id="add"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></g>
+      <g id="arrow-drop-down"><path d="M7 10l5 5 5-5z"/></g>
+      <g id="arrow-drop-up"><path d="M7 14l5-5 5 5z"/></g>
+      [...]
+    </defs>
+  </svg>
+</iron-iconset-svg>
+```
