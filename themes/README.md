@@ -14,6 +14,7 @@ A King of App theme is composed of a set of elements built with [Polymer](https:
   * [Set the fonts families](#set-the-fonts-families)
   * [Background color and background image](#background-color-and-background-image)
   * [Colors](#colors)
+* [Iconsets](#iconsets)
 
 ## About elements
 
