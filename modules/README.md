@@ -443,7 +443,7 @@ Key | Description | Example values
 ```
 
 #### Menu go back feature
-For menus with toolbar it is recommended to implement the `go back` function.
+For menus with toolbar it is recommended to implement the `go back` feature.
 [Checkout our Top Menu example](https://github.com/KingofApp/koapp-module-topmenu)
 
 The controller piece of code that controls whether to show the back button:
