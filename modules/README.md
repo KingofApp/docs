@@ -386,6 +386,7 @@ Angular menu particularities:
 [Angular menu Example](https://github.com/KingofApp/koapp-module-angularmenu)
 
 ### The menu standards
+
 All menus should include at least these 3 features:
 
 Key | Description | Example values
@@ -439,6 +440,32 @@ Key | Description | Example values
     "label": "Background colors"
   }
 }
+```
+
+#### Menu go back feature
+For menus with toolbar it is recommended to implement the `go back` function.
+[Checkout our Top Menu example](https://github.com/KingofApp/koapp-module-topmenu)
+
+The controller piece of code that controls whether to show the back button:
+```javascript
+  $scope.showBack = false;
+
+  if(structureService.getMenuItems().indexOf($location.$$path) === -1 && $rootScope.current != 'topmenu'){
+    $scope.showBack = true;
+  }
+  $scope.goBack = function() {
+    window.history.back()
+  };
+```
+
+The toolbar in the view:
+```html
+  <koa-toolbar>
+    <koa-icon-button icon="{{topmenu.icon}}" ng-if="!showBack" ng-click="showBoxMenu()"></koa-icon-button>
+    <koa-icon-button icon="arrow-back" ng-click="goBack()" ng-if="showBack"></koa-icon-button>
+    <img id="logo" ng-src="{{topmenu.modulescope.toolbarLogo}}" ng-if="topmenu.modulescope.toolbarLogo">
+    <span class="title" ng-if="topmenu.modulescope.toolbarTitle">{{toolbar.title}}</span>
+  </koa-toolbar>
 ```
 
 ### Working with APIs
