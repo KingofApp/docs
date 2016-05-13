@@ -318,7 +318,11 @@ The following object stores are available:
 
 [Demo module using the storage service](https://github.com/KingofApp/koapp-demo-storagesample)
 
-### Inside module events
+### Inside module features
+
+####Events
+koaAppRendered is the event used by the visualizer to confirm polymer has rendered all the [koa elements](https://github.com/KingofApp/docs/tree/master/themes#list-of-elements).
+Example:
 ```javascript
 $rootScope.$on("koaAppRendered",function() {
   //Your code here
@@ -326,6 +330,23 @@ $rootScope.$on("koaAppRendered",function() {
 });
 ```
 Checkout our [simplegallery module](https://github.com/KingofApp/koapp-module-simplegallery).
+
+
+#### Custom Filter - loadUrl
+loadUrl is the filter used to define the correct path for the module's resources in each environment.
+Example:
+```javascript
+PDFJS.workerSrc = $filter('loadUrl')('modules/pdfviewer/pdfjs/pdf.worker.js');
+```
+```html
+<div id='playicon'>
+  <koa-icon icon="{{'modules/soundcloud/images/play.svg' | loadUrl}}"></koa-icon>
+</div>
+<div id="pauseicon">
+  <koa-icon icon="{{'modules/soundcloud/images/pause.svg' | loadUrl}}"></koa-icon>
+</div>
+```
+Checkout our [pdfviewer module](https://github.com/KingofApp/koapp-module-pdfviewer).
 
 ## Container modules
 
