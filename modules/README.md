@@ -11,7 +11,7 @@ King of App modules are composed of [AngularJS](https://angularjs.org/) logic an
 * [ Menu modules ](#menu-modules)
 * [ The menu standards ](#the-menu-standards)
 * [ Working with APIs ](#working-with-apis)
-* [ Search friendly modules ](#search-friendly-modules)
+* [ Searchable modules ](#searchable-modules)
 * [ Dependencies in modules ](#dependencies-in-modules)
 * [ Presenting data in modules ](#presenting-data-in-modules)
 * [ Module config in builder ](#module-config-in-builder)
@@ -96,7 +96,7 @@ Key | Description | Default value
 `category` | Categories to which your module belongs. [ Check-out our list ](#module-category-list)  | "others"
 `requires` | Certain modules require other modules to work properly. [ Youtube gallery module ](https://github.com/KingofApp/koapp-module-youtubegallery)  | []
 `canContain` | Set to true if the module can adopt other modules inside them.[Check-out the  container module](#container-modules) type. | False
-`searchFriendly` | Set to true if the module supports working with the search module.[Check-out Search friendly modules](#search-friendly-modules) | False
+`searchable` | Set to true if the module supports working with the search module.[Check-out Searchable modules](#searchable-modules) | False
 `showOn.market` | Property to make the module selectable by the users in our market. | True
 `showOn.dragDrop` | Property to disable the drag and drop option from the KingOfApp builder | True
 `view` | Main view file | "modules/{identifier}/index.html"
@@ -567,8 +567,8 @@ For more examples on Api related modules checkout:
 * [RSS](https://github.com/KingofApp/koapp-module-rss)
 * [Instagram](https://github.com/KingofApp/koapp-module-instagramfeed)
 
-### Search friendly modules
-Modules that support integration with the search modules should have the tag `searchFriendly` set to `true` inside the config.json.
+### Searchable modules
+Modules that support integration with the search modules should have the tag `searchable` set to `true` inside the config.json.
 [Simplegallery sample](https://github.com/KingofApp/koapp-module-simplegallery)
 
 Modules receive the search parameter as a variable `q` inside the url. This is how a module will interact with it:
