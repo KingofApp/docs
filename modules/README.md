@@ -412,26 +412,57 @@ Angular menu particularities:
 
 All menus should include at least these 3 features:
 
+```json
+"menuItems": [
+  {
+    "path": "/menu-abcd/home-abcd",
+    "bgImage": "http://i.imgur.com/X2KTVXE.jpg",
+    "bgColor": ""
+  },
+  {
+    "path": "/menu-abcd/map-abcd",
+    "bgImage": "",
+    "bgColor": "#ECECEC"
+  }
+]
+```
+
 Key | Description | Example values
 ----------------|-------------|--------
-`menuItems` | Array of elements in the menu | ["/menu-abcd/home-abcd", "/menu-abcd/elements-abcd", "/menu-abcd/map-abcd"]
-`backgroundImages` | Array of images matched in index order | ["http://i.imgur.com/ZGEX2eX.jpg", "http://i.imgur.com/dd6Szc4.jpg", "http://i.imgur.com/3L11jbd.jpg"]
-`backgroundColors` | Array of colors matched in index order | ["#ECECEC", "#FFFFFF", "#ECECEC"]
+`menuItems.path` | Modules path.
+`menuItems.bgImage` | Background image url.
+`menuItems.bgColor` | Hexadecimal color , example - #ECECEC
 
-#### Formly config for menuItems
+#### Formly config for menuItems with backgrounds
 ```json
 {
+  "type": "repeatSection",
   "key": "menuItems",
-  "type": "multiInput",
   "templateOptions": {
-    "label": "Menu items",
-    "inputOptions": {
+    "label": "Items",
+    "btnText": "Add another item to the menu",
+    "fields": [{
       "type": "select",
+      "key": "path",
       "templateOptions": {
-        "options": [],
-        "label": "Normal Select"
+        "label": "Path",
+        "required": true
       }
-    }
+    }, {
+      "type": "input",
+      "key": "bgImage",
+      "templateOptions": {
+        "label": "Background Image URL",
+        "placeholder": "(Optional)"
+      }
+    }, {
+      "type": "input",
+      "key": "bgColor",
+      "templateOptions": {
+        "label": "Background Color",
+        "placeholder": "(Optional)"
+      }
+    }]
   }
 }
 ```
@@ -847,9 +878,23 @@ A structure.json app example:
         }
       ],
       "scope": {
-        "menuItems": ["/menu-abcd/home-abcd", "/menu-abcd/elements-abcd", "/menu-abcd/map-abcd"],
-        "backgroundImages": [],
-        "backgroundColors": [],
+        "menuItems": [
+          {
+            "path": "/menu-abcd/home-abcd",
+            "bgImage": "",
+            "bgColor": ""
+          },
+          {
+            "path": "/menu-abcd/elements-abcd",
+            "bgImage": "",
+            "bgColor": ""
+          },
+          {
+            "path": "/menu-abcd/map-abcd",
+            "bgImage": "",
+            "bgColor": ""
+          }
+        ],
         "path": "/menu-abcd",
         "headerShown": false,
         "headerBackgroundImage": "",
