@@ -569,7 +569,6 @@ For more examples on Api related modules checkout:
 
 ### Searchable modules
 Modules that support integration with the search modules should have the tag `searchable` set to `true` inside the config.json.
-[Simplegallery sample](https://github.com/KingofApp/koapp-module-simplegallery)
 
 Modules receive the search parameter as a variable `q` inside the url. This is how a module will interact with it:
 
