@@ -128,16 +128,6 @@ Received data object example:
 }
 ```
 
-
-### Returning the data to the King Of App builder.
-Inside the `js/config.controller.js` file we can find:
-```javascript
-//Send back data object.
-koappComm.iframe.sendData(data);
-//Signal to close iframe popup in builder.
-koappComm.iframe.close();
-```
-
 Key | Description | Default value
 ----------------|-------------|--------
 `data._id` | Application id | ""
@@ -152,7 +142,14 @@ Key | Description | Default value
 `data.plugin.scope` | Module config variables | {}
 `data.plugin.uniqueId` | Unique builder id | ""
 
-
+### Returning the data to the King Of App builder.
+Inside the `js/config.controller.js` file we can find:
+```javascript
+//Send back data object.
+koappComm.iframe.sendData(data);
+//Signal to close iframe popup in builder.
+koappComm.iframe.close();
+```
 
 ## Demo modules list
 * [Facebook feed](https://github.com/KingofApp/koapp-module-facebookfeed)
