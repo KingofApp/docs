@@ -1,6 +1,6 @@
-# &lt;koa-spinner&gt;
+# King of App spinners
 
-It is an spinner.
+A King of App spinner is an element built with [Polymer](https://www.polymer-project.org), like the [theme elements](../themes/README.md#list-of-elements).
 
 ### Demo
 

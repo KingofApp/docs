@@ -14,6 +14,7 @@ A King of App theme is composed of a set of elements built with [Polymer](https:
   * [Set the fonts families](#set-the-fonts-families)
   * [Background color and background image](#background-color-and-background-image)
   * [Colors](#colors)
+* [Iconsets](#iconsets)
 
 ## About elements
 
@@ -55,13 +56,12 @@ Our [koa-theme generator](https://github.com/KingofApp/generator-koa-theme) give
 * [koa-grid](elements/koa-grid.md#koa-grid)
 * [koa-icon-button](elements/koa-icon-button.md#koa-icon-button) (it uses `koa-icon`)
 * [koa-input](elements/koa-input.md#koa-input) (with [koa-textarea](elements/koa-input.md#koa-textarea))
-* [koa-item](elements/koa-item.md#koa-item)
-* [koa-menu-button](elements/koa-menu-button.md#koa-menu-button)
+* [koa-item](elements/koa-item.md#koa-item) (with [koa-item-body](elements/koa-item.md#koa-item-body))
 * [koa-menu](elements/koa-menu.md#koa-menu) (with [koa-submenu](elements/koa-menu.md#koa-submenu))
+* [koa-menu-button](elements/koa-menu-button.md#koa-menu-button)
 * [koa-progress](elements/koa-progress.md#koa-progress)
 * [koa-radio-button](elements/koa-radio-button.md#koa-radio-button)
 * [koa-slider](elements/koa-slider.md#koa-slider) (it uses `koa-input` and `koa-progress`)
-* [koa-spinner](elements/koa-spinner.md#koa-spinner)
 * [koa-tabs](elements/koa-tabs.md#koa-tabs) (with [koa-tab](elements/koa-tabs.md#koa-tab))
 * [koa-toggle-button](elements/koa-toggle-button.md#koa-toggle-button)
 * [koa-toolbar](elements/koa-toolbar.md#koa-toolbar)
@@ -535,4 +535,29 @@ Also, you need to set in the `css-variables.json`. Example:
   },
   ...
 }
+```
+
+## Iconsets
+
+To create an iconset, yo need to use the [Polymer `iron-iconset-svg`](https://elements.polymer-project.org/elements/iron-iconset-svg).
+
+The `iron-iconset-svg` element allows users to define their own icon sets that contain svg icons. The svg icon elements should be children of the `iron-iconset-svg` element. Multiple icons should be given distinct id's. To support all the icons, get the [PolymerElements/iron-icons/iron-icons.html](https://github.com/PolymerElements/iron-icons/blob/master/iron-icons.html) and edit the svg paths.
+
+Example:
+
+```html
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../iron-iconset-svg/iron-iconset-svg.html">
+
+<iron-iconset-svg name="myiconsetname" size="24">
+  <svg>
+    <defs>
+      [...]
+      <g id="add"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></g>
+      <g id="arrow-drop-down"><path d="M7 10l5 5 5-5z"/></g>
+      <g id="arrow-drop-up"><path d="M7 14l5-5 5 5z"/></g>
+      [...]
+    </defs>
+  </svg>
+</iron-iconset-svg>
 ```
