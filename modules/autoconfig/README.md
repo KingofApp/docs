@@ -46,7 +46,7 @@ Key | Description | Default value
 
 ### File structure
 
-We strongly recommend to store the config files in a folder inside the module. We will store and serve your files in our servers. Anyway you can point your `templateOptions.url` from the [config.json](#files-and-configuration) file to any url of your preference.
+We strongly recommend to store the config files in a folder inside the module. We will store and serve your files in our servers. Anyway you can point your `templateOptions.url` from the [config.json](#files-and-configuration) file to any url of your choice.
 
 ```
 koapp-module-facebookfeed
@@ -83,9 +83,9 @@ For Api interactions checkout the [Iframe requests section](https://github.com/K
 Communications between parent and iframe are done using the [koapp widget communicator](https://github.com/KingofApp/koapp-widget-communicator)
 
 Configuration workflow:
-1. Controller listens to data incoming from the parent (King Of App Builder).
+1. Controller listens to data incoming from the parent (King Of App Builder) iframe.
 2. The user data can be captured inside the `data.plugin.scope` if defined in the builder or asked for it during the process inside the iframe.
-3. Once the configuration phase has finished, the `data.plugin.scope` should be altered and passed back to the parent (King Of App builder).
+3. Once the configuration phase has finished, the `data.plugin.scope` should be altered and passed back to the parent (King Of App builder) iframe.
 
 
 ### Listening to the data.
