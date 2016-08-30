@@ -29,10 +29,6 @@ Inside the module / service config.json
       "blocked": ["secret","passwords"]
     }
   },
-  "widget": {
-    "title": "Admin - Module Name",
-    "url": "/modules/moduleid/builder/#/widget"
-  },
   ...
 }
 ```
@@ -59,11 +55,6 @@ Key | Description
 ----------------|-------------
 `app` | System variables (Ask the King Of App team)
 `plugin` | Previously [registered](#registering-protected-variables) by module or service.
-
-### Widget
-The widget object registers a section in the King Of App builder with the `title` name which loads an iframe with the given `url`.
-
-
 
 ## File Examples
 
