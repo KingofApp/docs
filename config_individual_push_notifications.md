@@ -6,9 +6,13 @@ Antes de comenzar, asegúrate de contar con los siguientes elementos:
 
 * Un sitio WordPress funcional con usuarios registrados.
 * Una aplicación desarrollada con **King of App**.
+  
+En King of app:
 * El servicio **KoaPush Notifications** activo y configurado.
-* Plugin **WP Koa Push Notifications** instalado en tu app.
-* El modulo Koa Suite instalado en el wordpress.
+* El servicio **WP Koa Push Notifications** instalado en tu app.
+  
+En wordpress:
+* Koa Suite instalado en el wordpress.
 
 ---
 
