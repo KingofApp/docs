@@ -14,6 +14,10 @@ En King of app:
 En wordpress:
 * Koa Suite instalado en el wordpress.
 
+Servicios adicionales
+* Una cuenta de Firebase con el proyecto
+* Una cuenta de apple 
+
 ---
 
 ## 🔗 Asociar el dispositivo al usuario
@@ -60,15 +64,7 @@ En la pestaña **Settings** del plugin:
 
 ---
 
-### 2. Obtener el ID del proyecto
-
-* Haz clic en el ícono de engranaje junto a “Project Overview”.
-* Selecciona **Configuración del proyecto**.
-* En la pestaña **General**, copia el **ID del proyecto**.
-
----
-
-### 3. Crear y descargar la cuenta de servicio
+### 2. Crear y descargar la cuenta de servicio
 
 * Ve a **Cuentas de servicio**.
 * Ignora el código mostrado.
@@ -76,6 +72,28 @@ En la pestaña **Settings** del plugin:
 * Se descargará un archivo `.json`.
 
 > 💾 Este archivo es el que debes subir en la configuración del plugin en WordPress.
+
+---
+### 3. Configurar permisos de notificaciones para iOS en firebase
+
+* Accede a tu proyecto de firebase
+* Haz click en el icono de ajustes
+* Busca la pestaña de **Mensajes en la nuve**
+* Has scroll hasta encontrar la la sección **Aplicaciones de apple**
+* En la sección **Clave de autenticación de APNS** deberás subir el archivo de claves de push de apple
+* Rellena los campos de Id de la clave e Id del equipo
+
+### Obtener las claves de autenticación de APNS 
+
+* Accede a tu cuenta de Apple 
+* Usando el link https://developer.apple.com/account/resources/authkeys/list puedes acceder al gestor de claves de tu cuenta
+* Crea una nueva clave
+* Selecciona la opción **Apple Push Notifications service (APNs)**
+* Usa el botón Configurar y en el campo **Enviroment** selecciona **Sandbox & Producción**
+* Pon un nombre y descipción a tu clave por ejemplo "Clave push KOA"
+* El proceso descargará un archivo con extención .p8
+* Guarda en un lugar seguro el id de la clave 
+
 
 ---
 
