@@ -48,7 +48,6 @@ Ahí verás una **lista de usuarios** y un botón para enviar notificaciones si 
 En la pestaña **Settings** del plugin:
 
 * **Sube el archivo JSON** de cuenta de servicio de Firebase.
-* **Introduce el ID del proyecto** de Firebase.
 
 ---
 
